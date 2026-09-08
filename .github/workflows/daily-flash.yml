@@ -29,11 +29,16 @@ jobs:
           python scripts/fetch_aihot.py
           echo "exit=$?" >> "$GITHUB_OUTPUT"
 
+      - name: Generate monetization news (AI commentary)
+        env:
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+        run: python scripts/generate_news.py
+
       # 数据没变化时跳过提交，避免空 commit 触发无意义部署
       - name: Check diff
         id: diff
         run: |
-          if git diff --quiet -- site/aihot-flash.js site/index.html; then
+          if git diff --quiet -- site/aihot-flash.js site/news-data.js site/index.html; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
