@@ -1,0 +1,8 @@
+{
+  // 纯静态网站托管：把 site/ 目录作为静态资源部署
+  "name": "ai-case-library",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./site"
+  }
+}
