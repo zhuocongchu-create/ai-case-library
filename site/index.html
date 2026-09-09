@@ -241,10 +241,9 @@ input{font-family:inherit}
 .nsub.active::before{background:var(--grad-hero)}
 .nsub.active .ns-ico{background:var(--grad-hero)}
 .nsub.active .ns-n{background:rgba(124,58,237,.9)}
-.flash-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:13px 16px;margin-bottom:8px;transition:all .15s}
+.flash-card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:13px 16px;margin-bottom:8px;transition:all .15s}
 .flash-card:hover{border-color:var(--brand-2);box-shadow:var(--shadow-md)}
-.flash-card .fc-t{font-size:13.5px;font-weight:700;line-height:1.55;display:flex;gap:10px;align-items:flex-start}
-.flash-card .fc-t>span:last-child{flex:1;min-width:0}
+.flash-card .fc-t{font-size:13.5px;font-weight:700;line-height:1.55;padding-right:64px}
 .flash-card[data-fx]{cursor:pointer;transition:border-color .16s,transform .16s}
 .flash-card[data-fx]:hover{border-color:var(--acc,#6c5ce7);transform:translateY(-1px)}
 .fx-hint{margin-top:8px;font-size:11.5px;color:var(--acc,#6c5ce7);opacity:.75;font-weight:600}
@@ -257,7 +256,7 @@ input{font-family:inherit}
 .fx-go{display:inline-block;background:var(--grad-hero);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:11px 26px;border-radius:12px;transition:transform .15s,box-shadow .15s}
 .fx-go:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(108,92,231,.35)}
 .fx-nolink{font-size:13px;opacity:.5}
-.flash-card .fc-hm{flex-shrink:0;font-size:11px;font-weight:600;color:var(--tx2);background:rgba(127,127,127,.14);border-radius:6px;padding:2px 7px;font-family:ui-monospace,Consolas,monospace;margin-top:1px;white-space:nowrap}
+.flash-card .fc-hm{position:absolute;top:14px;right:16px;font-size:11px;font-weight:700;color:var(--acc,#6c5ce7);background:color-mix(in srgb,var(--acc,#6c5ce7) 10%,transparent);border:1px solid color-mix(in srgb,var(--acc,#6c5ce7) 22%,transparent);border-radius:var(--r-full);padding:2px 9px;font-family:ui-monospace,Consolas,monospace;white-space:nowrap;z-index:2}
 .flash-card .fc-t a:hover{color:var(--link);text-decoration:underline}
 .fc-sum{font-size:12px;color:var(--tx2);line-height:1.65;margin-top:5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .fc-why{font-size:12px;color:var(--brand);background:var(--brand-soft);border-radius:8px;padding:6px 10px;margin-top:7px;line-height:1.6}
@@ -478,6 +477,22 @@ input{font-family:inherit}
 
 /* ============ 导航 CTA / 权限进度条 / 结账弹窗 ============ */
 .nav-cta{border:none;background:var(--grad-hero);color:#fff;font-size:13px;font-weight:700;padding:8px 18px;border-radius:var(--r-full);box-shadow:var(--shadow-brand);transition:all .2s;white-space:nowrap}
+.bell-btn{position:relative;border:1px solid var(--line);background:var(--surface);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;padding:0}
+.bell-btn:hover{border-color:var(--acc,#6c5ce7);transform:translateY(-1px)}
+.bell-dot{position:absolute;top:-2px;right:-2px;width:11px;height:11px;border-radius:50%;background:#ef4444;border:2px solid var(--bg);animation:bellPulse 1.8s ease-in-out infinite}
+@keyframes bellPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.85)}}
+.in-row{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-bottom:1px dashed var(--line)}
+.in-row:last-child{border-bottom:none}
+.in-ico{flex-shrink:0;width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;background:color-mix(in srgb,var(--acc,#6c5ce7) 10%,transparent)}
+.in-t{font-weight:800;font-size:14.5px;margin-bottom:3px}
+.in-d{font-size:13px;line-height:1.65;color:var(--muted,#888)}
+.in-btn{display:inline-flex;align-items:center;gap:6px;border:none;background:var(--grad-hero);color:#fff;font-weight:800;font-size:14px;padding:11px 30px;border-radius:var(--r-full);cursor:pointer;transition:all .2s}
+.in-btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.in-btn.ghost{background:var(--surface);color:var(--tx);border:1px solid var(--line);box-shadow:none}
+.be-row{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-md);margin-bottom:8px;background:color-mix(in srgb,var(--acc,#6c5ce7) 4%,transparent)}
+.be-ico{flex-shrink:0;font-size:18px;margin-top:1px}
+.be-t{font-weight:800;font-size:13.5px;margin-bottom:2px}
+.be-d{font-size:12.5px;color:var(--muted,#888);line-height:1.6}
 .nav-cta:hover{filter:brightness(1.1);transform:translateY(-1px)}
 .access-bar{display:none;align-items:center;gap:14px;background:var(--grad-card);border:1px solid var(--line);border-radius:var(--r-lg);padding:12px 16px;margin:0 0 16px;box-shadow:var(--shadow-sm);flex-wrap:wrap}
 .access-bar.show{display:flex}
@@ -619,6 +634,7 @@ input{font-family:inherit}
     </a>
     <div class="grow" data-page-node-id="Uk9tWZjihQk7fhtEdSqwpx"></div>
     <span class="stat-mini" id="statMini" data-page-node-id="1uIG45mBEkArEavHkWhUQM"><b id="miniN" data-page-node-id="BuDfpGAKvOGUx7iLK7VeHE">0</b> 个精选案例</span>
+    <button class="bell-btn" id="bellBtn" onclick="openBell()" aria-label="网站更新提醒" title="网站更新提醒"><span>🔔</span><span class="bell-dot" id="bellDot" style="display:none"></span></button>
     <button class="nav-cta" id="navCta" onclick="openCheckout()" data-page-node-id="FdrCCGk5DsDibi07PeBwZI">获取完整版</button>
     <div class="theme-toggle" id="themeToggle" role="radiogroup" aria-label="主题切换" data-page-node-id="TtNvwGHUVIseAxQpPRdCmX">
       <button class="tt-btn" data-theme="light" title="浅色" aria-label="浅色" data-page-node-id="RKOa7aY7AE7GD4DxLc5LIB">☀️</button>
@@ -766,6 +782,38 @@ input{font-family:inherit}
     <div class="modal-head" id="fxHead"></div>
     <div class="modal-body" id="fxBody" style="padding:20px 26px 8px"></div>
     <div class="modal-foot" id="fxFoot" style="justify-content:center;padding:14px 26px 20px"></div>
+  </div>
+</div>
+<div class="modal-overlay" id="introOverlay" onclick="if(event.target===this)closeIntro()" role="dialog" aria-modal="true" aria-label="使用说明">
+  <div class="modal" style="max-width:520px">
+    <div class="modal-head">
+      <button class="close" onclick="closeIntro()" aria-label="关闭">✕</button>
+      <h2>👋 欢迎来到 AI 变现案例库</h2>
+      <div class="fx-when">30 秒看懂这个网站怎么用</div>
+    </div>
+    <div class="modal-body" style="padding:6px 26px 10px">
+      <div class="in-row"><div class="in-ico">💼</div><div><div class="in-t">80 个真实 AI 变现案例</div><div class="in-d">每个都带人物故事 + 手把手 SOP + 财务拆解，前 5 条免费试读完整内容</div></div></div>
+      <div class="in-row"><div class="in-ico">🔓</div><div><div class="in-t">三档订阅，即买即解锁</div><div class="in-d">9.9 试读版 / 29.8 前 30 条 / 99 全部 + 每周更新，扫码付款后输入昵称立刻生成钥匙解锁</div></div></div>
+      <div class="in-row"><div class="in-ico">⚡</div><div><div class="in-t">AI 情报站 · 全站免费</div><div class="in-d">每天自动更新「变现热点点评 + AI 快讯」，点卡片看详情，想深入再点「阅读原文」</div></div></div>
+      <div class="in-row"><div class="in-ico">🔔</div><div><div class="in-t">右上角铃铛 = 更新提醒</div><div class="in-d">网站有新内容时铃铛会亮红点，点开就能看到这次更新了什么</div></div></div>
+    </div>
+    <div class="modal-foot" style="justify-content:center;padding:14px 26px 20px">
+      <button class="in-btn" onclick="closeIntro()">开始探索 →</button>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="bellOverlay" onclick="if(event.target===this)closeBell()" role="dialog" aria-modal="true" aria-label="网站更新提醒">
+  <div class="modal" style="max-width:480px">
+    <div class="modal-head">
+      <button class="close" onclick="closeBell()" aria-label="关闭">✕</button>
+      <h2>🔔 网站最近更新</h2>
+      <div class="fx-when">内容由云端每日自动生产，无需等待</div>
+    </div>
+    <div class="modal-body" id="bellBody" style="padding:16px 22px"></div>
+    <div class="modal-foot" style="justify-content:center;padding:14px 26px 20px">
+      <button class="in-btn ghost" onclick="closeBell();openIntro()">查看使用说明</button>
+      <button class="in-btn" onclick="closeBell()">我知道了</button>
+    </div>
   </div>
 </div>
 <div class="co-overlay" id="coOverlay" onclick="if(event.target===this)closeCheckout()" role="dialog" aria-modal="true" aria-label="购买解锁" data-page-node-id="lr6E5E9dLjNnHQcQEULNvL">
@@ -1649,6 +1697,9 @@ $('overlay').addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape'&&$('coOverlay').classList.contains('open'))closeCheckout();
   if(e.key==='Escape'&&$('indPanel').classList.contains('open'))$('indPanel').classList.remove('open');
+  if(e.key==='Escape'&&$('fxOverlay').classList.contains('open'))closeFlash();
+  if(e.key==='Escape'&&$('introOverlay').classList.contains('open'))closeIntro();
+  if(e.key==='Escape'&&$('bellOverlay').classList.contains('open'))closeBell();
 });
 document.getElementById('tabBar').addEventListener('click',e=>{
   const b=e.target.closest('.tab-btn');if(!b)return;
@@ -1659,6 +1710,49 @@ $('toTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'
 window.addEventListener('scroll',()=>{$('toTop').classList.toggle('show',window.scrollY>600);},{passive:true});
 
 init();
+
+/* ================== 使用引导 + 更新提醒铃铛 ================== */
+function bellSig(){
+  var sigs=[];
+  (window.AI_HOT_FLASH||[]).forEach(function(d){sigs.push('f'+d.date);});
+  (window.NEWS||[]).forEach(function(d){sigs.push('n'+d.date);});
+  (window.WEEKLY||[]).forEach(function(w){sigs.push('w'+(w.period||w.label||''));});
+  sigs.sort();
+  return sigs.join('|');
+}
+function checkBell(){
+  try{
+    var sig=bellSig(),seen=localStorage.getItem('anli_seen_sig');
+    // 首次访问不亮红点（引导弹窗会介绍铃铛）；之后内容有变化才亮
+    $('bellDot').style.display=(seen&&sig!==seen)?'block':'none';
+  }catch(e){}
+}
+function markBellSeen(){
+  try{localStorage.setItem('anli_seen_sig',bellSig());$('bellDot').style.display='none';}catch(e){}
+}
+function renderBell(){
+  var rows=[];
+  var fl=window.AI_HOT_FLASH||[];
+  if(fl.length){var n=0;fl.forEach(function(d){n+=(d.items||[]).length;});rows.push(['⚡','AI 快讯 · 最新 '+fl[0].date,'近 3 天已更新 '+n+' 条，点「AI 情报站 → ⚡AI快讯」阅读']);}
+  var nw=window.NEWS||[];
+  if(nw.length){var m=0;nw.forEach(function(d){m+=(d.items||[]).length;});rows.push(['💰','变现热点 · 最新 '+nw[0].date,'近 3 天已更新 '+m+' 条编辑点评']);}
+  var wk=window.WEEKLY||[];
+  if(wk.length)rows.push(['🗓️','每周精选',(wk[0].label||wk[0].period||'最新一期')+'已上线，编辑推荐 5 条直达入口']);
+  var cc=(window.CASE_DATA||[]).length;
+  if(cc)rows.push(['💼','案例库','共 '+cc+' 个真实案例，每周继续上新']);
+  $('bellBody').innerHTML=rows.map(function(r){
+    return '<div class="be-row"><div class="be-ico">'+r[0]+'</div><div><div class="be-t">'+r[1]+'</div><div class="be-d">'+r[2]+'</div></div></div>';
+  }).join('')||'<div class="be-d" style="text-align:center;padding:10px">内容加载中，稍后再点开看看</div>';
+}
+function openBell(){renderBell();$('bellOverlay').classList.add('open');document.body.style.overflow='hidden';markBellSeen();}
+function closeBell(){$('bellOverlay').classList.remove('open');document.body.style.overflow='';}
+function openIntro(){$('introOverlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeIntro(){$('introOverlay').classList.remove('open');document.body.style.overflow='';try{localStorage.setItem('anli_intro_seen','1');}catch(e){}}
+(function initWelcome(){
+  checkBell();
+  var seen=null;try{seen=localStorage.getItem('anli_intro_seen');}catch(e){}
+  if(!seen)setTimeout(openIntro,700);
+})();
 
 /* ================== LightRays 光束背景（源自 React Bits·原生 WebGL 移植版） ================== */
 (function(){
