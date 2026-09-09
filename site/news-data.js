@@ -10,20 +10,20 @@ window.NEWS=[
     date:"2026-09-09",
     items:[
       {
-        title:"数学家指控OpenAI算力抢夺，AI副业需警惕信任风险",
-        why:"OpenAI用大量算力追赶证明，算力成本已成竞争关键。AI副业别盲目依赖大模型，优先权争议可能影响长期合作——先建立信任，再谈技术",
+        title:"数学家指控 OpenAI 算力碾压，AI 竞争已进阶学术信任战",
+        why:"数学家用 LLM 证明方程被 OpenAI 算力追赶，说明 AI 已渗透科研核心环节。你若用 AI 做数学类副业，需警惕成果被大厂逆向解析风险，建议同步申请专利或保留原始数据链路。",
         url:"https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician",
         tag:"行业观察"
       },
       {
-        title:"Mistral融资30亿欧元估值210亿，欧洲AI资本热度飙升",
-        why:"Mistral D轮30亿欧元估值210亿，欧洲AI资本热度飙升。想做AI副业的盯紧主权AI赛道，但别被高估值迷惑，先验证市场需求",
+        title:"Mistral 三年估值破210亿欧元，欧洲AI正疯狂吸金",
+        why:"30亿欧元融资刷新欧洲科技公司纪录，说明主权AI赛道正被资本狂热追逐。你若想接AI相关单，可关注这类高估值企业的技术路线图，但需注意其开源策略可能挤压中小开发者生存空间。",
         url:"https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier",
         tag:"行业数据"
       },
       {
-        title:"数学家用LLM完成证明，AI工具数学领域已具生产力",
-        why:"数学家用LLM完成证明，AI工具在数学领域已具生产力。AI副业可尝试细分领域，但需注意成果验证成本——先小规模测试，再扩大应用",
+        title:"数学家公开AI协作细节，LLM已能辅助突破方程难题",
+        why:"巴克马斯特团队用AI完成blowup证明并公开沟通记录，显示LLM可参与高阶数学研究。你若想用AI搞数学类内容变现，可尝试复现该方法，但需注意成果公开可能引发的优先权纠纷，建议同步建立技术壁垒。",
         url:"https://cims.nyu.edu/~tristanb/statement.pdf",
         tag:"工具动态"
       }
