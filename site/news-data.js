@@ -7,6 +7,29 @@
    ============================================================ */
 window.NEWS=[
   {
+    date:"2026-09-09",
+    items:[
+      {
+        title:"数学家指控OpenAI算力抢夺，AI副业需警惕信任风险",
+        why:"OpenAI用大量算力追赶证明，算力成本已成竞争关键。AI副业别盲目依赖大模型，优先权争议可能影响长期合作——先建立信任，再谈技术",
+        url:"https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician",
+        tag:"行业观察"
+      },
+      {
+        title:"Mistral融资30亿欧元估值210亿，欧洲AI资本热度飙升",
+        why:"Mistral D轮30亿欧元估值210亿，欧洲AI资本热度飙升。想做AI副业的盯紧主权AI赛道，但别被高估值迷惑，先验证市场需求",
+        url:"https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier",
+        tag:"行业数据"
+      },
+      {
+        title:"数学家用LLM完成证明，AI工具数学领域已具生产力",
+        why:"数学家用LLM完成证明，AI工具在数学领域已具生产力。AI副业可尝试细分领域，但需注意成果验证成本——先小规模测试，再扩大应用",
+        url:"https://cims.nyu.edu/~tristanb/statement.pdf",
+        tag:"工具动态"
+      }
+    ]
+  },
+  {
     date:"2026-09-08",
     items:[
       {
