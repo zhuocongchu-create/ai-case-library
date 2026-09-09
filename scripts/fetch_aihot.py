@@ -94,7 +94,7 @@ def main():
     # 只保留最近 KEEP_DAYS 天
     today = datetime.now() + timedelta(hours=8)  # 北京时间近似（本地已+8亦无碍，仅用于保留窗口）
     dates_sorted = sorted(merged.keys(), reverse=True)[:KEEP_DAYS]
-    merged = {d: merged[d] for d in dates_sorted}
+    merged = {d: merged[d] for d in dates_sorted if merged[d]}  # 空日期组直接剔除
 
     with open(FLASH_JSON, "w", encoding="utf-8") as f:
         json.dump(merged, f, ensure_ascii=False, indent=1)
