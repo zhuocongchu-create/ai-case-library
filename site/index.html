@@ -481,6 +481,15 @@ input{font-family:inherit}
 .bell-btn:hover{border-color:var(--acc,#6c5ce7);transform:translateY(-1px)}
 .bell-dot{position:absolute;top:-2px;right:-2px;width:11px;height:11px;border-radius:50%;background:#ef4444;border:2px solid var(--bg);animation:bellPulse 1.8s ease-in-out infinite}
 @keyframes bellPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.85)}}
+.bell-wrap{position:relative;flex-shrink:0}
+.bell-pop{position:absolute;top:46px;right:0;width:min(340px,calc(100vw - 28px));background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 48px rgba(0,0,0,.18);z-index:70;animation:popIn .18s cubic-bezier(.2,.9,.3,1.15);overflow:hidden}
+.bell-pop::before{content:"";position:absolute;top:-6px;right:14px;width:12px;height:12px;background:var(--surface);border-left:1px solid var(--line);border-top:1px solid var(--line);transform:rotate(45deg)}
+.bell-pop-h{display:flex;align-items:baseline;gap:8px;padding:14px 16px 10px;font-weight:800;font-size:14px;border-bottom:1px solid var(--line)}
+.bell-pop-s{font-weight:500;font-size:11px;color:var(--muted,#888)}
+.bell-pop-b{padding:10px 12px}
+.bell-pop-f{padding:9px 16px;border-top:1px solid var(--line);text-align:right}
+.bell-link{font-size:12px;color:var(--acc,#6c5ce7);cursor:pointer;font-weight:600}
+.bell-link:hover{text-decoration:underline}
 .in-row{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-bottom:1px dashed var(--line)}
 .in-row:last-child{border-bottom:none}
 .in-ico{flex-shrink:0;width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;background:color-mix(in srgb,var(--acc,#6c5ce7) 10%,transparent)}
@@ -489,6 +498,8 @@ input{font-family:inherit}
 .in-btn{display:inline-flex;align-items:center;gap:6px;border:none;background:var(--grad-hero);color:#fff;font-weight:800;font-size:14px;padding:11px 30px;border-radius:var(--r-full);cursor:pointer;transition:all .2s}
 .in-btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
 .in-btn.ghost{background:var(--surface);color:var(--tx);border:1px solid var(--line);box-shadow:none}
+.in-tag{font-size:12px;font-weight:800;color:var(--acc,#6c5ce7);padding:13px 0 0;letter-spacing:.3px}
+.in-tag-paid{color:var(--muted,#888)}
 .be-row{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-md);margin-bottom:8px;background:color-mix(in srgb,var(--acc,#6c5ce7) 4%,transparent)}
 .be-ico{flex-shrink:0;font-size:18px;margin-top:1px}
 .be-t{font-weight:800;font-size:13.5px;margin-bottom:2px}
@@ -634,7 +645,14 @@ input{font-family:inherit}
     </a>
     <div class="grow" data-page-node-id="Uk9tWZjihQk7fhtEdSqwpx"></div>
     <span class="stat-mini" id="statMini" data-page-node-id="1uIG45mBEkArEavHkWhUQM"><b id="miniN" data-page-node-id="BuDfpGAKvOGUx7iLK7VeHE">0</b> 个精选案例</span>
-    <button class="bell-btn" id="bellBtn" onclick="openBell()" aria-label="网站更新提醒" title="网站更新提醒"><span>🔔</span><span class="bell-dot" id="bellDot" style="display:none"></span></button>
+    <div class="bell-wrap" id="bellWrap">
+      <button class="bell-btn" id="bellBtn" onclick="toggleBell(event)" aria-label="网站更新提醒" title="网站更新提醒"><span>🔔</span><span class="bell-dot" id="bellDot" style="display:none"></span></button>
+      <div class="bell-pop" id="bellPop" style="display:none">
+        <div class="bell-pop-h">🔔 网站最近更新<span class="bell-pop-s">云端每日自动生产</span></div>
+        <div class="bell-pop-b" id="bellBody"></div>
+        <div class="bell-pop-f"><span class="bell-link" onclick="closeBell();openIntro()">ℹ️ 查看使用说明</span></div>
+      </div>
+    </div>
     <button class="nav-cta" id="navCta" onclick="openCheckout()" data-page-node-id="FdrCCGk5DsDibi07PeBwZI">获取完整版</button>
     <div class="theme-toggle" id="themeToggle" role="radiogroup" aria-label="主题切换" data-page-node-id="TtNvwGHUVIseAxQpPRdCmX">
       <button class="tt-btn" data-theme="light" title="浅色" aria-label="浅色" data-page-node-id="RKOa7aY7AE7GD4DxLc5LIB">☀️</button>
@@ -789,30 +807,18 @@ input{font-family:inherit}
     <div class="modal-head">
       <button class="close" onclick="closeIntro()" aria-label="关闭">✕</button>
       <h2>👋 欢迎来到 AI 变现案例库</h2>
-      <div class="fx-when">30 秒看懂这个网站怎么用</div>
+      <div class="fx-when">先看免费的，30 秒带你逛一圈</div>
     </div>
     <div class="modal-body" style="padding:6px 26px 10px">
-      <div class="in-row"><div class="in-ico">💼</div><div><div class="in-t">80 个真实 AI 变现案例</div><div class="in-d">每个都带人物故事 + 手把手 SOP + 财务拆解，前 5 条免费试读完整内容</div></div></div>
-      <div class="in-row"><div class="in-ico">🔓</div><div><div class="in-t">三档订阅，即买即解锁</div><div class="in-d">9.9 试读版 / 29.8 前 30 条 / 99 全部 + 每周更新，扫码付款后输入昵称立刻生成钥匙解锁</div></div></div>
+      <div class="in-tag">🆓 免费就能看的</div>
       <div class="in-row"><div class="in-ico">⚡</div><div><div class="in-t">AI 情报站 · 全站免费</div><div class="in-d">每天自动更新「变现热点点评 + AI 快讯」，点卡片看详情，想深入再点「阅读原文」</div></div></div>
-      <div class="in-row"><div class="in-ico">🔔</div><div><div class="in-t">右上角铃铛 = 更新提醒</div><div class="in-d">网站有新内容时铃铛会亮红点，点开就能看到这次更新了什么</div></div></div>
+      <div class="in-row"><div class="in-ico">💼</div><div><div class="in-t">80 个真实案例 · 免费试读</div><div class="in-d">每个都带人物故事 + 手把手 SOP + 财务拆解，前 5 条免费读完整内容，先尝后买</div></div></div>
+      <div class="in-row"><div class="in-ico">🔔</div><div><div class="in-t">右上角铃铛 · 更新提醒</div><div class="in-d">网站有新内容时铃铛会亮红点，点一下就能看到这次更新了什么</div></div></div>
+      <div class="in-tag in-tag-paid">🔒 想看更多再考虑（不买也不影响免费内容）</div>
+      <div class="in-row"><div class="in-ico">🔓</div><div><div class="in-t">解锁全部案例（可选）</div><div class="in-d">9.9 试读版 / 29.8 前 30 条 / 99 全部 + 每周更新，觉得值再解锁，扫码付款立刻生效</div></div></div>
     </div>
     <div class="modal-foot" style="justify-content:center;padding:14px 26px 20px">
-      <button class="in-btn" onclick="closeIntro()">开始探索 →</button>
-    </div>
-  </div>
-</div>
-<div class="modal-overlay" id="bellOverlay" onclick="if(event.target===this)closeBell()" role="dialog" aria-modal="true" aria-label="网站更新提醒">
-  <div class="modal" style="max-width:480px">
-    <div class="modal-head">
-      <button class="close" onclick="closeBell()" aria-label="关闭">✕</button>
-      <h2>🔔 网站最近更新</h2>
-      <div class="fx-when">内容由云端每日自动生产，无需等待</div>
-    </div>
-    <div class="modal-body" id="bellBody" style="padding:16px 22px"></div>
-    <div class="modal-foot" style="justify-content:center;padding:14px 26px 20px">
-      <button class="in-btn ghost" onclick="closeBell();openIntro()">查看使用说明</button>
-      <button class="in-btn" onclick="closeBell()">我知道了</button>
+      <button class="in-btn" onclick="closeIntro()">先去逛免费的 →</button>
     </div>
   </div>
 </div>
@@ -1699,7 +1705,7 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape'&&$('indPanel').classList.contains('open'))$('indPanel').classList.remove('open');
   if(e.key==='Escape'&&$('fxOverlay').classList.contains('open'))closeFlash();
   if(e.key==='Escape'&&$('introOverlay').classList.contains('open'))closeIntro();
-  if(e.key==='Escape'&&$('bellOverlay').classList.contains('open'))closeBell();
+  if(e.key==='Escape'&&$('bellPop')&&$('bellPop').style.display!=='none')closeBell();
 });
 document.getElementById('tabBar').addEventListener('click',e=>{
   const b=e.target.closest('.tab-btn');if(!b)return;
@@ -1733,19 +1739,28 @@ function markBellSeen(){
 function renderBell(){
   var rows=[];
   var fl=window.AI_HOT_FLASH||[];
-  if(fl.length){var n=0;fl.forEach(function(d){n+=(d.items||[]).length;});rows.push(['⚡','AI 快讯 · 最新 '+fl[0].date,'近 3 天已更新 '+n+' 条，点「AI 情报站 → ⚡AI快讯」阅读']);}
+  if(fl.length){var n=0;fl.forEach(function(d){n+=(d.items||[]).length;});rows.push(['⚡','AI 快讯 · 最新 '+fl[0].date,'近 3 天已更新 '+n+' 条']);}
   var nw=window.NEWS||[];
   if(nw.length){var m=0;nw.forEach(function(d){m+=(d.items||[]).length;});rows.push(['💰','变现热点 · 最新 '+nw[0].date,'近 3 天已更新 '+m+' 条编辑点评']);}
   var wk=window.WEEKLY||[];
-  if(wk.length)rows.push(['🗓️','每周精选',(wk[0].label||wk[0].period||'最新一期')+'已上线，编辑推荐 5 条直达入口']);
+  if(wk.length)rows.push(['🗓️','每周精选',(wk[0].label||wk[0].period||'最新一期')+'已上线']);
   var cc=(window.CASE_DATA||[]).length;
   if(cc)rows.push(['💼','案例库','共 '+cc+' 个真实案例，每周继续上新']);
   $('bellBody').innerHTML=rows.map(function(r){
     return '<div class="be-row"><div class="be-ico">'+r[0]+'</div><div><div class="be-t">'+r[1]+'</div><div class="be-d">'+r[2]+'</div></div></div>';
-  }).join('')||'<div class="be-d" style="text-align:center;padding:10px">内容加载中，稍后再点开看看</div>';
+  }).join('')||'<div class="be-d" style="text-align:center;padding:6px">内容加载中，稍后再点开看看</div>';
 }
-function openBell(){renderBell();$('bellOverlay').classList.add('open');document.body.style.overflow='hidden';markBellSeen();}
-function closeBell(){$('bellOverlay').classList.remove('open');document.body.style.overflow='';}
+function toggleBell(ev){
+  ev.stopPropagation();
+  var p=$('bellPop');
+  if(p.style.display==='none'){renderBell();p.style.display='block';markBellSeen();}
+  else p.style.display='none';
+}
+function closeBell(){$('bellPop').style.display='none';}
+document.addEventListener('click',function(e){
+  var w=$('bellWrap');
+  if(w&&!w.contains(e.target))$('bellPop').style.display='none';
+});
 function openIntro(){$('introOverlay').classList.add('open');document.body.style.overflow='hidden';}
 function closeIntro(){$('introOverlay').classList.remove('open');document.body.style.overflow='';try{localStorage.setItem('anli_intro_seen','1');}catch(e){}}
 (function initWelcome(){
