@@ -244,7 +244,19 @@ input{font-family:inherit}
 .flash-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:13px 16px;margin-bottom:8px;transition:all .15s}
 .flash-card:hover{border-color:var(--brand-2);box-shadow:var(--shadow-md)}
 .flash-card .fc-t{font-size:13.5px;font-weight:700;line-height:1.55;display:flex;gap:10px;align-items:flex-start}
-.flash-card .fc-t a{color:var(--tx);text-decoration:none;flex:1;min-width:0}
+.flash-card .fc-t>span:last-child{flex:1;min-width:0}
+.flash-card[data-fx]{cursor:pointer;transition:border-color .16s,transform .16s}
+.flash-card[data-fx]:hover{border-color:var(--acc,#6c5ce7);transform:translateY(-1px)}
+.fx-hint{margin-top:8px;font-size:11.5px;color:var(--acc,#6c5ce7);opacity:.75;font-weight:600}
+.fx-when{font-size:12px;opacity:.85;margin-top:4px;letter-spacing:.3px}
+.fx-sec{font-size:14.5px;line-height:1.78;color:var(--tx);margin-bottom:14px}
+.fx-sum{padding:14px 16px;background:rgba(127,127,127,.10);border-radius:12px}
+.fx-note{padding:14px 16px;border-left:3px solid var(--acc,#6c5ce7);background:rgba(127,127,127,.06);border-radius:0 12px 12px 0}
+.fx-note-t{display:block;font-weight:800;font-size:12.5px;margin-bottom:5px;opacity:.7}
+.fx-tip{font-size:12px;opacity:.55;text-align:center;padding:2px 0}
+.fx-go{display:inline-block;background:var(--grad-hero);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:11px 26px;border-radius:12px;transition:transform .15s,box-shadow .15s}
+.fx-go:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(108,92,231,.35)}
+.fx-nolink{font-size:13px;opacity:.5}
 .flash-card .fc-hm{flex-shrink:0;font-size:11px;font-weight:600;color:var(--tx2);background:rgba(127,127,127,.14);border-radius:6px;padding:2px 7px;font-family:ui-monospace,Consolas,monospace;margin-top:1px;white-space:nowrap}
 .flash-card .fc-t a:hover{color:var(--link);text-decoration:underline}
 .fc-sum{font-size:12px;color:var(--tx2);line-height:1.65;margin-top:5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
@@ -749,6 +761,13 @@ input{font-family:inherit}
 </div>
 
 <!-- ============ 结账弹窗：选档 → 扫码付款 → 自动发钥匙 ============ -->
+<div class="modal-overlay" id="fxOverlay" onclick="if(event.target===this)closeFlash()" role="dialog" aria-modal="true" aria-label="快讯详情">
+  <div class="modal" style="max-width:640px">
+    <div class="modal-head" id="fxHead"></div>
+    <div class="modal-body" id="fxBody" style="padding:20px 26px 8px"></div>
+    <div class="modal-foot" id="fxFoot" style="justify-content:center;padding:14px 26px 20px"></div>
+  </div>
+</div>
 <div class="co-overlay" id="coOverlay" onclick="if(event.target===this)closeCheckout()" role="dialog" aria-modal="true" aria-label="购买解锁" data-page-node-id="lr6E5E9dLjNnHQcQEULNvL">
   <div class="co-modal" data-page-node-id="VibXTU1fu4QaaNvcIWKyfL">
     <button class="co-close" onclick="closeCheckout()" aria-label="关闭" data-page-node-id="whpUwbfJq0AYBWQZLwxzCX">&times;</button>
@@ -793,9 +812,9 @@ input{font-family:inherit}
   </div>
 </div>
 
-<script src="case-data.js?v=20260909b"></script>
-<script src="weekly-updates.js?v=20260909b"></script>
-<script src="news-data.js?v=20260909b"></script>
+<script src="case-data.js?v=20260909a"></script>
+<script src="weekly-updates.js?v=20260909a"></script>
+<script src="news-data.js?v=20260909a"></script>
 <script src="aihot-flash.js?v=20260909b"></script>
 <script>
 /* ================== Helpers ================== */
@@ -990,10 +1009,12 @@ function matchFlashCases(n){
   (window.CASE_DATA||[]).forEach(function(c){if(inds[c.industry]&&out.length<2)out.push(c);});
   return out;
 }
+var FLASH_ITEMS=[];
 function renderFlash(){
   var wrap=$('flashList');if(!wrap)return;
   var days=window.AI_HOT_FLASH||[];
   var html='',shown=0,CAP=30;
+  FLASH_ITEMS=[];
   days.forEach(function(day){
     if(daysAgo(day.date)>3)return;
     var dayItems=(day.items||[]).slice();
@@ -1001,18 +1022,19 @@ function renderFlash(){
     var startShown=shown,dayHtml='';
     dayItems.forEach(function(n){
       if(shown>=CAP)return;
-      shown++;
+      var fxIdx=FLASH_ITEMS.length;FLASH_ITEMS.push(n);shown++;
       var relHtml='';
       matchFlashCases(n).forEach(function(c){
         var short=(c.title||'').replace(/^\[案例\d+\]\s*/,'');
         relHtml+='<span class="fc-rel" data-relno="'+c.no+'">📌 相关案例 #'+c.no+' · '+esc(short.slice(0,20))+(short.length>20?'…':'')+' →</span>';
       });
-      dayHtml+='<div class="flash-card">'
-        +'<div class="fc-t">'+(n.hm?'<span class="fc-hm">'+esc(n.hm)+'</span>':'')+'<a href="'+esc(n.u)+'" target="_blank" rel="noopener">'+esc(n.t)+'</a></div>'
+      dayHtml+='<div class="flash-card"'+(n.u?' data-fx="'+fxIdx+'"':'')+'>'
+        +'<div class="fc-t">'+(n.hm?'<span class="fc-hm">'+esc(n.hm)+'</span>':'')+esc(n.t)+'</div>'
         +(n.s?'<div class="fc-sum">'+esc(n.s)+'</div>':'')
         +(n.w?'<div class="fc-why">💡 '+esc(n.w)+'</div>':'')
         +'<div class="fc-meta"><span class="nc-tag">'+esc(n.cat||'资讯')+'</span>'+(n.src?'<span>'+esc(n.src)+'</span>':'')+'<span>北京时间</span></div>'
         +(relHtml?'<div class="fc-rels">'+relHtml+'</div>':'')
+        +(n.u?'<div class="fx-hint">点击查看详情 & 原文 →</div>':'')
         +'</div>';
     });
     if(shown>startShown)html+='<div class="news-day"><div class="news-date">📅 '+esc(day.date)+'</div>'+dayHtml+'</div>';
@@ -1020,14 +1042,31 @@ function renderFlash(){
   if(!shown)html='<div class="empty" style="margin-top:18px"><div class="e-ico">⚡</div><p>快讯更新中</p><small>每天自动从 AIHOT 同步精选 AI 动态，明天来看第一批</small></div>';
   wrap.innerHTML=html;
   var fn=$('nsubFlashN');if(fn)fn.textContent=(function(){var n=0;(window.AI_HOT_FLASH||[]).forEach(function(d){n+=(d.items||[]).length;});return n+' 条';})();
+  wrap.querySelectorAll('[data-fx]').forEach(function(el){
+    el.onclick=function(){openFlashDetail(+el.getAttribute('data-fx'));};
+  });
   wrap.querySelectorAll('.fc-rel').forEach(function(el){
-    el.onclick=function(){
+    el.onclick=function(ev){
+      ev.stopPropagation();
       var no=+el.getAttribute('data-relno');
       var c=(window.CASE_DATA||[]).filter(function(x){return x.no===no;})[0];
       if(c)openModal(c);
     };
   });
 }
+function openFlashDetail(i){
+  var n=FLASH_ITEMS[i];if(!n)return;
+  $('fxHead').innerHTML='<button class="close" onclick="closeFlash()" aria-label="关闭">✕</button>'
+    +'<div class="fx-when">'+(n.hm?esc(n.hm)+' 北京时间':'')+(n.src?(n.hm?' · ':'')+esc(n.src):'')+'</div>'
+    +'<h2>'+esc(n.t)+'</h2>';
+  $('fxBody').innerHTML=(n.s?'<div class="fx-sec fx-sum">'+esc(n.s)+'</div>':'')
+    +(n.w?'<div class="fx-sec fx-note"><span class="fx-note-t">💡 编辑观察</span>'+esc(n.w)+'</div>':'')
+    +(n.u?'<div class="fx-tip">以上为本站编辑整理的要点，点击下方按钮查看原文全文</div>':'');
+  $('fxFoot').innerHTML=n.u?'<a class="fx-go" href="'+esc(n.u)+'" target="_blank" rel="noopener noopener">📄 阅读原文 ↗</a>':'<span class="fx-nolink">本条暂无原文链接</span>';
+  $('fxOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeFlash(){$('fxOverlay').classList.remove('open');document.body.style.overflow='';}
 function daysAgo(dstr){
   var today=new Date();today.setHours(0,0,0,0);
   var d=new Date(dstr+'T00:00:00');
