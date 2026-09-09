@@ -4,6 +4,7 @@ name: daily-aihot-flash
 on:
   schedule:
     - cron: "30 0 * * *"
+    - cron: "45 0 * * *"  # 备用闹钟：防 GitHub 定时跳过（并发组保证不重复干活）
   workflow_dispatch: {}   # 手动触发按钮，方便测试
 
 permissions:
