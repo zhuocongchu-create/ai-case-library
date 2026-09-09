@@ -243,8 +243,9 @@ input{font-family:inherit}
 .nsub.active .ns-n{background:rgba(124,58,237,.9)}
 .flash-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:13px 16px;margin-bottom:8px;transition:all .15s}
 .flash-card:hover{border-color:var(--brand-2);box-shadow:var(--shadow-md)}
-.flash-card .fc-t{font-size:13.5px;font-weight:700;line-height:1.55}
-.flash-card .fc-t a{color:var(--tx);text-decoration:none}
+.flash-card .fc-t{font-size:13.5px;font-weight:700;line-height:1.55;display:flex;gap:10px;align-items:flex-start}
+.flash-card .fc-t a{color:var(--tx);text-decoration:none;flex:1;min-width:0}
+.flash-card .fc-hm{flex-shrink:0;font-size:11px;font-weight:600;color:var(--tx2);background:rgba(127,127,127,.14);border-radius:6px;padding:2px 7px;font-family:ui-monospace,Consolas,monospace;margin-top:1px;white-space:nowrap}
 .flash-card .fc-t a:hover{color:var(--link);text-decoration:underline}
 .fc-sum{font-size:12px;color:var(--tx2);line-height:1.65;margin-top:5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .fc-why{font-size:12px;color:var(--brand);background:var(--brand-soft);border-radius:8px;padding:6px 10px;margin-top:7px;line-height:1.6}
@@ -992,11 +993,13 @@ function matchFlashCases(n){
 function renderFlash(){
   var wrap=$('flashList');if(!wrap)return;
   var days=window.AI_HOT_FLASH||[];
-  var html='',shown=0,CAP=15;
+  var html='',shown=0,CAP=30;
   days.forEach(function(day){
     if(daysAgo(day.date)>3)return;
-    html+='<div class="news-day"><div class="news-date">📅 '+esc(day.date)+'</div>';
-    (day.items||[]).forEach(function(n){
+    var dayItems=(day.items||[]).slice();
+    if(!dayItems.length)return;
+    var startShown=shown,dayHtml='';
+    dayItems.forEach(function(n){
       if(shown>=CAP)return;
       shown++;
       var relHtml='';
@@ -1004,15 +1007,15 @@ function renderFlash(){
         var short=(c.title||'').replace(/^\[案例\d+\]\s*/,'');
         relHtml+='<span class="fc-rel" data-relno="'+c.no+'">📌 相关案例 #'+c.no+' · '+esc(short.slice(0,20))+(short.length>20?'…':'')+' →</span>';
       });
-      html+='<div class="flash-card">'
-        +'<div class="fc-t"><a href="'+esc(n.u)+'" target="_blank" rel="noopener">'+esc(n.t)+'</a></div>'
+      dayHtml+='<div class="flash-card">'
+        +'<div class="fc-t">'+(n.hm?'<span class="fc-hm">'+esc(n.hm)+'</span>':'')+'<a href="'+esc(n.u)+'" target="_blank" rel="noopener">'+esc(n.t)+'</a></div>'
         +(n.s?'<div class="fc-sum">'+esc(n.s)+'</div>':'')
         +(n.w?'<div class="fc-why">💡 '+esc(n.w)+'</div>':'')
-        +'<div class="fc-meta"><span class="nc-tag">'+esc(n.cat||'资讯')+'</span>'+(n.src?'<span>'+esc(n.src)+'</span>':'')+'<span>'+esc(n.hm||'')+' 北京时间</span></div>'
+        +'<div class="fc-meta"><span class="nc-tag">'+esc(n.cat||'资讯')+'</span>'+(n.src?'<span>'+esc(n.src)+'</span>':'')+'<span>北京时间</span></div>'
         +(relHtml?'<div class="fc-rels">'+relHtml+'</div>':'')
         +'</div>';
     });
-    html+='</div>';
+    if(shown>startShown)html+='<div class="news-day"><div class="news-date">📅 '+esc(day.date)+'</div>'+dayHtml+'</div>';
   });
   if(!shown)html='<div class="empty" style="margin-top:18px"><div class="e-ico">⚡</div><p>快讯更新中</p><small>每天自动从 AIHOT 同步精选 AI 动态，明天来看第一批</small></div>';
   wrap.innerHTML=html;
