@@ -612,6 +612,12 @@ input{font-family:inherit}
   .nav-cta{font-size:12px;padding:7px 12px}
   .brand{font-size:15px}
   .brand-badge{width:28px;height:28px;font-size:15px}
+  /* 顶栏手机端瘦身：主题切换隐藏（默认跟随系统深浅色），间距收紧 */
+  .theme-toggle{display:none}
+  .topbar-in{padding:8px 12px;gap:8px}
+  .bell-btn{width:32px;height:32px;font-size:14px}
+  .bell-pop{position:fixed;top:56px;left:12px;right:12px;width:auto}
+  .bell-pop::before{display:none}
   /* 结账弹窗 */
   .co-overlay{padding:2vh 10px}
   .co-head{padding:18px 16px 0}
@@ -1762,10 +1768,10 @@ document.addEventListener('click',function(e){
   if(w&&!w.contains(e.target))$('bellPop').style.display='none';
 });
 function openIntro(){$('introOverlay').classList.add('open');document.body.style.overflow='hidden';}
-function closeIntro(){$('introOverlay').classList.remove('open');document.body.style.overflow='';try{localStorage.setItem('anli_intro_seen','1');}catch(e){}}
+function closeIntro(){$('introOverlay').classList.remove('open');document.body.style.overflow='';try{localStorage.setItem('anli_intro_seen_v2','1');}catch(e){}}
 (function initWelcome(){
   checkBell();
-  var seen=null;try{seen=localStorage.getItem('anli_intro_seen');}catch(e){}
+  var seen=null;try{seen=localStorage.getItem('anli_intro_seen_v2');}catch(e){}
   if(!seen)setTimeout(openIntro,700);
 })();
 
