@@ -59,12 +59,13 @@ def transform(items):
             "t": (it.get("title") or "").strip(),
             "s": (it.get("summary") or "").strip(),
             "w": (it.get("reason") or "").strip(),
-            "u": (it.get("links") or {}).get("aihot") or (it.get("links") or {}).get("original") or "",
+            # 只链原文出处，绝不链 AIHOT 站内页（防止把自家用户导流走）
+            "u": (it.get("links") or {}).get("original") or "",
             "src": (it.get("source") or {}).get("name") or "",
             "cat": CAT_CN.get(it.get("category"), it.get("category") or "资讯"),
             "hm": hm,
         }
-        if not rec["t"] or not rec["u"]:
+        if not rec["t"]:  # 只要求有标题；没有原文链接也保留（弹层内不显示原文按钮）
             continue
         out.setdefault(date, [])
         if not any(x["t"] == rec["t"] for x in out[date]):  # 按标题去重
