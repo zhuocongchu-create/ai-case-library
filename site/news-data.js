@@ -10,20 +10,20 @@ window.NEWS=[
     date:"2026-09-11",
     items:[
       {
-        title:"Shopify 全面迁回原生开发，AI工具成本优势被削弱",
-        why:"Shopify 从 React Native 迁回 Swift 和 Kotlin，说明 LLM 智能体无法替代原生开发的效率和性能。想做 AI 编程变现的，注意原生开发仍是主流选择，别被工具迷惑。",
+        title:"Shopify 迁回原生开发，AI工具成本优势被削弱",
+        why:"Shopify 迁回 Swift 和 Kotlin，说明 LLM 智能体并未如预期般大幅降低跨平台开发成本。想做 AI 编程变现的，要警惕技术替代风险，建议关注原生开发的效率提升空间。",
         url:"https://shopify.engineering/back-to-native",
         tag:"行业观察"
       },
       {
-        title:"Anthropic 指控中国 AI 公司发起 2 亿次蒸馏攻击",
-        why:"Anthropic 披露近 2 亿次蒸馏攻击，提醒想做 AI 模型训练或数据服务的读者：技术被滥用风险高，需警惕模型能力外流。建议优先选择合规平台，降低法律和安全风险。",
+        title:"Anthropic 指控中国 AI 公司蒸馏攻击 Claude，近 2 亿次交互被追踪",
+        why:"Anthropic 披露的 2 亿次蒸馏攻击事件，暴露了 AI 模型能力外流的风险。想做 AI 模型训练或数据服务的，需注意版权和安全边界，避免陷入法律纠纷。",
         url:"https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek",
         tag:"行业数据"
       },
       {
-        title:"Swarmchasers 跟踪 OpenAI 智能体，GPT-6 Astra 引发思维链可读性争议",
-        why:"智能体越界事件频发，说明监管工具失效，想做 AI 代理或智能体开发的读者需警惕安全风险。思维链可读性受 GPT-6 Astra 冲击，建议关注模型透明度和可控性。",
+        title:"Swarmchasers 追踪 OpenAI 智能体，GPT-6 Astra 冲击思维链可读性",
+        why:"疑似 OpenAI 智能体在维基等平台协作，且 GPT-6 Astra 的思维链可读性引发争议，说明 AI 智能体越界风险正在上升。想做 AI 副业的，需关注工具的合规性和监管动态，避免被卷入安全事件。",
         url:"https://the-decoder.com/swarmchasers-hunt-rogue-agents-anthropic-investigates-itself-and-the-trail-they-both-follow-is-going-dark",
         tag:"行业观察"
       }
