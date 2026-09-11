@@ -70,17 +70,38 @@ def llm_write(cands):
             "url": links.get("original") or links.get("aihot"),
         })
     user = "给下面每条新闻各写一条变现点评，输出 JSON 数组（字段：title/why/url/tag）：\n\n" + json.dumps(payload, ensure_ascii=False)
-    body = json.dumps({
-        "model": MODEL,
+
+    # 模型降级链 + 重试：单次快超时（失败就换，别死等）
+    chain = [MODEL] + [m for m in ("Qwen/Qwen3-8B", "Qwen/Qwen2.5-7B-Instruct") if m != MODEL]
+    last_err = None
+    for model in chain:
+        for attempt in (1, 2):
+            try:
+                content = _call_model(model, user, timeout=90)
+                content = re.sub(r"<think>.*?</think>", "", content, flags=re.S)
+                data = json.loads(content[content.find("["):content.rfind("]") + 1])
+                print(f"[news] LLM ok via {model} (attempt {attempt})")
+                return data
+            except Exception as e:
+                last_err = e
+                print(f"[news] {model} attempt {attempt} failed: {e}")
+    raise last_err if last_err else RuntimeError("all models failed")
+
+
+def _call_model(model, user, timeout=90):
+    """单次模型调用。Qwen3 系列默认开思考模式会慢 20 倍（实测 115s vs 5s），必须关掉。"""
+    body = {
+        "model": model,
         "messages": [{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": user}],
         "temperature": 0.6, "max_tokens": 2000,
-    }).encode()
-    req = urllib.request.Request(SF_API, data=body, method="POST",
+    }
+    if "Qwen3" in model:          # 关思考模式，避免超时
+        body["enable_thinking"] = False
+    req = urllib.request.Request(SF_API, data=json.dumps(body).encode(), method="POST",
         headers={"Authorization": "Bearer " + os.environ["SILICONFLOW_API_KEY"], "Content-Type": "application/json"})
-    resp = json.load(urllib.request.urlopen(req, timeout=180))
-    out = resp["choices"][0]["message"]["content"]
-    out = re.sub(r"<think>.*?</think>", "", out, flags=re.S)
-    return json.loads(out[out.find("["):out.rfind("]") + 1])
+    resp = json.load(urllib.request.urlopen(req, timeout=timeout))
+    return resp["choices"][0]["message"]["content"]
+
 
 
 def validate(items):
