@@ -188,6 +188,105 @@ input{font-family:inherit}
 .sec-card.active .sec-ico{background:var(--grad-hero)}
 .sec-card.active .sec-badge{background:rgba(124,58,237,.9)}
 @media(max-width:768px){.sec-nav{grid-template-columns:1fr;gap:8px;margin:20px 0 12px}.sec-card{padding:11px 14px}.sec-ico{width:32px;height:32px;font-size:16px;border-radius:10px}.sec-t{font-size:14px}.sec-d{display:none}.sec-card::before{width:3px}}
+/* ==== 🛠 技术库 ==== */
+.tech-head-note{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:var(--r-md);padding:12px 16px;font-size:13px;color:var(--tx2);line-height:1.7}
+.tech-cats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 2px}
+.tech-cat{font-family:inherit;font-size:12.5px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--tx2);padding:6px 14px;border-radius:var(--r-full);cursor:pointer;transition:all .16s}
+.tech-cat:hover{border-color:var(--brand-2);color:var(--brand)}
+.tech-cat.active{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:16px}
+.tech-card{position:relative;background:var(--grad-card);border:1px solid var(--line);border-radius:var(--r-lg);padding:16px 16px 13px;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;display:flex;flex-direction:column;gap:9px;overflow:hidden}
+.tech-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--brand);opacity:0;transition:opacity .2s}
+.tech-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--brand-2)}
+.tech-card:hover::before{opacity:1}
+.tc-top{display:flex;align-items:center;gap:8px}
+.tc-ico{width:34px;height:34px;border-radius:10px;background:var(--brand-soft);display:flex;align-items:center;justify-content:center;font-size:17px;flex:0 0 auto}
+.tc-cat{font-size:11px;font-weight:700;color:var(--brand);background:var(--brand-soft);padding:3px 9px;border-radius:var(--r-full)}
+.tc-tier{margin-left:auto;font-size:11px;font-weight:800;padding:3px 10px;border-radius:var(--r-full);white-space:nowrap}
+.tc-tier.free{background:var(--lv1-bg);color:var(--lv1)}
+.tc-tier.lock{background:var(--accent-soft);color:var(--accent)}
+.tc-tier.open{background:var(--lv2-bg);color:var(--lv2)}
+.tc-t{font-size:15px;font-weight:800;line-height:1.45;color:var(--text)}
+.tc-sub{font-size:12.5px;color:var(--muted);line-height:1.65;flex:1}
+.tc-media{font-size:11.5px;font-weight:700;color:var(--brand);margin:-4px 0 8px;letter-spacing:.2px}
+.tc-foot{display:flex;align-items:center;gap:8px;border-top:1px dashed var(--line);padding-top:9px;margin-top:2px}
+.tc-tag{font-size:11px;color:var(--faint);background:var(--surface-2);border:1px solid var(--line);padding:2px 8px;border-radius:var(--r-full)}
+.tc-min{font-size:11px;color:var(--faint);margin-left:auto;white-space:nowrap}
+.tech-card.locked{background:linear-gradient(180deg,#fffdf7 0%,#fffaf0 100%)}
+.tech-card.locked .tc-t,.tech-card.locked .tc-sub{opacity:.72}
+.tech-empty{text-align:center;padding:44px 20px;color:var(--faint)}
+/* 技术文正文排版 */
+.tech-body{padding:22px 26px 26px;position:relative;z-index:2;font-size:14.5px;line-height:1.85;color:var(--text)}
+.tech-body .para{margin:0 0 13px}
+.tech-body .t-h3{font-size:17px;font-weight:800;margin:26px 0 12px;padding-left:11px;border-left:4px solid var(--brand);line-height:1.5}
+.tech-body .t-h4{font-size:15px;font-weight:800;margin:20px 0 9px;color:var(--brand-deep)}
+.tech-body .t-quote{background:var(--brand-soft);border-left:4px solid var(--brand-2);border-radius:0 var(--r-md) var(--r-md) 0;padding:12px 16px;margin:0 0 14px;font-size:13.5px;color:var(--tx2);line-height:1.8}
+
+/* ===== 富版式内容（落地案例 / 落地打法，源自飞书原文档，保留原设计） ===== */
+.rich-doc{padding:22px 26px 26px}
+.rich-doc h2{font-size:17px;font-weight:800;margin:28px 0 12px;padding-left:11px;border-left:4px solid var(--brand);line-height:1.5}
+.rich-doc h3{font-size:15.5px;font-weight:700;margin:22px 0 10px}
+.rich-doc h4{font-size:14.5px;font-weight:700;margin:18px 0 8px;color:var(--muted)}
+.rich-doc p{margin:0 0 13px}
+.rich-doc strong{font-weight:700}
+.rich-doc u{text-decoration:underline;text-underline-offset:3px}
+.rich-doc mark{background:#fef08a;padding:1px 3px;border-radius:3px;color:inherit}
+.rich-doc hr{border:0;border-top:1px dashed var(--line-strong);margin:24px 0}
+.rich-doc blockquote{background:var(--surface-2);border-left:4px solid var(--line-strong);border-radius:0 var(--r-md) var(--r-md) 0;padding:11px 15px;margin:0 0 14px;font-size:13.5px;color:var(--muted)}
+.rich-doc .callout{border-radius:var(--r-md);padding:14px 16px;margin:18px 0;border:1px solid var(--line-strong)}
+.rich-doc .co-emoji{font-size:19px;display:block;margin-bottom:6px;line-height:1}
+.rich-doc .callout h3{margin:8px 0;font-size:15px}
+.rich-doc .callout p{margin:8px 0}
+.rich-doc img{max-width:100%;display:block;border-radius:var(--r-md);border:1px solid var(--line);margin:0 0 12px}
+.rich-doc .crop{overflow:hidden;border-radius:var(--r-md);border:1px solid var(--line);margin:0 0 12px}
+.rich-doc .crop img{border:0;border-radius:0;margin:0;width:100%;height:100%;object-fit:cover}
+.rich-doc .grid{display:flex;gap:10px;margin:16px 0;align-items:flex-start}
+.rich-doc .grid>div{min-width:0;flex:1}
+.rich-doc .grid img{margin:0}
+.rich-doc table{border-collapse:collapse;width:100%;margin:16px 0;font-size:13px}
+.rich-doc th,.rich-doc td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+.rich-doc th{background:var(--surface-2);font-weight:700}
+.rich-doc pre{background:#211d38;color:#e9e7f5;border-radius:var(--r-md);padding:13px 15px;overflow-x:auto;font:12.5px/1.7 ui-monospace,Consolas,monospace;margin:14px 0}
+.rich-doc pre code{background:none;padding:0;color:inherit}
+.rich-doc code{font:12.5px/1.7 ui-monospace,Consolas,monospace;background:var(--bg-soft);padding:1px 5px;border-radius:4px}
+.rich-doc ul,.rich-doc ol{margin:0 0 13px;padding-left:22px}
+.rich-doc li{margin:5px 0}
+.rich-doc .cbx{list-style:none;padding-left:2px}
+.rich-doc .cbx li{display:flex;gap:8px;align-items:flex-start}
+.rich-doc .cbx li::before{content:"";flex:0 0 15px;height:15px;margin-top:5px;border:1.5px solid var(--line-strong);border-radius:4px}
+.rich-doc .cbx li.checked::before{background:var(--brand);border-color:var(--brand)}
+.rich-doc figure.video{margin:18px 0}
+.rich-doc figure.video video{width:100%;border-radius:var(--r-md);background:#000;display:block}
+.rich-doc figcaption{font-size:12.5px;color:var(--muted);margin-top:6px;text-align:center}
+.rich-doc .cite{color:var(--brand-2)}
+.rich-doc table{display:block;overflow-x:auto}
+.tech-body .t-note{background:var(--surface-2);border:1px dashed var(--line-strong);border-radius:var(--r-md);padding:10px 14px;margin:0 0 14px;font-size:12.5px;color:var(--faint);text-align:center}
+.tech-body .t-hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+.tech-body .rich-list{margin:0 0 14px;padding-left:20px}
+.tech-body .rich-list li{margin-bottom:7px}
+.tech-body .rich-list li.sub{list-style:circle;margin-left:16px;font-size:13.5px;color:var(--muted)}
+.tech-fig{margin:0 0 16px;text-align:center}
+.tech-fig img{max-width:100%;border-radius:var(--r-md);border:1px solid var(--line)}
+.tech-fig figcaption{font-size:11.5px;color:var(--faint);margin-top:7px}
+.tech-lock-box{padding:34px 26px 30px;text-align:center;position:relative;z-index:2}
+.tech-lock-box .tl-ico{font-size:44px;margin-bottom:10px}
+.tech-lock-box .tl-t{font-size:17px;font-weight:800;margin-bottom:8px}
+.tech-lock-box .tl-d{font-size:13.5px;color:var(--muted);line-height:1.8;max-width:520px;margin:0 auto 18px}
+.tl-media{display:inline-flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:-6px 0 18px;font-size:12.5px;color:var(--brand);font-weight:700}
+.tl-toc{text-align:left;max-width:520px;margin:0 auto 20px;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md);padding:14px 18px}
+.tl-toc b{font-size:12.5px;color:var(--muted);display:block;margin-bottom:8px}
+.tl-toc ul{list-style:none;padding:0;margin:0}
+.tl-toc li{font-size:13px;color:var(--tx2);padding:4px 0 4px 16px;position:relative;line-height:1.6}
+.tl-toc li::before{content:"·";position:absolute;left:4px;color:var(--brand);font-weight:800}
+.tl-cta{display:inline-block;border:none;background:var(--grad-hero);color:#fff;font-family:inherit;font-size:14px;font-weight:800;padding:12px 26px;border-radius:var(--r-full);cursor:pointer;box-shadow:var(--shadow-brand);transition:all .2s}
+.tl-cta:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.tech-foot-note{font-size:12px;color:var(--faint);margin-top:12px;line-height:1.7}
+@media(max-width:640px){
+  .tech-grid{grid-template-columns:1fr;gap:11px}
+  .tech-body{padding:18px 16px 22px;font-size:14px}
+  .tech-cats{gap:6px}
+  .tech-cat{padding:5px 11px;font-size:12px}
+}
 /* ==== 每周更新区 ==== */
 .weekly-teaser{background:var(--surface);border:1px dashed var(--brand-2);border-radius:var(--r-xl);padding:44px 24px;text-align:center;margin-top:16px}
 .weekly-teaser .wt-ico{font-size:44px;margin-bottom:10px}
@@ -526,7 +625,7 @@ input{font-family:inherit}
 .co-steps{display:flex;justify-content:center;gap:8px;margin-top:14px}
 .co-steps span{width:26px;height:4px;border-radius:var(--r-full);background:var(--line);transition:background .25s}
 .co-steps span.on{background:var(--brand)}
-.co-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:16px 22px 0}
+.co-tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:16px 22px 0}
 .co-tier{position:relative;border:1.5px solid var(--line);background:var(--surface-2);border-radius:12px;padding:10px 6px 8px;text-align:center;cursor:pointer;transition:all .15s}
 .co-tier:hover{border-color:var(--brand-2)}
 .co-tier.active{border-color:var(--brand);background:var(--brand-soft);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 12%,transparent)}
@@ -717,6 +816,10 @@ input{font-family:inherit}
       <div class="sec-top"><span class="sec-ico">📰</span><span class="sec-t">AI 情报站</span><span class="sec-badge" data-page-node-id="DwGMY85RNqMTI4t5IknAFN">每日更新</span></div>
       <div class="sec-d">变现热点 + AI 快讯 · 每天 8:30 自动同步，只留最新 3 天</div>
     </button>
+    <button class="tab-pill sec-card" data-tab="tech" onclick="switchTab('tech')">
+      <div class="sec-top"><span class="sec-ico">🛠</span><span class="sec-t">技术库 &amp; 落地专区</span><span class="sec-badge" id="tabTechN">每周更新</span></div>
+      <div class="sec-d">落地案例·打法原版图文视频 + 工具手册 · 怎么用、怎么卖、坑在哪</div>
+    </button>
   </div>
 
   <div id="paneCases" data-page-node-id="CruHgIJvxbyfi0Znfr87uG">
@@ -758,8 +861,36 @@ input{font-family:inherit}
     <div id="newsOur" data-page-node-id="L54AinAlC4tYtWxWQ18MxK"><div id="newsList" data-page-node-id="INeDiap5Siv9BbLciInT3E"></div></div>
     <div id="newsFlashPane" style="display:none" data-page-node-id="R7dkx77BHiB2ck7Vh5gq2m">
       <div id="flashList" data-page-node-id="fNdMyyUT8BqMeyK2FxfdD7"></div>
-      <div class="flash-foot" data-page-node-id="eC8rckDdbsmRnmd1MfssMw">⚡ 快讯数据来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener" data-page-node-id="ionGMXuPo2MBFQkPuB9B4u">AIHOT</a>（AI 热点监控 · 站长数字生命卡兹克）· 点标题看 AIHOT 收录页，内容以第三方原文为准</div>
+      <div class="flash-foot" data-page-node-id="eC8rckDdbsmRnmd1MfssMw">⚡ 快讯数据来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener" data-page-node-id="ionGMXuPo2MBFQkPuB9B4u">AIHOT</a>（AI 热点监控 · 站长数字生命卡兹克）· 点标题看站内详情，可跳转第三方原文</div>
     </div>
+  </div>
+
+  <div id="paneTech" style="display:none">
+    <div class="tech-head-note" data-page-node-id="techNote">
+      🛠 <b>技术库 &amp; 落地专区</b> · 不放"教程合集"——<b style="color:var(--brand)">落地案例 / 落地打法是我亲手做过、按原版式搬过来的</b>（含实拍图与视频），工具手册则写清「怎么用 / 怎么卖 / 坑在哪」。
+    </div>
+    <div class="tech-cats" id="techCats" data-page-node-id="techCats"></div>
+    <div class="tech-grid" id="techGrid" data-page-node-id="techGrid"></div>
+  </div>
+</div>
+
+<!-- ============ 技术库详情浮层 ============ -->
+<div class="modal-overlay" id="techOverlay" onclick="if(event.target===this)closeTech()" role="dialog" aria-modal="true" aria-label="技术库文章">
+  <div class="modal" style="max-width:820px">
+    <div class="modal-head">
+      <button class="close" onclick="closeTech()" aria-label="关闭">&times;</button>
+      <div class="mh-in">
+        <div class="mh-top">
+          <span class="mh-no" id="tNo"></span>
+          <span class="mh-badge" id="tTier"></span>
+        </div>
+        <h2 id="tTitle"></h2>
+      </div>
+    </div>
+    <div class="modal-body" id="tBody">
+      <div class="wm-layer" id="tWm"></div>
+    </div>
+    <div class="modal-foot" id="tFoot"></div>
   </div>
 </div>
 
@@ -819,9 +950,11 @@ input{font-family:inherit}
       <div class="in-tag">🆓 免费就能看的</div>
       <div class="in-row"><div class="in-ico">⚡</div><div><div class="in-t">AI 情报站 · 全站免费</div><div class="in-d">每天自动更新「变现热点点评 + AI 快讯」，点卡片看详情，想深入再点「阅读原文」</div></div></div>
       <div class="in-row"><div class="in-ico">💼</div><div><div class="in-t">80 个真实案例 · 免费试读</div><div class="in-d">每个都带人物故事 + 手把手 SOP + 财务拆解，前 5 条免费读完整内容，先尝后买</div></div></div>
+      <div class="in-row"><div class="in-ico">🛠</div><div><div class="in-t">技术库 · 3 篇免费试读</div><div class="in-d">我自己跑通才写的手册——先免费看「Vibe Creating / Gamma / AI 技术去哪学」三篇完整版，看顺眼了再说</div></div></div>
       <div class="in-row"><div class="in-ico">🔔</div><div><div class="in-t">右上角铃铛 · 更新提醒</div><div class="in-d">网站有新内容时铃铛会亮红点，点一下就能看到这次更新了什么</div></div></div>
       <div class="in-tag in-tag-paid">🔒 想看更多再考虑（不买也不影响免费内容）</div>
-      <div class="in-row"><div class="in-ico">🔓</div><div><div class="in-t">解锁全部案例（可选）</div><div class="in-d">9.9 试读版 / 29.8 前 30 条 / 99 全部 + 每周更新，觉得值再解锁，扫码付款立刻生效</div></div></div>
+      <div class="in-row"><div class="in-ico">🔓</div><div><div class="in-t">案例线（可选）</div><div class="in-d">9.9 试读版 / 29.8 前 30 条 / 99 全部案例 + 每周精选，扫码付款立刻生效</div></div></div>
+      <div class="in-row"><div class="in-ico">🚀</div><div><div class="in-t">199 双引擎版 · 案例 + 落地案例/打法 + 技术库一起拿</div><div class="in-d">含 99 全部案例，再加<b>落地案例 / 落地打法的原版图文与实拍视频</b>，以及技术库全部实操手册。<b>已买过案例库的只补 ¥100</b></div></div></div>
     </div>
     <div class="modal-foot" style="justify-content:center;padding:14px 26px 20px">
       <button class="in-btn" onclick="closeIntro()">先去逛免费的 →</button>
@@ -874,8 +1007,10 @@ input{font-family:inherit}
 
 <script src="case-data.js?v=20260911g"></script>
 <script src="weekly-updates.js?v=20260911g"></script>
-<script src="news-data.js?v=20260911f"></script>
+<script src="news-data.js?v=20260911g"></script>
 <script src="aihot-flash.js?v=20260911g"></script>
+<script src="tech-data.js?v=20260911g"></script>
+<script src="rich-data.js?v=20260911g"></script>
 <script>
 /* ================== Helpers ================== */
 function esc(s){const d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
@@ -938,34 +1073,40 @@ let activeMode=''; let activeIndustry=''; let search='';
 let modeCounts={}, indCounts={};
 
 /* ================== 售卖 / 钥匙 ================== */
+/* 档位体系：trial 9.9 → std 29.8 → pro 99（案例线）→ dual 199（双引擎·加技术库）→ coop 399（共创·预售登记） */
 const PLANS=[
   {tier:'trial',no:5, name:'体验款', sub:'先尝 5 条完整案例', price:'¥9.9', ori:'', cta:'私信购买', hot:false, note:'适合先验货',
    upsell:{tier:'std',priceDiff:'+¥19.9',message:'已付 9.9 可抵扣，再加 ¥19.9 升 30 条'}},
-  {tier:'std',no:30, name:'标准款', sub:'30 条完整案例', price:'¥29.8', ori:'', cta:'私信购买', hot:true, note:'最多人选择',
+  {tier:'std',no:30, name:'标准款', sub:'30 条完整案例', price:'¥29.8', ori:'', cta:'私信购买', hot:false, note:'最多人选择',
    upsell:{tier:'pro',priceDiff:'+¥69',message:'已付 29.8 可抵扣，再加 ¥69 升订阅款（含周更）'}},
-  {tier:'pro',no:999,name:'订阅款', sub:'全部案例 + 每周更新', price:'¥99', ori:'', cta:'私信购买', hot:false, note:'永久钥匙 · 每周更新',
+  {tier:'pro',no:999,name:'订阅款', sub:'全部案例 + 每周精选', price:'¥99', ori:'', cta:'私信购买', hot:false, note:'案例线主力',
+   upsell:{tier:'dual',priceDiff:'+¥100',message:'已付 99 可抵扣，再加 ¥100 解锁技术库'}},
+  {tier:'dual',no:999,name:'双引擎版', sub:'案例库 + 落地案例/打法 + 技术库 全解锁', price:'¥199', ori:'', cta:'私信购买', hot:true, note:'案例 + 技术一起拿',
    upsell:null}
 ];
-const TIER_CN={guest:'未解锁 · 游客浏览',trial:'体验款（前5条）',std:'标准款（前30条）',pro:'订阅款（全部+每周更新）'};
-const TIER_PRICE={trial:'¥9.9',std:'¥29.8',pro:'¥99'};
+const TIER_CN={guest:'未解锁 · 游客浏览',trial:'体验款（前5条）',std:'标准款（前30条）',pro:'订阅款（全部案例+周更）',dual:'双引擎版（案例+技术库）',coop:'共创版（含社群+直播）'};
+const TIER_PRICE={trial:'¥9.9',std:'¥29.8',pro:'¥99',dual:'¥199'};
+function numOf(p){return parseFloat((p||'0').replace(/[^\d.]/g,''))||0;}
 function upDiff(from,to){ // 补差价：from/to 为档位码，返回营销化文案
   if(from==='trial'&&to==='std')return '+¥19.9';
   if(from==='std'&&to==='pro')return '+¥69';
   if(from==='trial'&&to==='pro')return '+¥89.1';
-  const d=parseFloat((TIER_PRICE[to]||'0').slice(1))-parseFloat((TIER_PRICE[from]||'0').slice(1));
-  return '+¥'+d.toFixed(1);
+  if(from==='pro'&&to==='dual')return '+¥100';
+  if(from==='dual'&&to==='coop')return '+¥200';
+  const d=numOf(TIER_PRICE[to])-numOf(TIER_PRICE[from]);
+  return '+¥'+(Math.round(d*10)%10===0?Math.round(d):d.toFixed(1));
 }
 const STORE_KEY='ai-cat-key';
-let access={tier:'guest',nick:''};
+let access={tier:'guest',nick:'',exp:null};
 
 function readTier(c){ // 案例 no 需要的最低档位
   if(c.no<=5)return 'trial';   // 前5条 9.9 可看
   if(c.no<=30)return 'std';    // 30条 29.8 可看
   return 'pro';                 // 其余 99
 }
-function tierRank(t){return t==='pro'?3:t==='std'?2:t==='trial'?1:0;}
+function tierRank(t){return t==='coop'?5:t==='dual'?4:t==='pro'?3:t==='std'?2:t==='trial'?1:0;}
 function canView(c){
-  if(access.tier==='pro')return true;
+  if(tierRank(access.tier)>=3)return true;   // pro / dual / coop 都能看全部案例
   return tierRank(access.tier)>=tierRank(readTier(c));
 }
 /* ---- 钥匙校验（与 make_key.py 同算法：base64url(payload) + FNV-1a 签名）---- */
@@ -973,7 +1114,8 @@ const SECRET='3aZtjqMWBFHDSe6I'; // ⚠️ 与 make_key.py 保持一致；如需
 function fnv1a32(s){let h=0x811c9dc5;for(let i=0;i<s.length;i++){const b=s.charCodeAt(i);h^=b;h=Math.imul(h,0x01000193)>>>0;}return (h>>>0).toString(16).padStart(8,'0');}
 function b64uEncode(str){return btoa(unescape(encodeURIComponent(str))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}
 function b64uDecode(str){str=str.replace(/-/g,'+').replace(/_/g,'/');while(str.length%4)str+='=';return decodeURIComponent(escape(atob(str)));}
-const TIER_MAP={t:'trial',s:'std',p:'pro'};
+const TIER_MAP={t:'trial',s:'std',p:'pro',d:'dual',c:'coop'};
+function ymd(){var d=new Date();return ''+d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');}
 function parseKey(k){
   if(!k||typeof k!=='string')return null;
   const parts=k.split('.');
@@ -982,27 +1124,36 @@ function parseKey(k){
   if(fnv1a32(SECRET+payload)!==sig)return null; // 签名不符 = 伪造
   try{
     const raw=b64uDecode(payload);
-    const sep=raw.lastIndexOf('|');
-    if(sep<0)return null;
-    const nick=raw.slice(0,sep), tierCh=raw.slice(sep+1);
-    const tier=TIER_MAP[tierCh];
+    // 兼容两种载荷：旧钥匙 "昵称|档位"(永久) ；新钥匙 "昵称|档位|到期日"(YYYYMMDD)
+    const seg=raw.split('|');
+    if(seg.length<2)return null;
+    const nick=seg[0], tier=TIER_MAP[seg[1]];
     if(!tier)return null;
-    return {tier,nick:nick||'已购用户'};
+    let exp=null;
+    if(seg[2]){
+      if(!/^\d{8}$/.test(seg[2]))return null;
+      exp=seg[2];
+    }
+    return {tier,nick:nick||'已购用户',exp};
   }catch(e){return null;}
+}
+function techExpired(){ // 技术库权限是否到期（到期后案例库仍可看 = 续费软着陆）
+  if(!access.exp)return false;
+  return access.exp < ymd();
 }
 function applyKey(k){
   // 演示短钥匙（仅 SHOW_DEMO=true 时生效，正式版已关闭）
-  const demoMap={'demo-trial':'trial','demo-std':'std','demo-pro':'pro'};
+  const demoMap={'demo-trial':'trial','demo-std':'std','demo-pro':'pro','demo-dual':'dual'};
   if(SHOW_DEMO&&demoMap[k]){
-    access={tier:demoMap[k],nick:{trial:'演示-体验',std:'演示-标准',pro:'演示-订阅'}[demoMap[k]]};
+    access={tier:demoMap[k],nick:{trial:'演示-体验',std:'演示-标准',pro:'演示-订阅',dual:'演示-双引擎'}[demoMap[k]],exp:null};
     localStorage.setItem(STORE_KEY,k);
-    renderAccessUI();render();buildPricing();return true;
+    renderAccessUI();render();buildPricing();renderTech();return true;
   }
   const info=parseKey(k);
   if(!info)return false;
-  access={tier:info.tier,nick:info.nick};
+  access={tier:info.tier,nick:info.nick,exp:info.exp||null};
   localStorage.setItem(STORE_KEY,k);
-  renderAccessUI();render();buildPricing();return true;
+  renderAccessUI();render();buildPricing();renderTech();return true;
 }
 function initKey(){
   const url=new URLSearchParams(location.search).get('key');
@@ -1013,8 +1164,8 @@ function initKey(){
   } else renderAccessUI();
 }
 function lockOut(){
-  access={tier:'guest',nick:''};localStorage.removeItem(STORE_KEY);
-  renderAccessUI();render();
+  access={tier:'guest',nick:'',exp:null};localStorage.removeItem(STORE_KEY);
+  renderAccessUI();render();renderTech();
 }
 function renderAccessUI(){
   const badge=$('statMini');
@@ -1030,11 +1181,13 @@ function renderAccessUI(){
     $('keyZone').style.display='none';
     if(access.tier==='trial'){cta.textContent='补 ¥19.9 升级';cta.onclick=()=>openCheckout('std');}
     else if(access.tier==='std'){cta.textContent='补 ¥69 解锁全部';cta.onclick=()=>openCheckout('pro');}
-    else{cta.textContent='✓ 已解锁全部';cta.onclick=()=>document.getElementById('pricingSec').scrollIntoView({behavior:'smooth'});}
+    else if(access.tier==='pro'){cta.textContent='🛠 补 ¥100 加技术库';cta.onclick=()=>openCheckout('dual');}
+    else{cta.textContent=access.tier==='coop'?'✓ 共创版':'✓ 双引擎版已解锁';cta.onclick=()=>switchTab('tech');}
   }
   if(ks&&access.tier!=='guest')ks.innerHTML='✅ 已解锁 <b>'+esc(TIER_CN[access.tier])+'</b>';
   renderAccessBar();
   if(activeTab==='news')renderNews(); // 解锁状态变化后刷新情报站锁
+  if(activeTab==='tech')renderTech();
 }
 
 /* ================== 三页签：全部案例 / 每周更新 / AI 情报站 ================== */
@@ -1045,8 +1198,10 @@ function switchTab(t){
   $('paneCases').style.display=t==='cases'?'':'none';
   $('paneWeekly').style.display=t==='weekly'?'':'none';
   $('paneNews').style.display=t==='news'?'':'none';
+  $('paneTech').style.display=t==='tech'?'':'none';
   if(t==='weekly')renderWeekly();
   if(t==='news'){renderNews();renderFlash();}
+  if(t==='tech')renderTech();
 }
 /* ==== 情报站副页签：变现热点 / AIHOT 快讯 ==== */
 var newsSub='hot';
@@ -1056,6 +1211,168 @@ function switchNewsSub(s){
   $('newsOur').style.display=s==='hot'?'':'none';
   $('newsFlashPane').style.display=s==='flash'?'':'none';
   if(s==='flash')renderFlash();
+}
+
+/* ========== 🛠 技术库 & 落地专区（案例库之外的第二条产品线） ========== */
+var techCat='';
+/* 技术库内容 = 落地案例/落地打法（用户核心，富版式）+ 工具手册 */
+function techSrc(){return (window.RICH_DATA||[]).concat(window.TECH_DATA||[]);}
+function techAll(){return techSrc().filter(function(a){return a.live!==false;});}
+function techPaid(){return techAll().filter(function(a){return a.tier!=='free';});}
+function techById(id){return techSrc().filter(function(a){return a.id===id;})[0];}
+function canTech(a){ // 免费试读人人可看；付费手册需 dual/coop 且未过期
+  if(!a)return false;
+  if(a.tier==='free')return true;
+  if(access.tier!=='dual'&&access.tier!=='coop')return false;
+  return !techExpired();
+}
+function renderTech(){
+  var wrap=$('techGrid');if(!wrap)return;
+  var all=techAll();
+  var catBox=$('techCats');
+  if(catBox){
+    var cats=[];all.forEach(function(a){if(cats.indexOf(a.cat)<0)cats.push(a.cat);});
+    var html='<button class="tech-cat'+(techCat===''?' active':'')+'" data-cat="">全部 '+all.length+'</button>';
+    cats.forEach(function(c){
+      var n=all.filter(function(a){return a.cat===c;}).length;
+      html+='<button class="tech-cat'+(techCat===c?' active':'')+'" data-cat="'+esc(c)+'">'+esc(c)+' '+n+'</button>';
+    });
+    catBox.innerHTML=html;
+    catBox.querySelectorAll('.tech-cat').forEach(function(b){
+      b.onclick=function(){techCat=b.getAttribute('data-cat');renderTech();};
+    });
+  }
+  var note=$('techNote');
+  if(note){
+    var freeN=all.filter(function(a){return a.tier==='free';}).length;
+    note.innerHTML='🛠 <b>技术库 &amp; 落地专区</b> · 不放"教程合集"——<b style="color:var(--brand)">落地案例 / 落地打法按原版式搬过来</b>（含实拍图与视频），工具手册写清「怎么用 / 怎么卖 / 坑在哪」。'
+      +'<br>已上线 <b>'+all.length+' 篇</b>（付费 '+techPaid().length+' 篇 · 免费试读 '+freeN+' 篇），每周日上新，<b style="color:var(--brand)">买过案例库的话补 ¥100 就能全拿</b>。';
+  }
+  var n=$('tabTechN');if(n)n.textContent=all.length+' 篇';
+  var list=all.filter(function(a){return !techCat||a.cat===techCat;});
+  if(!list.length){wrap.innerHTML='<div class="tech-empty">这个分类还在整理中</div>';return;}
+  wrap.innerHTML=list.map(function(a){
+    var ok=canTech(a);
+    var tier=ok
+      ? (a.tier==='free'?'<span class="tc-tier free">免费试读</span>':'<span class="tc-tier open">✓ 已解锁</span>')
+      : '<span class="tc-tier lock">🔒 199 解锁</span>';
+    var mediaHint='';
+    if(a.rich&&a.media){
+      var mm=[];
+      if(a.media.imgs)mm.push('📷 '+a.media.imgs+' 张实拍图');
+      if(a.media.videos)mm.push('🎬 '+a.media.videos+' 段视频');
+      if(mm.length)mediaHint='<div class="tc-media">'+mm.join(' · ')+'</div>';
+    }
+    return '<div class="tech-card'+(ok?'':' locked')+'" data-id="'+esc(a.id)+'">'
+      +'<div class="tc-top"><span class="tc-ico">'+esc(a.icon||'🛠')+'</span><span class="tc-cat">'+esc(a.cat)+'</span>'+tier+'</div>'
+      +'<div class="tc-t">'+esc(a.title)+'</div>'
+      +'<div class="tc-sub">'+esc(a.sub||'')+'</div>'
+      +mediaHint
+      +'<div class="tc-foot">'
+      +(a.tags||[]).slice(0,2).map(function(t){return '<span class="tc-tag">#'+esc(t)+'</span>';}).join('')
+      +'<span class="tc-min">约 '+(a.mins||5)+' 分钟</span></div></div>';
+  }).join('');
+  wrap.querySelectorAll('.tech-card').forEach(function(el){
+    el.onclick=function(){openTech(el.getAttribute('data-id'));};
+  });
+}
+function openTech(id){
+  var a=techById(id);if(!a)return;
+  if(!canTech(a))return techLocked(a);
+  $('tNo').textContent=(a.icon||'🛠')+' 第 '+a.no+' 篇';
+  $('tTier').textContent=a.tier==='free'?'🆓 免费试读':'✓ 已解锁';
+  $('tTitle').textContent=a.title;
+  $('tBody').innerHTML='<div class="wm-layer" id="tWm"></div><div class="tech-body'+(a.rich?' rich-doc':'')+'">'+(a.rich?a.body:techToHtml(a.body))+'</div>';
+  $('tFoot').innerHTML='<span class="src-tag">'+esc(a.cat)+'</span><span class="src-tag">'+esc(a.from||'极客OPC 知识库')+'</span>'
+    +'<span style="flex:1"></span>'
+    +(access.tier==='pro'?'<button class="upgrade-mini" onclick="closeTech();openCheckout(\'dual\')">🛠 补 ¥100 解锁全部技术库</button>':'')
+    +'<button class="sort-btn" onclick="closeTech()">关闭 ✕</button>';
+  paintWm('tWm');
+  $('techOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  $('tBody').scrollTop=0;
+}
+function closeTech(){
+  $('techOverlay').classList.remove('open');
+  if(!$('overlay').classList.contains('open')&&!$('coOverlay').classList.contains('open'))document.body.style.overflow='';
+}
+function techLocked(a){
+  var toc=[];
+  if(a.rich){ // 富版式：从小标题标签里取目录
+    (String(a.body||'').match(/<h[234][^>]*>[\s\S]*?<\/h[234]>/g)||[]).forEach(function(h){
+      var t=h.replace(/<[^>]+>/g,'').trim();
+      if(t)toc.push(t);
+    });
+  }else{
+    (a.body||'').split('\n').forEach(function(l){var m=l.match(/^##\s+(.+)$/);if(m)toc.push(m[1].replace(/[*`#]/g,''));});
+  }
+  $('tNo').textContent=(a.icon||'🛠')+' 第 '+a.no+' 篇';
+  $('tTier').textContent='🔒 双引擎版解锁';
+  $('tTitle').textContent=a.title;
+  var footNote= a.rich
+    ? '含 '+techPaid().length+' 篇完整案例与打法 · 每周日上新'
+    : '含 '+techPaid().length+' 篇实操手册 · 每周日上新';
+  var ctaTxt= a.rich
+    ? (access.tier==='pro'?'💰 补 ¥100 升双引擎版 · 解锁全部落地案例与打法':'💰 解锁落地案例与打法 · ¥199 双引擎版')
+    : (access.tier==='pro'?'🛠 补 ¥100 升双引擎版 · 解锁全部技术库':'🛠 解锁技术库 · ¥199 双引擎版');
+  var mediaTip='';
+  if(a.rich&&a.media){
+    var bits=[];
+    if(a.media.imgs)bits.push('📷 '+a.media.imgs+' 张实拍图');
+    if(a.media.videos)bits.push('🎬 '+a.media.videos+' 段视频');
+    if(bits.length)mediaTip='<div class="tl-media">'+bits.join(' · ')+'</div>';
+  }
+  $('tBody').innerHTML='<div class="wm-layer" id="tWm"></div><div class="tech-lock-box">'
+    +'<div class="tl-ico">🔒</div>'
+    +'<div class="tl-t">'+esc(a.rich?('这篇属于「'+a.cat+'」原版专区'):'这篇属于「技术库」付费手册')+'</div>'
+    +'<div class="tl-d">'+esc(a.sub||'')+'</div>'
+    +mediaTip
+    +(toc.length?'<div class="tl-toc"><b>📖 本文目录预览</b><ul>'+toc.slice(0,7).map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ul></div>':'')
+    +'<button class="tl-cta" onclick="closeTech();openCheckout(\'dual\')">'+ctaTxt+'</button>'
+    +'<div class="tech-foot-note">'+footNote+'<br>'
+    +(access.tier==='pro'?'你已购订阅款 ¥99，<b>只补 ¥100</b> 即可升级，无需重买':'已购案例库的老用户只补差价即可升级')+'</div>'
+    +'</div>';
+  $('tFoot').innerHTML='<span class="src-tag">'+esc(a.cat)+'</span><span style="flex:1"></span><button class="sort-btn" onclick="closeTech()">关闭 ✕</button>';
+  paintWm('tWm');
+  $('techOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  $('tBody').scrollTop=0;
+}
+function techToHtml(txt){
+  if(!txt)return '<p class="para">—</p>';
+  var blocks=txt.split(/\n{2,}/).map(function(b){return b.trim();}).filter(Boolean);
+  var html='';
+  blocks.forEach(function(b){
+    var m;
+    if((m=b.match(/^###\s+([\s\S]+)$/))){html+='<h4 class="t-h4">'+rich(esc(m[1]))+'</h4>';return;}
+    if((m=b.match(/^##\s+([\s\S]+)$/))){html+='<h3 class="t-h3">'+rich(esc(m[1]))+'</h3>';return;}
+    if((m=b.match(/^#\s+([\s\S]+)$/))){html+='<h3 class="t-h3">'+rich(esc(m[1]))+'</h3>';return;}
+    if(/^-{3,}$/.test(b)){html+='<hr class="t-hr">';return;}
+    if((m=b.match(/^\[\[IMG\|([^|]+)\|([^\]]*)\]\]$/))){html+='<figure class="tech-fig"><img loading="lazy" src="'+esc(m[1])+'" alt="'+esc(m[2])+'">'+(m[2]?'<figcaption>'+esc(m[2])+'</figcaption>':'')+'</figure>';return;}
+    if((m=b.match(/^\[\[(?:NOTE|SHEET)\|([\s\S]*)\]\]$/))){html+='<div class="t-note">'+esc(m[1])+'</div>';return;}
+    if(/^\[\[IMG_PENDING/.test(b)){html+='<div class="t-note">（此处原有一张配图）</div>';return;}
+    if(/^>/.test(b)){ // 引用块（可多行、可嵌套 markdown）
+      var q=b.split('\n').map(function(x){return x.replace(/^>\s?/,'');}).join('\n');
+      html+='<div class="t-quote">'+techToHtml(q)+'</div>';return;
+    }
+    if(/^\d+[.、]\s/.test(b)){ // 有序列表
+      var items=b.split('\n').filter(function(x){return /^\s*\d+[.、]\s/.test(x);});
+      if(items.length){
+        html+='<ol class="rich-list">'+items.map(function(x){return '<li>'+rich(esc(x.replace(/^\s*\d+[.、]\s*/,'')))+'</li>';}).join('')+'</ol>';
+        return;
+      }
+    }
+    html+=blocksToHtml(b,'tech');
+  });
+  return html;
+}
+function paintWm(id){
+  var wl=$(id);if(!wl)return;
+  wl.innerHTML='';
+  if(access.tier==='guest')return;
+  var t='🔒 已购 '+esc(access.nick)+' · '+esc(TIER_CN[access.tier])+' · 请勿外传';
+  var cells='';for(var i=0;i<14;i++)cells+='<span>'+t+'</span>';
+  wl.innerHTML=cells;
 }
 function matchFlashCases(n){
   var text=((n.t||'')+' '+(n.s||'')+' '+(n.w||'')).toLowerCase();
@@ -1193,31 +1510,49 @@ function renderAccessBar(){
   let cta='';
   if(access.tier==='trial')cta='<button class="ab-cta" onclick="openCheckout(\'std\')">补 ¥19.9 升级 30 条 →</button>';
   else if(access.tier==='std')cta='<button class="ab-cta" onclick="openCheckout(\'pro\')">补 ¥69 解锁全部 '+total+' 条 + 每周更新 →</button>';
-  else cta='<span class="ab-text" style="color:var(--lv1);font-weight:700">✓ 订阅款 · 新案例每周自动解锁</span>';
+  else if(access.tier==='pro')cta='<button class="ab-cta" onclick="openCheckout(\'dual\')">🛠 补 ¥100 加技术库 '+techPaid().length+' 篇 →</button>';
+  else if(techExpired())cta='<button class="ab-cta" onclick="openSupport()">技术库已到期 · 联系续费 →</button>';
+  else cta='<span class="ab-text" style="color:var(--lv1);font-weight:700">✓ '+(access.tier==='coop'?'共创版':'双引擎版')+' · 案例 + 技术库全解锁</span>';
   bar.classList.add('show');
   bar.innerHTML='<div class="ab-track"><div class="ab-fill" style="width:'+pct+'%"></div></div>'
     +'<span class="ab-text">已解锁 <b>'+n+'</b> / '+total+' 条 · '+esc(TIER_CN[access.tier])+'</span>'+cta;
 }
 function buildPricing(){
   const box=$('pricingCards');if(!box)return;
-  const owned=tierRank(access.tier);
-  box.innerHTML=PLANS.map((p,i)=>{
-    const rank=i+1;
-    const isOwn=access.tier!=='guest'&&tierRank(access.tier)>=rank;
-    const feats=p.tier==='pro'
-      ?['当前 '+((window.CASE_DATA||[]).length)+' 条全解锁','每周更新 · 钥匙永久有效','新案例自动解锁','内容持续沉淀']
-      :[p.tier==='trial'?'前 5 条案例完整内容':'前 30 条案例完整内容','人物故事 + 执行手册 SOP','一手溯源 + 搜索筛选','(升级订阅款可看全部)'];
+  const caseN=(window.CASE_DATA||[]).length;
+  const techN=techPaid().length;
+  const TFEAT={
+    trial:['前 5 条案例完整内容','人物故事 + 手把手 SOP','一手溯源 + 搜索筛选','（升级可看全部 '+caseN+' 条）'],
+    std:['前 30 条案例完整内容','人物故事 + 手把手 SOP','一手溯源 + 搜索筛选','（技术库需双引擎版）'],
+    pro:['全部 '+caseN+' 条案例解锁','🗓️ 每周精选 · 新案例自动解锁','钥匙永久有效','（技术库需双引擎版）'],
+    dual:['✅ 案例库全部解锁（含每周新增）','🛠 技术库 '+techN+' 篇全解锁（含落地案例/打法原版图文视频）','工具指南 + 避坑全册 + 创客 SOP','含 1 年更新 · 到期案例库仍可看']
+  };
+  let cards=PLANS.map(function(p){
+    const isOwn=access.tier!=='guest'&&tierRank(access.tier)>=tierRank(p.tier);
+    const isCur=access.tier===p.tier;
     return '<div class="price-card'+(p.hot?' hot':'')+'">'
       +(p.note?'<span class="pc-tag">'+esc(p.note)+'</span>':'')
       +'<div class="pc-name">'+esc(p.name)+'</div>'
       +'<div class="pc-sub">'+esc(p.sub)+'</div>'
       +'<div class="pc-price">'+esc(p.price)+'</div>'
-      +'<div class="pc-ori">'+esc(p.ori)+'</div>'
-      +'<ul>'+feats.map(f=>'<li>'+esc(f)+'</li>').join('')+'</ul>'
-      +(isOwn?'<span class="pc-cta" style="background:var(--lv1);cursor:default">✓ 已解锁</span>'
-             :'<span class="pc-cta" onclick="openCheckout(\''+p.tier+'\')">立即解锁 →</span>')
+      +'<div class="pc-ori">'+esc(p.ori||'')+'</div>'
+      +'<ul>'+TFEAT[p.tier].map(function(f){return '<li>'+f+'</li>';}).join('')+'</ul>'
+      +(isOwn?'<span class="pc-cta" style="background:var(--lv1);cursor:default">'+(isCur?'✓ 当前档位':'✓ 已解锁')+'</span>'
+             :'<span class="pc-cta" onclick="openCheckout(\''+p.tier+'\')">'
+              +(access.tier!=='guest'?'补 '+esc(upDiff(access.tier,p.tier))+' 升级 →':'立即解锁 →')+'</span>')
     +'</div>';
   }).join('');
+  // 399 共创版：预售登记（不收款——交付物是社群+直播，达到条件才开卖）
+  cards+='<div class="price-card" style="border-style:dashed;border-color:var(--brand-2)">'
+    +'<span class="pc-tag" style="background:var(--accent);">预售 · 满 10 人开群</span>'
+    +'<div class="pc-name">共创版</div>'
+    +'<div class="pc-sub">双引擎 + 飞书社群 + 每月直播答疑</div>'
+    +'<div class="pc-price">¥399<small style="font-size:12px;font-weight:600">/年</small></div>'
+    +'<div class="pc-ori"></div>'
+    +'<ul><li>双引擎版全部权益</li><li>🤝 极客OPC 飞书社群（答疑 · 内测）</li><li>🎬 每月 1 次直播答疑</li><li>🆕 新工具抢先体验</li><li>💼 可申请分销资格（佣金 25%~40%）</li></ul>'
+    +'<span class="pc-cta" style="background:var(--accent)" onclick="openSupport()">加我登记预售 →</span>'
+    +'</div>';
+  box.innerHTML=cards;
 }
 const SHOW_DEMO=false; // ⚠️ 正式版已关闭演示钥匙；本地测试需要时临时改 true（与 demo-* 钥匙配套）
 function makeKeyZone(){
@@ -1265,7 +1600,8 @@ function init(){
     statItem(data.length,'精选案例')+
     statItem(inds.length,'覆盖行业')+
     statItem(Object.keys(modeCounts).length,'变现模式')+
-    statItem(totalLen(data),'万字干货');
+    statItem(totalLen(data),'万字干货')+
+    statItem(techAll().length,'篇技术手册');
   $('miniN').textContent=data.length;
   var tabN=$('tabCaseN');if(tabN)tabN.textContent=data.length+' 条';
   // 行业下拉（可搜索）
@@ -1283,7 +1619,7 @@ function init(){
   makeKeyZone();buildPricing();initKey();
   // 结账弹窗：昵称输入回车 = 生成
   $('coNick').onkeydown=e=>{if(e.key==='Enter')coGen();};
-  renderModePills();render();buildFloats(data);
+  renderModePills();render();buildFloats(data);renderTech();
 }
 function statItem(n,label){return '<div class="hstat"><b>'+n+'</b><span>'+label+'</span></div>';}
 function totalLen(data){
@@ -1447,10 +1783,12 @@ function openModal(c){
   const url=extractUrl(c.source);
   let upgradeMini='';
   if(access.tier==='std'){
-    upgradeMini='<button class="upgrade-mini" onclick="openCheckout(\'pro\')">🚀 补 ¥69 升级订阅款 · 解锁全部+周更</button>';
+    upgradeMini='<button class="upgrade-mini" onclick="openCheckout(\'pro\')">🚀 补 ¥69 升级订阅款 · 解锁全部案例+每周精选</button>';
   } else if(access.tier==='trial'){
     upgradeMini='<button class="upgrade-mini" onclick="openCheckout(\'std\')">补 ¥19.9 升 30 条（已付 9.9 自动抵扣）</button>';
   } else if(access.tier==='pro'){
+    upgradeMini='<button class="upgrade-mini" onclick="openCheckout(\'dual\')">🛠 补 ¥100 升双引擎版 · 再解锁技术库</button>';
+  } else {
     upgradeMini='<button class="upgrade-mini" style="color:var(--tx2);text-decoration:none" onclick="openSupport()">遇到问题？联系我</button>';
   }
   $('mFoot').innerHTML='<a class="src-chip" href="'+esc(url)+'" target="_blank" rel="noopener">🔗 <span class="sx">'+esc(srcLabel(c.source))+'</span></a>'
@@ -1551,16 +1889,23 @@ const CO_METHOD={
   wx:{img:'images/wechat-pay.jpg',label:'微信',fixed:t=>'images/wx-'+TIER_PRICE[t].slice(1)+'.jpg'},
   zfb:{img:'images/alipay-pay.jpg',label:'支付宝',fixed:t=>'images/zfb-'+TIER_PRICE[t].slice(1)+'.jpg'}
 };
-const TIER_CH={trial:'t',std:'s',pro:'p'};
+const TIER_CH={trial:'t',std:'s',pro:'p',dual:'d',coop:'c'};
 let coTier='std', coMethodCur='wx', coFixedQr=false;
 
-/* 与 make_key.py 同算法：payload=b64url(昵称|档位字母)，sig=fnv1a32(SECRET+payload) */
-function genKey(nick,tier){
-  const payload=b64uEncode((nick||'已购用户')+'|'+TIER_CH[tier]);
+/* 与 make_key.py 同算法：payload=b64url(昵称|档位字母[|到期日])，sig=fnv1a32(SECRET+payload)
+   案例线（trial/std/pro）永久有效；双引擎/共创版含 1 年更新，载荷追加到期日 YYYYMMDD */
+function genKey(nick,tier,exp){
+  let raw=(nick||'已购用户')+'|'+TIER_CH[tier];
+  if(exp)raw+='|'+exp;
+  const payload=b64uEncode(raw);
   return payload+'.'+fnv1a32(SECRET+payload);
 }
+function expOneYear(){
+  const d=new Date();d.setFullYear(d.getFullYear()+1);
+  return ''+d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');
+}
 function openCheckout(tier){
-  if(access.tier==='pro')return; // 已是全量，不弹结账
+  if(access.tier==='coop')return; // 已是最高档，不弹结账
   // 缺省档位：游客默认标准款（最多人选）；已购用户默认下一档
   coTier = tier || (access.tier!=='guest' ? (PLANS.find(p=>p.tier===access.tier)||{}).upsell?.tier : 'std') || 'std';
   if(access.tier!=='guest' && tierRank(coTier)<=tierRank(access.tier)) return;
@@ -1598,9 +1943,11 @@ function coSetQr(){ // 优先用「固定金额收款码」（金额锁死付不
   const img=$('coQr');
   const m=CO_METHOD[coMethodCur];
   const fixed=m.fixed(coTier);
-  img.onerror=function(){img.onerror=null;coFixedQr=false;img.src=m.img;};
-  img.onload=function(){coFixedQr=(img.getAttribute('src')===fixed);};
-  img.src=fixed;
+  // 先「试探加载」固定金额码，成功了才换上 —— 避免缺图时闪一下破图
+  const probe=new Image();
+  probe.onload=function(){coFixedQr=true;img.src=fixed;};
+  probe.onerror=function(){coFixedQr=false;img.src=m.img;};
+  probe.src=fixed;
 }
 function coMethod(m){
   coMethodCur=m;
@@ -1633,11 +1980,12 @@ function coGen(){
   const nick=($('coNick').value||'').trim();
   const input=$('coNick');
   if(!nick){input.style.borderColor='#dc2626';input.placeholder='昵称必填 — 它会成为你的专属水印';input.focus();return;}
-  const key=genKey(nick,coTier);
+  const key=genKey(nick,coTier,coTier==='dual'?expOneYear():null);
   if(!applyKey(key))return;
   $('cdKey').textContent=key;
   $('cdTitle').textContent='解锁成功，欢迎你 '+nick+'！';
-  $('cdSub').innerHTML='已激活「<b style="color:var(--brand)">'+esc(TIER_CN[access.tier])+'</b>」· 可立即阅读解锁范围内的全部内容';
+  $('cdSub').innerHTML='已激活「<b style="color:var(--brand)">'+esc(TIER_CN[access.tier])+'</b>」· 可立即阅读解锁范围内的全部内容'
+    +(coTier==='dual'?'<br><span style="color:var(--faint);font-size:12px">技术库权益有效期至 '+expOneYear().replace(/(\d{4})(\d{2})(\d{2})/,'$1-$2-$3')+'，到期后案例库仍可正常查看</span>':'');
   coStep(3);
 }
 function coCopy(){
@@ -1729,6 +2077,8 @@ function bellSig(){
   (window.AI_HOT_FLASH||[]).forEach(function(d){sigs.push('f'+d.date);});
   (window.NEWS||[]).forEach(function(d){sigs.push('n'+d.date);});
   (window.WEEKLY||[]).forEach(function(w){sigs.push('w'+(w.period||w.label||''));});
+  (window.TECH_DATA||[]).forEach(function(a){if(a.live!==false)sigs.push('t'+a.no+a.id);});
+  (window.RICH_DATA||[]).forEach(function(a){if(a.live!==false)sigs.push('r'+a.id+(a.media?a.media.videos:0));});
   sigs.sort();
   return sigs.join('|');
 }
@@ -1750,6 +2100,16 @@ function renderBell(){
   if(nw.length){var m=0;nw.forEach(function(d){m+=(d.items||[]).length;});rows.push(['💰','变现热点 · 最新 '+nw[0].date,'近 3 天已更新 '+m+' 条编辑点评']);}
   var wk=window.WEEKLY||[];
   if(wk.length)rows.push(['🗓️','每周精选',(wk[0].label||wk[0].period||'最新一期')+'已上线']);
+  var tt=techAll();
+  if(tt.length){
+    var tf=tt.filter(function(a){return a.tier==='free';}).length;
+    rows.push(['🛠','技术库 · 新上线',tt.length+' 篇实操手册（'+tf+' 篇免费试读）']);
+  }
+  var rd=window.RICH_DATA||[];
+  if(rd.length){
+    var rv=0;rd.forEach(function(a){rv+=((a.media&&a.media.videos)||0);});
+    rows.push(['💰','落地案例 · 上新',rd.length+' 篇完整案例与打法（含 '+rv+' 段实拍视频）']);
+  }
   var cc=(window.CASE_DATA||[]).length;
   if(cc)rows.push(['💼','案例库','共 '+cc+' 个真实案例，每周继续上新']);
   $('bellBody').innerHTML=rows.map(function(r){
@@ -1768,10 +2128,10 @@ document.addEventListener('click',function(e){
   if(w&&!w.contains(e.target))$('bellPop').style.display='none';
 });
 function openIntro(){$('introOverlay').classList.add('open');document.body.style.overflow='hidden';}
-function closeIntro(){$('introOverlay').classList.remove('open');document.body.style.overflow='';try{localStorage.setItem('anli_intro_seen_v2','1');}catch(e){}}
+function closeIntro(){$('introOverlay').classList.remove('open');document.body.style.overflow='';try{localStorage.setItem('anli_intro_seen_v3','1');}catch(e){}}
 (function initWelcome(){
   checkBell();
-  var seen=null;try{seen=localStorage.getItem('anli_intro_seen_v2');}catch(e){}
+  var seen=null;try{seen=localStorage.getItem('anli_intro_seen_v3');}catch(e){}
   if(!seen)setTimeout(openIntro,700);
 })();
 
