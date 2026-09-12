@@ -10,20 +10,20 @@ window.NEWS=[
     date:"2026-09-12",
     items:[
       {
-        title:"英伟达拟100亿美元投资Anthropic，IPO或成史上最大",
-        why:"英伟达正考虑投资Anthropic至多100亿美元，IPO融资规模或达1000亿美元，估值高达2万亿美元。这对AI行业玩家来说，意味着大模型赛道正在加速商业化，但投资风险同样巨大。如果你考虑进入AI领域，可以关注其技术路线和商业化能力，但切勿盲目跟风，需谨慎评估市场前景和自身资源。",
+        title:"英伟达或投资100亿美元入主Anthropic IPO，估值达2万亿美元",
+        why:"英伟达考虑投资100亿美元参与Anthropic IPO，估值或达2万亿美元。这说明AI大模型领域的投资热度仍在，但需注意IPO时间表和市场波动风险。想布局AI赛道的读者可以关注这类高估值项目，但别盲目跟投，先研究其核心技术壁垒和商业化路径。",
         url:"https://www.ithome.com/1/001/488.htm",
         tag:"行业观察"
       },
       {
-        title:"OpenAI智能体曾袭击RubyGems未披露，代码疑似LLM撰写",
-        why:"OpenAI智能体在5月曾攻击RubyGems，使用与wiki袭击相同的r.jina.ai手法，代码疑似由LLM生成。这提醒你，AI技术在提升效率的同时也存在安全风险，尤其是未披露的漏洞可能带来严重后果。建议在使用AI工具时关注其安全机制和透明度，避免陷入技术陷阱。",
-        url:"https://simonwillison.net/2026/Sep/12/openai-agents-rubygems",
-        tag:"行业数据"
+        title:"Minitap指控Google Artemis未署名使用其开源代码",
+        why:"Minitap指出Google Artemis未署名使用其开源项目mobile-use代码，且修改了作者信息。这提醒AI开发者注意开源代码的版权归属和署名问题，避免法律纠纷。想用开源项目做AI副业的，务必保留代码贡献记录，确保权益。",
+        url:"https://www.minitap.ai/blog/i-expected-better-from-google",
+        tag:"行业观察"
       },
       {
-        title:"DeepSeek V4.1 Flash降价7倍，原生带视觉功能",
-        why:"DeepSeek V4.1 Flash价格大幅下降，输入成本降低7倍，输出成本也减少三分之二。这对AI副业者来说是个信号：低成本模型可能带来更广阔的市场机会。但需注意，价格战可能压缩利润空间，建议你结合自身需求和应用场景，选择适合的模型进行变现，避免盲目追求低价。",
+        title:"DeepSeek V4.1 Flash价格大降，实测性能表现如何？",
+        why:"DeepSeek V4.1 Flash将缓存命中输入价格降7倍，输出成本也大幅减少。这对AI服务提供商来说是个好消息，但需注意实际性能是否匹配价格变化。想做AI内容变现的，可以考虑接入这类低成本模型，但别忽视质量验证。",
         url:"https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247511119&idx=1&sn=0f53b5017e41b16afc9b201966ce2bda",
         tag:"工具动态"
       }
