@@ -7,6 +7,29 @@
    ============================================================ */
 window.NEWS=[
   {
+    date:"2026-09-12",
+    items:[
+      {
+        title:"英伟达或投资100亿美元参与Anthropic IPO，估值或达2万亿美元",
+        why:"英伟达考虑投资100亿美元参与Anthropic IPO，估值或达2万亿美元。这说明AI大模型赛道正吸引顶级资本，但IPO进程仍需时间，建议关注行业动态，谨慎评估投资风险。",
+        url:"https://www.ithome.com/1/001/488.htm",
+        tag:"行业观察"
+      },
+      {
+        title:"DeepSeek V4.1 Flash价格大降，输出成本砍三分之二",
+        why:"DeepSeek V4.1 Flash输出成本降低至原价的三分之一，价格优势明显。但作者指出其在视觉任务上表现不足，AI接单需注意模型适配性，避免盲目追求低价而影响质量。",
+        url:"https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247511119&idx=1&sn=0f53b5017e41b16afc9b201966ce2bda",
+        tag:"工具动态"
+      },
+      {
+        title:"三位AI研究者探讨递归自我改进技术的前景与挑战",
+        why:"三位一线研究者讨论递归自我改进的瓶颈与未来，透露技术尚未成熟。想做AI副业的，需关注前沿动态，但切勿盲目跟风，应结合自身资源与市场需求谨慎布局。",
+        url:"https://www.dwarkesh.com/p/john-beren-charlie",
+        tag:"行业观察"
+      }
+    ]
+  },
+  {
     date:"2026-09-11",
     items:[
       {
@@ -70,29 +93,6 @@ window.NEWS=[
       {
         title:"数学家公开AI协作细节，LLM已能辅助突破方程难题",
         why:"巴克马斯特团队用AI完成blowup证明并公开沟通记录，显示LLM可参与高阶数学研究。你若想用AI搞数学类内容变现，可尝试复现该方法，但需注意成果公开可能引发的优先权纠纷，建议同步建立技术壁垒。",
-        url:"https://cims.nyu.edu/~tristanb/statement.pdf",
-        tag:"工具动态"
-      }
-    ]
-  },
-  {
-    date:"2026-09-08",
-    items:[
-      {
-        title:"Anthropic 5170亿算力协议曝光，AI算力成本或成关键变量",
-        why:"大厂算力投入远超营收预期，说明AI赛道需警惕算力成本陷阱。你若想用AI做内容变现，需测算算力投入与收益比——5170亿合同背后，可能隐藏着技术门槛和资源争夺的残酷现实。建议优先评估自身算力获取渠道",
-        url:"https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk",
-        tag:"行业观察"
-      },
-      {
-        title:"Mistral 30亿欧元融资估值210亿，欧洲AI赛道资本热度飙升",
-        why:"欧洲AI独角兽融资规模突破30亿欧元，说明资本正在重新定义AI价值。你若考虑AI接单，可研究其资金用途中的「开源模型研发」方向——210亿估值背后，是欧洲主权AI对数据主权的执着，这可能为你打开政府项目接单窗口",
-        url:"https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier",
-        tag:"行业数据"
-      },
-      {
-        title:"数学家曝AI数学证明细节，工具辅助研究潜力显现",
-        why:"AI已能辅助证明复杂方程，但需注意其局限性。你若想用AI做高阶内容变现，可尝试数学建模领域——但需警惕「工具依赖陷阱」，特里斯坦团队证明blowup现象时，仍需人类数学家把控方向，这暗示AI只能作为辅助而非替代",
         url:"https://cims.nyu.edu/~tristanb/statement.pdf",
         tag:"工具动态"
       }
