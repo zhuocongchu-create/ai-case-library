@@ -10,20 +10,20 @@ window.NEWS=[
     date:"2026-09-12",
     items:[
       {
-        title:"英伟达拟投资 Anthropic 至多 100 亿美元，估值或达 2 万亿美元",
-        why:"英伟达考虑投资 Anthropic 至多 100 亿美元，其估值可能达到 2 万亿美元，这说明 AI 大模型赛道正吸引巨资。想做 AI 副业的你，可以关注大模型公司的融资动态，寻找合作或投资机会，但也要注意估值泡沫风险。",
+        title:"英伟达或投资100亿美元参与Anthropic IPO，估值达2万亿美元",
+        why:"英伟达考虑投资 Anthropic 至多 100 亿美元，这表明 AI 大模型赛道正吸引巨头资金。想做 AI 副业的你，可以关注大模型公司融资动态，寻找潜在合作机会或投资信号。但需注意，大模型创业风险高，需评估技术与市场潜力后再行动。",
         url:"https://www.ithome.com/1/001/488.htm",
         tag:"行业观察"
       },
       {
-        title:"Minitap 指控 Google Artemis 未署名使用其开源项目代码",
-        why:"Google Artemis 被指未署名使用 Minitap 的开源代码，甚至修改了作者信息。想做 AI 副业的你，要重视代码版权和署名问题，避免因开源项目使用不当导致纠纷。建议在使用他人开源项目时，务必确认授权条款并保留记录。",
+        title:"Minitap 指控 Google Artemis 未署名使用其开源代码",
+        why:"Google Artemis 被指未署名使用 Minitap 的开源项目，这提醒你：在使用开源项目时，注意版权与署名问题，避免法律风险。AI 副业中若涉及代码开发，务必确认开源协议条款，防止因侵权导致纠纷。",
         url:"https://www.minitap.ai/blog/i-expected-better-from-google",
-        tag:"行业数据"
+        tag:"行业观察"
       },
       {
-        title:"DeepSeek V4.1 Flash 价格大降，缓存命中输入降价 7 倍",
-        why:"DeepSeek V4.1 Flash 在价格上大幅下调，缓存命中输入降价 7 倍，输出价格也降了三分之二。想做 AI 副业的你，可以关注这类低价模型的使用场景，但也要注意其性能是否能满足你的需求，避免因成本降低而影响质量。",
+        title:"DeepSeek V4.1 Flash 价格大降，缓存输入降价7倍",
+        why:"DeepSeek V4.1 Flash 的价格大幅下降，缓存输入降价 7 倍，这对 AI 接单者是个机会。你可考虑使用该模型降低服务成本，提升竞争力。但需注意，低价可能伴随性能下降，建议结合实际测试再决定是否采用。",
         url:"https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247511119&idx=1&sn=0f53b5017e41b16afc9b201966ce2bda",
         tag:"工具动态"
       }
