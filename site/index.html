@@ -233,6 +233,43 @@ input{font-family:inherit}
 .nc-ch b{display:block;font-size:12.5px;font-weight:800;color:var(--tx1)}
 .nc-ch small{display:block;font-size:11px;color:var(--tx2);margin-top:1px}
 @media(max-width:768px){.sec-nav{grid-template-columns:1fr}.sec-subs{grid-template-columns:1fr}.sub-tabs{grid-template-columns:1fr;gap:8px}.news-card{padding:12px 14px;gap:10px}.nc-chans{width:100%}.nc-ch{flex:1}}
+/* ===== 门户：三块内容的大卡（进来先选去哪块，不强制顺序） ===== */
+.portal-head{text-align:center;margin:4px 0 16px}
+.portal-head h2{font-size:clamp(19px,3vw,24px);font-weight:800;color:var(--tx1);letter-spacing:.5px}
+.portal-head p{font-size:13px;color:var(--tx2);margin-top:6px}
+.portal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:stretch}
+.portal-card{position:relative;display:flex;flex-direction:column;text-align:left;font-family:inherit;border:1.5px solid var(--line);background:var(--surface);border-radius:var(--r-lg);padding:20px 20px 16px;cursor:pointer;transition:all .2s;overflow:hidden}
+.portal-card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--grad-hero);opacity:.9}
+.portal-card.pc-tech::before{background:linear-gradient(135deg,#0891b2,#22d3ee)}
+.portal-card.pc-news::before{background:linear-gradient(135deg,#d97706,#fbbf24)}
+.portal-card:hover{transform:translateY(-3px);border-color:var(--brand-2);box-shadow:var(--shadow-md)}
+.pt-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.pt-ico{width:50px;height:50px;border-radius:15px;background:var(--brand-soft);display:flex;align-items:center;justify-content:center;font-size:25px;flex-shrink:0}
+.portal-card.pc-tech .pt-ico{background:rgba(34,211,238,.14)}
+.portal-card.pc-news .pt-ico{background:rgba(251,191,36,.18)}
+.pt-badge{font-size:11px;font-weight:800;background:var(--lv1);color:#fff;border-radius:var(--r-full);padding:3px 10px;white-space:nowrap}
+.pt-t{font-size:19px;font-weight:800;color:var(--tx1);letter-spacing:.5px}
+.pt-q{display:block;margin-top:6px;font-size:13.5px;font-weight:700;color:var(--brand)}
+.pt-d{display:block;margin-top:8px;font-size:12.5px;color:var(--tx2);line-height:1.75;flex:1}
+.pt-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.pt-tags i{font-style:normal;font-size:11px;color:var(--tx2);background:var(--bg);border:1px solid var(--line);border-radius:var(--r-full);padding:2px 9px}
+.pt-go{display:block;margin-top:14px;font-size:13.5px;font-weight:800;color:var(--brand)}
+/* ===== 面包屑：板块内返回首页 / 快速切换板块 ===== */
+.crumb-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 14px;border:1px solid var(--line);background:var(--surface);border-radius:var(--r-md);margin-bottom:14px}
+.cb-back{font-family:inherit;font-size:12.5px;font-weight:700;color:var(--tx2);background:var(--bg);border:1px solid var(--line);border-radius:var(--r-full);padding:6px 14px;cursor:pointer;transition:all .16s}
+.cb-back:hover{color:var(--brand);border-color:var(--brand-2)}
+.cb-path{flex:1;min-width:120px;font-size:12.5px;color:var(--tx2)}
+.cb-path b{color:var(--tx1)}
+.cb-quick{display:flex;gap:6px;flex-wrap:wrap}
+.cb-quick button{font-family:inherit;font-size:12px;font-weight:600;color:var(--tx2);background:transparent;border:1px solid var(--line);border-radius:var(--r-full);padding:5px 11px;cursor:pointer;transition:all .16s}
+.cb-quick button:hover{color:var(--brand);border-color:var(--brand-2)}
+.cb-quick button.on{color:var(--brand);border-color:currentColor;background:var(--brand-soft);font-weight:800}
+/* ===== 板块小标题 + 子档选择提示 ===== */
+.pane-title{font-size:16px;font-weight:800;color:var(--tx1);margin:6px 0 12px}
+.pane-title small{font-size:12px;font-weight:600;color:var(--tx2);margin-left:8px}
+.pick-hint{font-size:12.5px;color:var(--tx2);line-height:1.75;background:var(--brand-soft);border:1px dashed color-mix(in srgb,var(--brand) 30%,transparent);border-radius:var(--r-md);padding:10px 14px;margin:12px 0}
+.pick-hint b{color:var(--tx1)}
+@media(max-width:900px){.portal-grid{grid-template-columns:1fr;gap:10px}.portal-card{padding:16px}}
 /* ==== 🛠 实操库 ==== */
 .tech-head-note{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:var(--r-md);padding:12px 16px;font-size:13px;color:var(--tx2);line-height:1.7}
 .tech-cats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 2px}
@@ -832,72 +869,70 @@ input{font-family:inherit}
   </div>
 </div>
 
-<!-- ============ 光束背景带 + Pricing ============ -->
-<div class="rays-wrap" data-page-node-id="BfZgXT7LzgTs6OXvvXeTRQ">
-  <div class="rays-band" id="raysBand" aria-hidden="true" data-page-node-id="QCcTb8qDYg7Dt9xNJgVxR2"></div>
-  <div class="container" id="pricingSec" data-page-node-id="6BwB0lSoZLiP1Ydefj4DGI">
-    <div class="rays-head" data-page-node-id="zwUJBEASLYpTUkvlcQzk0d">
-      <span class="rh-eyebrow" data-page-node-id="dOFLxvUgMHT2fbtxnW4Y47">选择你的档位</span>
-      <p class="rh-sub" data-page-node-id="Vl6URtYhDQ7N0rtUEuCOYn">扫码付款 · 钥匙自动生成 · 即付即看，全程无需等待</p>
-    </div>
-    <div class="access-bar" id="accessBar" data-page-node-id="9tYF6iiefCQp3tIwkg3TQz"></div>
-    <div class="pricing" id="pricingCards" data-page-node-id="DoNzl9ridjDfmMc6Hn4sX8"></div>
-    <div class="key-zone" id="keyZone" style="display:none" data-page-node-id="7squGYTLPB8Wpt3QMfeJ32"></div>
-  </div>
-</div>
-
 <!-- ============ 三页签内容区 ============ -->
 <div class="container" data-page-node-id="FCA95IBmX51HQlUNFH0wb7">
-  <div class="path-hint">
-    🧭 <span><b>第一次来？按 ① → ② 的顺序看：</b>先在<b>案例库</b>找方向（别人是怎么赚到钱的），再去<b>实操库</b>学做法（工具怎么用 + 我亲手做过的实操实录）。每天想抓新机会，看下面的 AI 情报站。</span>
-  </div>
-
-  <div class="sec-nav" role="tablist" data-page-node-id="PDjTn7gzfE1nfLNMOaPjrf">
-    <button class="tab-pill sec-card active" data-tab="cases" onclick="switchTab('cases')" data-page-node-id="terdDHdEHUa3MJV9G2YjDl">
-      <div class="sec-top"><span class="sec-step">①</span><span class="sec-ico">📚</span><span class="sec-t">案例库</span><span class="sec-badge" id="tabCaseN" data-page-node-id="DaRdpr4VNVOLAPL19bBgVK"></span></div>
-      <div class="sec-d"><b>看别人怎么赚的</b> · 49 个行业的真实变现案例，每条都有人物故事、手把手 SOP 和一手出处</div>
-      <div class="sec-subs">
-        <span class="sec-sub" data-secsub="cases:all"><b>📖 全部案例</b><small>按行业 / 变现方式筛选</small></span>
-        <span class="sec-sub" data-secsub="cases:weekly"><b>🗓️ 每周精选</b><small>编辑挑 5 条 + 推荐理由</small></span>
-      </div>
-    </button>
-    <button class="tab-pill sec-card" data-tab="tech" onclick="switchTab('tech')">
-      <div class="sec-top"><span class="sec-step">②</span><span class="sec-ico">🛠</span><span class="sec-t">实操库</span><span class="sec-badge" id="tabTechN">每周更新</span></div>
-      <div class="sec-d"><b>学自己怎么做</b> · 教技术：工具怎么用、怎么卖、坑在哪，还有我亲手做过一遍的完整实操实录</div>
-      <div class="sec-subs">
-        <span class="sec-sub" data-secsub="tech:handbook"><b>📘 工具手册</b><small>怎么用 / 怎么卖 / 避坑</small></span>
-        <span class="sec-sub" data-secsub="tech:real"><b>🎬 实操实录</b><small>亲手做过 · 含实拍视频</small></span>
-      </div>
-    </button>
-  </div>
-
-  <div class="news-card" id="newsCard">
-    <div class="nc-main">
-      <div class="nc-title">📰 AI 情报站 <span class="nc-live"><span class="hs-dot" style="margin:0"></span>每天 8:30 更新</span></div>
-      <div class="nc-desc">帮你盯住 AI 圈的新机会：今天有什么新玩法、新工具、谁又赚到钱了 —— <b>每天 3 分钟刷完，不用自己到处找</b>（只留最新 3 天）</div>
+    <!-- 门户：进来先选去哪块（三块彼此独立，不强制先后顺序） -->
+  <div id="portalSec">
+    <div class="portal-head">
+      <h2>先选一块看</h2>
+      <p>三块内容彼此独立，想看什么就点哪块。</p>
     </div>
-    <div class="nc-chans">
-      <button class="nc-ch" onclick="openNews('hot')"><b>💰 变现热点</b><small id="ncHotN">12 条 · 带变现点评</small></button>
-      <button class="nc-ch" onclick="openNews('flash')"><b>⚡ AI 快讯</b><small id="ncFlashN">12 条 · AIHOT 同步</small></button>
+    <div class="portal-grid">
+      <button class="portal-card pc-cases" data-portal="cases" onclick="switchTab('cases')">
+        <span class="pt-top"><span class="pt-ico">📚</span><span class="pt-badge" id="tabCaseN">80 条</span></span>
+        <span class="pt-t">案例库</span>
+        <span class="pt-q">想看别人是怎么赚钱的？进这个库</span>
+        <span class="pt-d">80 条真实变现案例，覆盖 49 个行业、7 种变现方式。每条都有人物故事、手把手 SOP 和一手出处。</span>
+        <span class="pt-tags"><i>人物故事</i><i>手把手 SOP</i><i>一手溯源</i></span>
+        <span class="pt-go">进入案例库 →</span>
+      </button>
+      <button class="portal-card pc-tech" data-portal="tech" onclick="switchTab('tech')">
+        <span class="pt-top"><span class="pt-ico">🛠</span><span class="pt-badge" id="tabTechN">19 篇</span></span>
+        <span class="pt-t">实操库</span>
+        <span class="pt-q">想学技术、想自己动手做？进这个库</span>
+        <span class="pt-d">19 篇实操内容：工具手册教你「怎么用 / 怎么卖 / 坑在哪」，实操实录是我亲手做过一遍的完整过程，含实拍图与视频。</span>
+        <span class="pt-tags"><i>工具手册</i><i>实操实录</i><i>含实拍视频</i></span>
+        <span class="pt-go">进入实操库 →</span>
+      </button>
+      <button class="portal-card pc-news" data-portal="news" onclick="switchTab('news')">
+        <span class="pt-top"><span class="pt-ico">📰</span><span class="pt-badge" id="ptNewsN">每天更新</span></span>
+        <span class="pt-t">AI 情报站</span>
+        <span class="pt-q">想第一时间知道 AI 圈的新机会？进这个板块</span>
+        <span class="pt-d">每天 8:30 自动更新，帮你盯住 AI 圈的新机会：今天有什么新玩法、新工具、谁又赚到钱了。3 分钟刷完，不用自己到处找。</span>
+        <span class="pt-tags"><i>💰 变现热点</i><i>⚡ AI 快讯</i><i>只留最新 3 天</i></span>
+        <span class="pt-go">进入情报站 →</span>
+      </button>
+    </div>
+    <div class="home-strip" id="videoStrip" style="margin:14px 0 0">
+      <span class="hs-ico">🎬</span>
+      <span class="hs-txt"><b>视频教学</b> · 成套录播课录制中，双引擎版用户届时<b style="color:var(--brand)">免费解锁</b></span>
+      <span class="hs-badge">敬请期待</span>
     </div>
   </div>
 
-  <div class="home-strip" id="videoStrip" style="margin:0 0 16px">
-    <span class="hs-ico">🎬</span>
-    <span class="hs-txt"><b>视频教学</b> · 成套录播课录制中，双引擎版用户届时<b style="color:var(--brand)">免费解锁</b></span>
-    <span class="hs-badge">敬请期待</span>
+  <!-- 板块内：面包屑（返回首页 / 快速切换板块） -->
+  <div class="crumb-bar" id="crumbBar" style="display:none">
+    <button class="cb-back" onclick="switchTab('home')">← 返回首页</button>
+    <span class="cb-path" id="crumbPath"></span>
+    <span class="cb-quick">
+      <button data-quick="cases" onclick="switchTab('cases')">📚 案例库</button>
+      <button data-quick="tech" onclick="switchTab('tech')">🛠 实操库</button>
+      <button data-quick="news" onclick="switchTab('news')">📰 情报站</button>
+    </span>
   </div>
 
-  <div id="paneCases" data-page-node-id="CruHgIJvxbyfi0Znfr87uG">
+<div id="paneCases" style="display:none" data-page-node-id="CruHgIJvxbyfi0Znfr87uG">
+  <div class="pane-title">📚 案例库 <small>别人是怎么赚钱的 · 每条都有故事、SOP 和一手出处</small></div>
   <div class="sub-tabs" id="caseSubs">
-    <button class="sub-tab active" data-csub="all" onclick="switchCaseSub('all')">
+    <button class="sub-tab" data-csub="all" onclick="switchCaseSub('all')">
       <span class="st-ico">📖</span><span class="st-body"><b>全部案例 <span id="csubAllN"></span></b><small>按行业、变现方式筛选 · 每条含人物故事 + SOP</small></span>
     </button>
     <button class="sub-tab" data-csub="weekly" onclick="switchCaseSub('weekly')">
       <span class="st-ico">🗓️</span><span class="st-body"><b>每周精选</b><small>编辑每周挑 5 条 + 推荐理由 · 周日上新</small></span>
     </button>
   </div>
-  <div id="caseAllWrap">
+  <div class="pick-hint" id="casePickHint">👆 <b>选一个看</b>：<b>全部案例</b> 可以按变现方式、行业自己筛；<b>每周精选</b> 是编辑每周挑的 5 条 + 推荐理由。</div>
+  <div id="caseAllWrap" style="display:none">
   <div class="filterbar" data-page-node-id="g8Pkw68FxNaQmcSqntB1B4">
     <span class="fb-label" data-page-node-id="2ARuXNxGLFcYbnWWYEXsKV">变现方式</span>
     <div class="mode-pills" id="modeFilters" data-page-node-id="HhOmaAi17HPfWFv87RSdgu"></div>
@@ -928,6 +963,7 @@ input{font-family:inherit}
   </div><!-- /paneCases -->
 
   <div id="paneNews" style="display:none" data-page-node-id="hFLqZlnwANcyQ8Js2Mo9VI">
+    <div class="pane-title">📰 AI 情报站 <small>每天 8:30 自动更新 · 帮你盯住 AI 圈的新机会</small></div>
     <div class="news-head-note" data-page-node-id="rxACBWAtDM1jua1zDPyjvN">🔥 每天 8:30 自动更新 · <b style="color:var(--brand)" data-page-node-id="chJC0AKKeeNb9bvfxGQvYW">全部内容免费看</b> · 只保留最新 3 天</div>
     <div class="news-subrow" data-page-node-id="zISHsDAXsanQ9YmT74HKUW">
       <button class="nsub active" data-nsub="hot" onclick="switchNewsSub('hot')" data-page-node-id="uZfFH4lQzxIiwTiUMljXpg"><span class="ns-ico">💰</span><span class="ns-body"><span class="ns-t">变现热点</span><small>本站精选 · 带变现点评</small></span><span class="ns-n" id="nsubHotN"></span></button>
@@ -941,17 +977,33 @@ input{font-family:inherit}
   </div>
 
   <div id="paneTech" style="display:none">
+    <div class="pane-title">🛠 实操库 <small>想学技术、想自己动手做 · 工具手册 + 实操实录</small></div>
     <div class="sub-tabs" id="techSubs">
-      <button class="sub-tab active" data-tsub="handbook" onclick="switchTechSub('handbook')">
+      <button class="sub-tab" data-tsub="handbook" onclick="switchTechSub('handbook')">
         <span class="st-ico">📘</span><span class="st-body"><b>工具手册 <span id="tsubBookN"></span></b><small>工具怎么用、怎么卖、坑在哪</small></span>
       </button>
       <button class="sub-tab" data-tsub="real" onclick="switchTechSub('real')">
         <span class="st-ico">🎬</span><span class="st-body"><b>实操实录 <span id="tsubRealN"></span></b><small>我亲手做过一遍 · 含实拍图与视频</small></span>
       </button>
     </div>
-    <div class="tech-head-note" id="techNote" style="margin-top:12px"></div>
+    <div class="pick-hint" id="techPickHint">👆 <b>选一个看</b>：<b>工具手册</b> 讲工具怎么用、怎么卖、坑在哪；<b>实操实录</b> 是我亲手做过一遍的完整过程（含实拍图与视频）。</div>
+    <div class="tech-head-note" id="techNote" style="margin-top:12px;display:none"></div>
     <div class="tech-cats" id="techCats" data-page-node-id="techCats"></div>
     <div class="tech-grid" id="techGrid" data-page-node-id="techGrid"></div>
+  </div>
+</div>
+
+<!-- ============ 光束背景带 + Pricing ============ -->
+<div class="rays-wrap" id="pricingWrap" data-page-node-id="BfZgXT7LzgTs6OXvvXeTRQ">
+  <div class="rays-band" id="raysBand" aria-hidden="true" data-page-node-id="QCcTb8qDYg7Dt9xNJgVxR2"></div>
+  <div class="container" id="pricingSec" data-page-node-id="6BwB0lSoZLiP1Ydefj4DGI">
+    <div class="rays-head" data-page-node-id="zwUJBEASLYpTUkvlcQzk0d">
+      <span class="rh-eyebrow" data-page-node-id="dOFLxvUgMHT2fbtxnW4Y47">选择你的档位</span>
+      <p class="rh-sub" data-page-node-id="Vl6URtYhDQ7N0rtUEuCOYn">扫码付款 · 钥匙自动生成 · 即付即看，全程无需等待</p>
+    </div>
+    <div class="access-bar" id="accessBar" data-page-node-id="9tYF6iiefCQp3tIwkg3TQz"></div>
+    <div class="pricing" id="pricingCards" data-page-node-id="DoNzl9ridjDfmMc6Hn4sX8"></div>
+    <div class="key-zone" id="keyZone" style="display:none" data-page-node-id="7squGYTLPB8Wpt3QMfeJ32"></div>
   </div>
 </div>
 
@@ -1086,12 +1138,12 @@ input{font-family:inherit}
   </div>
 </div>
 
-<script src="case-data.js?v=20260913a"></script>
-<script src="weekly-updates.js?v=20260913a"></script>
-<script src="news-data.js?v=20260913a"></script>
-<script src="aihot-flash.js?v=20260913a"></script>
-<script src="tech-data.js?v=20260913a"></script>
-<script src="rich-data.js?v=20260913a"></script>
+<script src="case-data.js?v=20260913b"></script>
+<script src="weekly-updates.js?v=20260913b"></script>
+<script src="news-data.js?v=20260913b"></script>
+<script src="aihot-flash.js?v=20260913b"></script>
+<script src="tech-data.js?v=20260913b"></script>
+<script src="rich-data.js?v=20260913b"></script>
 <script>
 /* ================== Helpers ================== */
 function esc(s){const d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
@@ -1271,59 +1323,74 @@ function renderAccessUI(){
   if(activeTab==='tech')renderTech();
 }
 
-/* ================== 板块：案例库 / 实操库（+ 情报站说明卡入口） ================== */
-var activeTab='cases';
-function switchTab(t){
-  if(t==='weekly'){t='cases';setCaseSub('weekly');} // 兼容旧入口：每周精选已并入案例库
-  if(t==='real'){t='tech';setTechSub('real');}      // 兼容旧入口：落地实录已并入实操库
+/* ================== 门户 → 板块 → 子档（逐层进入，不强制顺序） ================== */
+var activeTab='home';
+function switchTab(t,noScroll){
+  if(t==='weekly'){t='cases';setCaseSub('weekly');} // 兼容旧入口
+  if(t==='real'){t='tech';setTechSub('real');}      // 兼容旧入口
+  var home=(t==='home');
   activeTab=t;
-  document.querySelectorAll('.tab-pill').forEach(function(b){b.classList.toggle('active',b.dataset.tab===t);});
+  var pw=$('pricingWrap');if(pw)pw.style.display=home?'':'none'; // 档位表只在首页，板块内保持干净
+  $('portalSec').style.display=home?'':'none';
+  $('crumbBar').style.display=home?'none':'';
   $('paneCases').style.display=t==='cases'?'':'none';
-  $('paneNews').style.display=t==='news'?'':'none';
   $('paneTech').style.display=t==='tech'?'':'none';
+  $('paneNews').style.display=t==='news'?'':'none';
   if(t==='news'){renderNews();renderFlash();}
   if(t==='tech')renderTech();
-  updateStrips();
+  updateCrumb();
+  if(!home&&!noScroll)scrollToContent();
 }
-/* 情报站说明卡只在首页（案例库）显示；视频教学预告全页常驻（情报站页除外） */
-function updateStrips(){
-  var nc=$('newsCard');if(nc)nc.style.display=activeTab==='cases'?'':'none';
-  var vs=$('videoStrip');if(vs)vs.style.display=activeTab==='news'?'none':'';
+/* 搜索时静默把案例列表准备好（结果得有地方显示）——不打断输入、不滚动 */
+function ensureCaseList(){
+  if(activeTab!=='cases')switchTab('cases',true);
+  if(caseSub!=='all')setCaseSub('all');
+}
+function updateCrumb(){
+  var p=$('crumbPath');if(!p)return;
+  var map={cases:'📚 案例库',tech:'🛠 实操库',news:'📰 AI 情报站'};
+  var path=map[activeTab]||'';
+  if(activeTab==='cases')path+=caseSub==='all'?' › 全部案例':caseSub==='weekly'?' › 每周精选':'';
+  if(activeTab==='tech')path+=techSub==='handbook'?' › 工具手册':techSub==='real'?' › 实操实录':'';
+  var needPick=(activeTab==='cases'&&!caseSub)||(activeTab==='tech'&&!techSub);
+  p.innerHTML='当前：<b>'+path+'</b>'+(needPick?'　<span style="color:var(--brand);font-weight:700">↑ 上面选一个子档</span>':'');
+  document.querySelectorAll('.cb-quick button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-quick')===activeTab);});
+}
+function scrollToContent(){
+  try{var el=$('crumbBar');if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'});}catch(e){}
 }
 function updateStripCounts(){
-  var h=$('ncHotN');
-  if(h)h.textContent=(window.NEWS||[]).reduce(function(s,d){return s+(d.items||[]).length;},0)+' 条 · 带变现点评';
-  var f=$('ncFlashN');
-  if(f)f.textContent=(window.AI_HOT_FLASH||[]).reduce(function(s,d){return s+(d.items||[]).length;},0)+' 条 · AIHOT 同步';
+  var n=$('ptNewsN');if(!n)return;
+  var h=(window.NEWS||[]).reduce(function(s,d){return s+(d.items||[]).length;},0);
+  var f=(window.AI_HOT_FLASH||[]).reduce(function(s,d){return s+(d.items||[]).length;},0);
+  n.textContent='今日 '+(h+f)+' 条';
 }
-/* 情报站频道直达（说明卡上的两个按钮） */
+/* 情报站频道直达 */
 function openNews(sub){switchTab('news');if(sub)switchNewsSub(sub);}
-/* 一级卡上的子入口：点它直接进对应板块的对应子档（捕获阶段拦截，避免整卡的 switchTab 抢先） */
-document.addEventListener('click',function(e){
-  var sub=e.target&&e.target.closest?e.target.closest('.sec-sub'):null;
-  if(!sub)return;
-  e.preventDefault();e.stopPropagation();
-  var v=(sub.getAttribute('data-secsub')||'').split(':');
-  if(v[0]==='cases'){switchTab('cases');setCaseSub(v[1]||'all');}
-  else if(v[0]==='tech'){switchTab('tech');setTechSub(v[1]||'handbook');}
-},true);
-/* 案例库内部子档：全部案例 / 每周精选 */
-var caseSub='all';
+/* 子档卡上的数量徽章 */
+function updateSubBadges(){
+  var cn=$('csubAllN');if(cn)cn.textContent=(window.CASE_DATA||[]).length+' 条';
+}
+/* 案例库内部子档：全部案例 / 每周精选（'' = 还没选，只显示选项） */
+var caseSub='';
 function setCaseSub(s){
   caseSub=s;
   document.querySelectorAll('#caseSubs .sub-tab').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-csub')===s);});
+  var hint=$('casePickHint');if(hint)hint.style.display=s?'none':'';
   $('caseAllWrap').style.display=s==='all'?'':'none';
   $('caseWeeklyWrap').style.display=s==='weekly'?'':'none';
   if(s==='weekly')renderWeekly();
+  updateCrumb();
 }
 function switchCaseSub(s){setCaseSub(s);}
-/* 实操库内部子档：工具手册 / 实操实录 */
-var techSub='handbook';
+/* 实操库内部子档：工具手册 / 实操实录（'' = 还没选） */
+var techSub='';
 function setTechSub(s){
-  techSub=s;
-  techCat='';
+  techSub=s;techCat='';
   document.querySelectorAll('#techSubs .sub-tab').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-tsub')===s);});
+  var hint=$('techPickHint');if(hint)hint.style.display=s?'none':'';
   renderTech();
+  updateCrumb();
 }
 function switchTechSub(s){setTechSub(s);}
 /* ==== 情报站副页签：变现热点 / AIHOT 快讯 ==== */
@@ -1393,6 +1460,10 @@ function renderTech(){
   var wrap=$('techGrid');if(!wrap)return;
   var isReal=techSub==='real';
   var all=isReal?realAll():techAll();
+  var show=!!techSub;
+  updateSubBadges();
+  ['techNote','techCats','techGrid'].forEach(function(id){var el=$(id);if(el)el.style.display=show?'':'none';});
+  if(!show){wrap.innerHTML='';return;}   // 选择态：先选子档再出内容
   renderCats($('techCats'),all,techCat,function(c){techCat=c;renderTech();});
   var note=$('techNote');
   if(note){
@@ -2163,6 +2234,7 @@ function scheduleSearch(delay){
     var kw=searchInput.value.trim();
     var hint=$('searchHint');
     if(!kw){hint.classList.remove('show');return;}
+    ensureCaseList();
     var n=document.querySelectorAll('#cards .card').length;
     $('shText').innerHTML='找到 <b>'+n+'</b> 条与「'+esc(kw.slice(0,16))+'」相关的案例';
     hint.classList.add('show');
@@ -2170,8 +2242,8 @@ function scheduleSearch(delay){
 }
 $('shGo').addEventListener('click',function(){
   $('searchHint').classList.remove('show');
-  var fb=document.querySelector('.filterbar');
-  if(fb)fb.scrollIntoView({behavior:'smooth',block:'start'});
+  ensureCaseList();
+  scrollToContent();
 });
 searchInput.addEventListener('keydown',function(e){if(e.key==='Enter')$('shGo').click();});
 /* 行业下拉 */
