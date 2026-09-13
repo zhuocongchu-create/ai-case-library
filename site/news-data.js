@@ -10,20 +10,20 @@ window.NEWS=[
     date:"2026-09-13",
     items:[
       {
-        title:"AI Agent 长任务上下文管理有新解，4种机制帮你控制成本",
-        why:"这篇文章详细解析了 AI Agent 如何通过预算控制、压缩、todo-state 和记忆解决上下文溢出问题，适合想做 AI 代理服务的你参考。注意这些机制在不同产品中的实现差异，避免盲目套用。建议优先测试压缩和记忆功能，可降低服务器成本 20% 以上。",
+        title:"AI Agent 长任务上下文管理四招，教你应对目标丢失难题",
+        why:"这篇文章详细拆解了 Agent 长任务处理中上下文溢出的四类解决机制，包括预算控制、压缩、todo-state 复述和记忆管理。你如果想做 AI 副业，了解这些技术细节能帮助你优化系统，提高服务稳定性。建议结合具体产品实现方式，逐步测试应用。",
         url:"https://www.marktechpost.com/2026/09/12/context-engineering-inside-the-harness-4-mechanisms-that-beat-context-overflow-and-goal-loss-on-long-horizon-tasks",
         tag:"行业观察"
       },
       {
-        title:"英伟达成 AI 领域中央银行，700亿投资背后是金融风险",
-        why:"英伟达不仅提供芯片，还通过巨额融资推动 AI 需求，你若想做 AI 芯片相关副业，需警惕其背后的风险模式。过去三年融资超 700 亿美元，但可能埋下类似互联网泡沫的隐患，建议关注其合作伙伴和投资回报率。",
+        title:"英伟达成 AI 领域中央银行，700亿融资背后潜藏风险",
+        why:"英伟达通过巨额融资支持 AI 初创企业，三年累计投入超 700 亿美元，今年更提供 1050 亿美元兜底。你若想进入 AI 芯片或相关服务赛道，需警惕其背后可能引发的泡沫风险，建议关注实际应用场景和可持续性。",
         url:"https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
         tag:"行业数据"
       },
       {
-        title:"OpenAI 支持放缓前沿发展，独立评估访问将开放",
-        why:"Sam Altman 同意 Dario Amodei 的放缓前沿主张，你若在做 AI 评估或安全相关副业，可借此判断行业趋势。OpenAI 将开放独立评估者访问，这可能为第三方服务带来新机会。抓住这个信号，提前布局评估服务。",
+        title:"OpenAI 跟进 Anthropic，开放独立评估者访问",
+        why:"OpenAI 现已同意让独立评估者访问其 AI 系统，这反映了行业对 AI 安全与透明的重视。你若想做 AI 咨询或评估类副业，这是一个值得跟进的趋势，但需注意技术门槛和合规风险。",
         url:"https://x.com/sama/status/2098811563415150910",
         tag:"行业观察"
       }
