@@ -7,6 +7,23 @@
    ============================================================ */
 window.NEWS=[
   {
+    date:"2026-09-13",
+    items:[
+      {
+        title:"Google Artemis 未署名使用 Minitap 开源代码",
+        why:"Minitap 指出 Google Artemis 复用其开源项目 mobile-use 代码，却未署名，甚至修改提交历史。这提醒你：开源项目也有版权风险，注意代码使用规范和署名要求，避免侵权纠纷。",
+        url:"https://www.minitap.ai/blog/i-expected-better-from-google",
+        tag:"行业观察"
+      },
+      {
+        title:"OpenAI 支持放缓前沿 AI 发展",
+        why:"Sam Altman 表示同意 Dario Amodei 的放缓主张，并将开放独立评估者访问。这说明你若想在 AI 领域接单，需关注行业政策变化，提前布局合规和评估服务，以适应未来趋势。",
+        url:"https://x.com/sama/status/2098811563415150910",
+        tag:"行业观察"
+      }
+    ]
+  },
+  {
     date:"2026-09-12",
     items:[
       {
@@ -71,29 +88,6 @@ window.NEWS=[
         title:"Nvidia买下HuggingFace软实力，AI工具价值飙升100亿",
         why:"Nathan Lambert称HuggingFace软实力年值100亿，说明AI工具影响力已超越技术本身。想做AI副业的可关注Nvidia在开发者生态的布局，但需警惕：模型即服务模式需持续迭代，单靠工具难以形成溢价，要结合场景化解决方案。",
         url:"https://x.com/natolambert/status/2097745018421236154",
-        tag:"工具动态"
-      }
-    ]
-  },
-  {
-    date:"2026-09-09",
-    items:[
-      {
-        title:"数学家指控 OpenAI 算力碾压，AI 竞争已进阶学术信任战",
-        why:"数学家用 LLM 证明方程被 OpenAI 算力追赶，说明 AI 已渗透科研核心环节。你若用 AI 做数学类副业，需警惕成果被大厂逆向解析风险，建议同步申请专利或保留原始数据链路。",
-        url:"https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician",
-        tag:"行业观察"
-      },
-      {
-        title:"Mistral 三年估值破210亿欧元，欧洲AI正疯狂吸金",
-        why:"30亿欧元融资刷新欧洲科技公司纪录，说明主权AI赛道正被资本狂热追逐。你若想接AI相关单，可关注这类高估值企业的技术路线图，但需注意其开源策略可能挤压中小开发者生存空间。",
-        url:"https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier",
-        tag:"行业数据"
-      },
-      {
-        title:"数学家公开AI协作细节，LLM已能辅助突破方程难题",
-        why:"巴克马斯特团队用AI完成blowup证明并公开沟通记录，显示LLM可参与高阶数学研究。你若想用AI搞数学类内容变现，可尝试复现该方法，但需注意成果公开可能引发的优先权纠纷，建议同步建立技术壁垒。",
-        url:"https://cims.nyu.edu/~tristanb/statement.pdf",
         tag:"工具动态"
       }
     ]
