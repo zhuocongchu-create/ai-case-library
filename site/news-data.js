@@ -10,15 +10,21 @@ window.NEWS=[
     date:"2026-09-13",
     items:[
       {
-        title:"Google Artemis 使用 Minitap 开源代码未署名，引争议",
-        why:"Minitap 团队发现 Google Artemis 直接复用了其开源项目 mobile-use 的代码，包括 Hopper agent 的提示词和示例，但未署名。这提醒你：开源项目也有版权，注意代码使用规范，避免被索赔。建议在使用前确认授权条款，或考虑付费使用。",
-        url:"https://www.minitap.ai/blog/i-expected-better-from-google",
+        title:"OpenAI 同意 Anthropic 延缓前沿AI发展，独立评估开放信号",
+        why:"OpenAI 现在也开放独立评估者访问权限，说明行业对安全和可控性越来越重视。你如果想做 AI 安全评估副业，这个信号意味着市场正在扩大，但竞争也会更激烈，建议先学习相关知识再入局。",
+        url:"https://x.com/sama/status/2098811563415150910",
         tag:"行业观察"
       },
       {
-        title:"Sam Altman 支持放缓前沿 AI，OpenAI 将开放评估者访问",
-        why:"Sam Altman 明确表示 OpenAI 会像 Anthropic 一样，允许第三方评估者以员工身份访问系统。这对 AI 副业者来说是个信号：关注行业趋势，把握政策变化，可能在未来获得更多合作机会。但注意别盲目跟风，评估自身能力是否匹配。",
-        url:"https://x.com/sama/status/2098811563415150910",
+        title:"Thariq 支持放缓前沿AI，强调系统加固和社会讨论的必要性",
+        why:"Thariq 作为 Anthropic 工程师，公开支持 AI 行业减速，说明行业内部有声音在呼吁更谨慎发展。你若想接 AI 安全或伦理类咨询单，可借此信号切入，但需注意技术门槛，避免被同行卷死。",
+        url:"https://x.com/trq212/status/2098860941391872132",
+        tag:"行业观察"
+      },
+      {
+        title:"Dario Amodei 提出三步计划，Anthropic 已执行第一步",
+        why:"Dario 提出的三步计划中，Anthropic 已经落实第一步，开放员工级系统访问。你若想做 AI 评估或安全类服务，可以借鉴这个模式，但需注意，这类工作对专业背景要求高，普通人需谨慎评估自身能力再尝试。",
+        url:"https://x.com/PeterMcCrory/status/2099868931071226252",
         tag:"行业观察"
       }
     ]
