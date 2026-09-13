@@ -10,21 +10,21 @@ window.NEWS=[
     date:"2026-09-13",
     items:[
       {
-        title:"AI Agent 长任务上下文工程四机制解析，帮你优化系统效率",
-        why:"文章拆解了 Agent 长任务中解决上下文溢出的四大机制，如预算控制和记忆存储，适合想搭建 AI 副业工具的你。掌握这些技术能显著提升系统稳定性，建议先从预算控制入手，避免资源浪费。",
+        title:"AI Agent 长任务上下文管理有新解，4种机制帮你控制成本",
+        why:"这篇文章详细解析了 AI Agent 如何通过预算控制、压缩、todo-state 和记忆解决上下文溢出问题，适合想做 AI 代理服务的你参考。注意这些机制在不同产品中的实现差异，避免盲目套用。建议优先测试压缩和记忆功能，可降低服务器成本 20% 以上。",
         url:"https://www.marktechpost.com/2026/09/12/context-engineering-inside-the-harness-4-mechanisms-that-beat-context-overflow-and-goal-loss-on-long-horizon-tasks",
         tag:"行业观察"
       },
       {
-        title:"OpenAI 支持放缓前沿 AI，独立评估访问权限将开放",
-        why:"Sam Altman 明确表态支持放缓前沿 AI 发展，并将开放独立评估者访问权限，这为 AI 副业者提供了更透明的行业信号。你若关注 AI 技术伦理或想接评估类订单，这可能是未来机会点，但需留意政策变化带来的不确定性。",
-        url:"https://x.com/sama/status/2098811563415150910",
-        tag:"行业观察"
+        title:"英伟达成 AI 领域中央银行，700亿投资背后是金融风险",
+        why:"英伟达不仅提供芯片，还通过巨额融资推动 AI 需求，你若想做 AI 芯片相关副业，需警惕其背后的风险模式。过去三年融资超 700 亿美元，但可能埋下类似互联网泡沫的隐患，建议关注其合作伙伴和投资回报率。",
+        url:"https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
+        tag:"行业数据"
       },
       {
-        title:"Anthropic 工程师支持放缓 AI 前沿，强调系统加固与社会讨论",
-        why:"Thariq 作为 Anthropic 一线工程师，公开支持放缓 AI 前沿发展，强调行业加速带来的疲劳和社会消化时间。你若考虑做 AI 伦理咨询或内容评估，这可能是新赛道，但需注意行业节奏变化对需求的影响。",
-        url:"https://x.com/trq212/status/2098860941391872132",
+        title:"OpenAI 支持放缓前沿发展，独立评估访问将开放",
+        why:"Sam Altman 同意 Dario Amodei 的放缓前沿主张，你若在做 AI 评估或安全相关副业，可借此判断行业趋势。OpenAI 将开放独立评估者访问，这可能为第三方服务带来新机会。抓住这个信号，提前布局评估服务。",
+        url:"https://x.com/sama/status/2098811563415150910",
         tag:"行业观察"
       }
     ]
