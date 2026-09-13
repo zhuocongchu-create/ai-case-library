@@ -10,14 +10,14 @@ window.NEWS=[
     date:"2026-09-13",
     items:[
       {
-        title:"Google Artemis 未署名使用 Minitap 开源代码",
-        why:"Minitap 指出 Google Artemis 复用其开源项目 mobile-use 代码，却未署名，甚至修改提交历史。这提醒你：开源项目也有版权风险，注意代码使用规范和署名要求，避免侵权纠纷。",
+        title:"Google Artemis 使用 Minitap 开源代码未署名，引争议",
+        why:"Minitap 团队发现 Google Artemis 直接复用了其开源项目 mobile-use 的代码，包括 Hopper agent 的提示词和示例，但未署名。这提醒你：开源项目也有版权，注意代码使用规范，避免被索赔。建议在使用前确认授权条款，或考虑付费使用。",
         url:"https://www.minitap.ai/blog/i-expected-better-from-google",
         tag:"行业观察"
       },
       {
-        title:"OpenAI 支持放缓前沿 AI 发展",
-        why:"Sam Altman 表示同意 Dario Amodei 的放缓主张，并将开放独立评估者访问。这说明你若想在 AI 领域接单，需关注行业政策变化，提前布局合规和评估服务，以适应未来趋势。",
+        title:"Sam Altman 支持放缓前沿 AI，OpenAI 将开放评估者访问",
+        why:"Sam Altman 明确表示 OpenAI 会像 Anthropic 一样，允许第三方评估者以员工身份访问系统。这对 AI 副业者来说是个信号：关注行业趋势，把握政策变化，可能在未来获得更多合作机会。但注意别盲目跟风，评估自身能力是否匹配。",
         url:"https://x.com/sama/status/2098811563415150910",
         tag:"行业观察"
       }
