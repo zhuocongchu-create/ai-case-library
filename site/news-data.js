@@ -10,21 +10,21 @@ window.NEWS=[
     date:"2026-09-13",
     items:[
       {
-        title:"OpenAI 将开放独立评估者访问，AI安全讨论升温",
-        why:"OpenAI 现在也开始允许独立评估者访问系统，这说明行业对AI安全的关注度在提升。你如果想进入AI安全评估领域，可以关注这类政策变化，提前布局。但也要注意，这类工作需要专业背景和资质，别盲目跟风。",
+        title:"AI Agent 长任务上下文工程四机制解析，帮你优化系统效率",
+        why:"文章拆解了 Agent 长任务中解决上下文溢出的四大机制，如预算控制和记忆存储，适合想搭建 AI 副业工具的你。掌握这些技术能显著提升系统稳定性，建议先从预算控制入手，避免资源浪费。",
+        url:"https://www.marktechpost.com/2026/09/12/context-engineering-inside-the-harness-4-mechanisms-that-beat-context-overflow-and-goal-loss-on-long-horizon-tasks",
+        tag:"行业观察"
+      },
+      {
+        title:"OpenAI 支持放缓前沿 AI，独立评估访问权限将开放",
+        why:"Sam Altman 明确表态支持放缓前沿 AI 发展，并将开放独立评估者访问权限，这为 AI 副业者提供了更透明的行业信号。你若关注 AI 技术伦理或想接评估类订单，这可能是未来机会点，但需留意政策变化带来的不确定性。",
         url:"https://x.com/sama/status/2098811563415150910",
         tag:"行业观察"
       },
       {
-        title:"Thariq 支持放缓AI发展，强调社会讨论的重要性",
-        why:"Thariq 作为 Anthropic 的一线工程师，公开支持放缓AI前沿发展，并提到社会需要时间消化技术。你若想做AI伦理或政策咨询，可以从中找到切入点，但需注意避免技术外行的误区，要深入理解行业动态。",
+        title:"Anthropic 工程师支持放缓 AI 前沿，强调系统加固与社会讨论",
+        why:"Thariq 作为 Anthropic 一线工程师，公开支持放缓 AI 前沿发展，强调行业加速带来的疲劳和社会消化时间。你若考虑做 AI 伦理咨询或内容评估，这可能是新赛道，但需注意行业节奏变化对需求的影响。",
         url:"https://x.com/trq212/status/2098860941391872132",
-        tag:"行业观察"
-      },
-      {
-        title:"Dario Amodei 提出三步计划，推动AI发展节奏调整",
-        why:"Dario 提出的三步计划引发行业热议，其中第一步已由 Anthropic 承诺实施。你若想参与AI安全评估，可以借鉴其思路，但别忽视行业门槛，专业资质和资源是关键，否则容易被卷入低效竞争。",
-        url:"https://x.com/PeterMcCrory/status/2098868931071226252",
         tag:"行业观察"
       }
     ]
