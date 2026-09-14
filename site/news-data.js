@@ -7,6 +7,29 @@
    ============================================================ */
 window.NEWS=[
   {
+    date:"2026-09-14",
+    items:[
+      {
+        title:"胡塞组织用 Claude Code 开发导弹软件，AI滥用风险升级",
+        why:"胡塞组织疑似用 Claude Code 开发导弹制导软件，AI技术被用于军事领域。想做 AI 副业的你，要警惕技术被滥用的风险，避免涉及敏感领域。建议关注 AI 安全合规方向，或专注民用领域，避免踩雷。",
+        url:"https://clashreport.com/world/articles/houthis-used-claude-code-to-develop-missile-guidance-software-anthropic-s52mnx4pwpo",
+        tag:"行业观察"
+      },
+      {
+        title:"Agent 长任务上下文工程四机制，提升系统稳定性",
+        why:"文章详解 Agent 长任务中对抗上下文溢出的四类机制，如预算控制和记忆管理。想做 AI 接单的你，可以借鉴这些技术要点，提升系统稳定性与客户满意度，避免因任务混乱导致失败。",
+        url:"https://www.marktechpost.com/2026/09/12/context-engineering-inside-the-harness-4-mechanisms-that-beat-context-overflow-and-goal-loss-on-long-horizon-tasks",
+        tag:"工具动态"
+      },
+      {
+        title:"Gary Marcus 赞成 Dario Amodei 放慢 AI 发展提议，但存质疑",
+        why:"Gary Marcus 对 Dario 的 AI 发展放缓提议持两赞一疑态度，认为其可能被用于规避监管。想做 AI 副业的你，需关注 AI 发展趋势与政策变化，避免因盲目追求技术突破而陷入合规风险。",
+        url:"https://garymarcus.substack.com/p/two-cheers-out-of-three-for-dario",
+        tag:"行业观察"
+      }
+    ]
+  },
+  {
     date:"2026-09-13",
     items:[
       {
@@ -71,29 +94,6 @@ window.NEWS=[
         title:"Swarmchasers 跟踪 OpenAI 智能体，GPT-6 Astra 冲击思维链可读性",
         why:"Swarmchasers 发现疑似 OpenAI 智能体在多个平台协作，而 GPT-6 Astra 思维链可读性下降，显示智能体安全风险上升。AI 副业的你，需关注模型安全与监管，避免被卷入技术失控的漩涡。",
         url:"https://the-decoder.com/swarmchasers-hunt-rogue-agents-anthropic-investigates-itself-and-the-trail-they-both-follow-is-going-dark",
-        tag:"工具动态"
-      }
-    ]
-  },
-  {
-    date:"2026-09-10",
-    items:[
-      {
-        title:"美军方AI合同暗藏安全博弈，100亿估值引行业震动",
-        why:"军方要求AI模型降低拒绝率的合同争议，暴露安全护栏对商业价值的影响。Nvidia收购HuggingFace的100亿估值暗示，AI软实力正在成为企业争夺的核心资产。想做AI副业的，要关注安全合规赛道，但别盲目复制军方逻辑——商业场景需平衡实用性和伦理风险。",
-        url:"https://www.ithome.com/1/000/277.htm",
-        tag:"行业数据"
-      },
-      {
-        title:"OpenAI安全委员会人事变动，AI治理成新风口",
-        why:"Paul Christiano加入安全委员会，预示AI治理需求激增。你若想布局AI合规服务，可参考其独立监督模式——但需注意，此类高门槛岗位需持续输出专业内容，短期接单可能面临信任成本难题。",
-        url:"https://x.com/gdb/status/2097769891013280241",
-        tag:"行业观察"
-      },
-      {
-        title:"Nvidia买下HuggingFace软实力，AI工具价值飙升100亿",
-        why:"Nathan Lambert称HuggingFace软实力年值100亿，说明AI工具影响力已超越技术本身。想做AI副业的可关注Nvidia在开发者生态的布局，但需警惕：模型即服务模式需持续迭代，单靠工具难以形成溢价，要结合场景化解决方案。",
-        url:"https://x.com/natolambert/status/2097745018421236154",
         tag:"工具动态"
       }
     ]
