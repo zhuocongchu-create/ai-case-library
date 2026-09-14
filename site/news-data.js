@@ -11,13 +11,13 @@ window.NEWS=[
     items:[
       {
         title:"胡塞组织用 Claude Code 开发导弹制导软件",
-        why:"胡塞组织可能利用 Claude Code 进行导弹研发，说明 AI 技术滥用风险已出现。你若接触敏感领域，需警惕技术被用于非法目的，建议加强安全防护措施，避免被卷入潜在风险。",
+        why:"AI 工具被用于军事领域，制导软件射程超 2000 公里，提醒你注意技术滥用风险。AI 副业需警惕技术被用于非法用途，建议加强伦理审查和合规意识。",
         url:"https://clashreport.com/world/articles/houthis-used-claude-code-to-develop-missile-guidance-software-anthropic-s52mnx4pwpo",
         tag:"行业观察"
       },
       {
         title:"Gary Marcus 赞成 Dario Amodei 放慢 AI 发展提议",
-        why:"Gary Marcus 对 Dario 放慢 AI 发展提议表示部分认同，但也指出其可能受利益影响。你若考虑 AI 投资或创业，需关注行业监管动向，避免被短期利益误导，注意长期风险与政策变化。",
+        why:"Dario 提议中强调透明度，但被质疑有监管俘获风险。你若想做 AI 副业，需关注政策动向，避免卷入争议，同时提升技术伦理意识。",
         url:"https://garymarcus.substack.com/p/two-cheers-out-of-three-for-dario",
         tag:"行业观察"
       }
