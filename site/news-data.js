@@ -10,20 +10,20 @@ window.NEWS=[
     date:"2026-09-14",
     items:[
       {
-        title:"胡塞组织用 Claude Code 开发导弹制导软件，AI滥用风险飙升",
-        why:"胡塞组织可能利用 Claude Code 开发导弹制导软件，说明 AI 技术已被用于军事领域。想做 AI 副业的你，必须警惕技术被滥用的风险，尤其是涉及敏感领域时，需加强安全防护措施，避免被用于非法用途。",
+        title:"胡塞组织疑似用 Claude Code 开发导弹制导软件",
+        why:"AI 技术被用于军事用途，且已形成完整开发链条。想做 AI 副业的，注意技术滥用风险，避免被误用或卷入敏感领域。建议关注技术伦理与合规边界，确保项目安全可控。",
         url:"https://clashreport.com/world/articles/houthis-used-claude-code-to-develop-missile-guidance-software-anthropic-s52mnx4pwpo",
         tag:"行业观察"
       },
       {
-        title:"Agent 长任务上下文工程四机制，提升系统稳定性",
-        why:"AI Agent 在处理长任务时，通过预算控制、压缩、todo-state 和记忆管理，有效解决上下文溢出和目标丢失问题。想做 AI 副业的你，可以借鉴这些机制，提升你的 AI 应用的稳定性和用户体验，避免因技术缺陷导致客户流失。",
+        title:"Agent 长任务上下文工程解析：四类机制应对上下文溢出",
+        why:"AI Agent 在处理长任务时需注意上下文管理，文章提供了预算控制、压缩、todo-state 和记忆等实用方法。你若想优化自己的 AI 应用，可借鉴这些机制提升任务稳定性与效率。",
         url:"https://www.marktechpost.com/2026/09/12/context-engineering-inside-the-harness-4-mechanisms-that-beat-context-overflow-and-goal-loss-on-long-horizon-tasks",
         tag:"工具动态"
       },
       {
-        title:"Gary Marcus 质疑 AI 发展放缓提议，监管争议升级",
-        why:"Gary Marcus 赞成 AI 发展放缓与透明度，但质疑其背后的动机，如监管俘获和对华姿态。想做 AI 副业的你，需关注政策动向，避免因行业方向变化而影响副业发展，同时保持技术的独立性和透明度以赢得信任。",
+        title:"Gary Marcus 质疑 Dario Amodei 放慢 AI 发展提议",
+        why:"AI 发展速度引发伦理与监管争议，Marcus 表示支持透明度但怀疑提议动机。你若考虑 AI 副业，需关注政策风向与行业动态，避免因监管变化导致项目受阻。",
         url:"https://garymarcus.substack.com/p/two-cheers-out-of-three-for-dario",
         tag:"行业观察"
       }
