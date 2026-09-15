@@ -10,20 +10,20 @@ window.NEWS=[
     date:"2026-09-15",
     items:[
       {
-        title:"Anthropic 连续盈利瞄准 2 万亿美元估值，但需注意成本计算方式",
-        why:"Anthropic 的盈利基于剔除股权激励的调整后指标，毛利率超 80% 但未计分成和训练成本。想做 AI 副业的，别只看表面盈利，得弄清真实成本结构和盈利模式，否则容易踩坑。",
+        title:"Anthropic 连续盈利瞄准 2 万亿美元估值，但毛利率仅 80%",
+        why:"Anthropic 连续第二季度盈利，但毛利率仅 80%，未算分成和训练成本。想做 AI 副业的你，别只看估值，要看真实盈利模式。建议先了解其成本结构再考虑合作机会。",
         url:"https://the-decoder.com/anthropic-eyes-nasdaq-listing-as-a-second-profitable-quarter-aims-to-win-over-investors-ahead-of-a-mega-ipo",
         tag:"行业观察"
       },
       {
-        title:"科技巨头 AI 开发放缓：安全共识还是压制竞争的卡特尔？",
-        why:"Sam Altman 等大佬口头同意放缓 AI 开发，但动机存疑。想做 AI 副业的，需警惕行业趋势背后的博弈，别盲目跟风，要分析真实需求与监管动向。",
+        title:"科技巨头 AI 开发放缓，是安全共识还是卡特尔？",
+        why:"大科技领袖口头同意放缓 AI 开发，但动机成疑。想做 AI 副业的你，需警惕行业趋势变化，关注监管动向，避免被卡特尔影响市场机会。",
         url:"https://www.theverge.com/ai-artificial-intelligence/995186-is-big-techs-ai-slowdown-a-safety-pact-or-a-cartel",
         tag:"行业观察"
       },
       {
-        title:"GPT-5.6 Luna 代码评审成本 $0.20，但精度不如 GPT-6 Astra",
-        why:"Luna 在代码评审上成本低但精度不足，Astra 精度 96% 但成本高昂。想做 AI 接单的，得权衡成本与效果，别只图便宜，要选对模型和场景。",
+        title:"GPT-5.6 Luna 代码评审性能落后 GPT-6 Astra，成本仅 $0.20",
+        why:"Luna 在代码评审上 bug 检测数量比 Astra 少 23 个，成本仅 $0.20。想做 AI 副业的你，若专注代码评审，需评估模型精度与成本比，避免低价低效陷阱。",
         url:"https://entelligence.ai/blogs/gpt-5.6-luna-vs-gpt-6-astra-is-a-1.20-model-good-enough-for-code-review",
         tag:"行业数据"
       }
