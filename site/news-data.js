@@ -10,20 +10,20 @@ window.NEWS=[
     date:"2026-09-15",
     items:[
       {
-        title:"Anthropic 连续盈利瞄准 2 万亿美元估值，但调整后指标需警惕",
-        why:"Anthropic 连续第二季度盈利，但基于剔除股权激励的调整后指标，实际成本未算入。想做 AI 副业的，别被估值迷惑，要关注真实盈利模式和成本结构，避免被虚假繁荣误导。",
+        title:"Anthropic 连续盈利瞄准 2 万亿美元估值，但盈利口径存争议",
+        why:"Anthropic 连续第二季度盈利，但基于调整后指标，实际成本未计入。想做 AI 副业的你，需警惕盈利数据背后的隐藏成本，关注长期可持续性。建议先研究其商业模式再考虑跟进。",
         url:"https://the-decoder.com/anthropic-eyes-nasdaq-listing-as-a-second-profitable-quarter-aims-to-win-over-investors-ahead-of-a-mega-ipo",
-        tag:"行业数据"
+        tag:"行业观察"
       },
       {
-        title:"科技巨头 AI 开发放缓，是安全共识还是竞争压制？",
-        why:"Sam Altman 等人提出全球 AI 开发放缓协议，但被批评者视为压制竞争的卡特尔。想做 AI 副业的，注意行业动态，避免盲目跟风，需关注政策与竞争格局变化带来的机会与风险。",
+        title:"科技巨头 AI 开发放缓：安全共识还是压制竞争的卡特尔？",
+        why:"Sam Altman 等提出 AI 开发放缓协议，但被质疑为压制开源与竞争者。想做 AI 副业的你，需留意行业风向变化，关注政策与技术发展的平衡点，避免盲目跟风。",
         url:"https://www.theverge.com/ai-artificial-intelligence/995186-is-big-techs-ai-slowdown-a-safety-pact-or-a-cartel",
         tag:"行业观察"
       },
       {
-        title:"GPT-5.6 Luna 与 GPT-6 Astra 代码评审对比：$1.20 模型够用吗？",
-        why:"Luna 在代码评审中召回 69 个 bug，成本仅 $0.20，而 Astra 召回 92 个 bug，成本 $5.66。想做 AI 副业的，可以考虑用低价模型做基础任务，但别忽视精度差异，需根据项目需求选择合适的模型。",
+        title:"GPT-5.6 Luna vs GPT-6 Astra：代码评审精度与成本对比",
+        why:"Luna 在代码评审中找到 69 个 bug，成本仅 $0.20，但 Astra 精度更高。想做 AI 副业的你，若涉及代码相关服务，可考虑性价比高的模型，但别忽视精度对客户信任的影响。",
         url:"https://entelligence.ai/blogs/gpt-5.6-luna-vs-gpt-6-astra-is-a-1.20-model-good-enough-for-code-review",
         tag:"工具动态"
       }
