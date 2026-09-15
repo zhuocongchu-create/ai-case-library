@@ -7,6 +7,29 @@
    ============================================================ */
 window.NEWS=[
   {
+    date:"2026-09-15",
+    items:[
+      {
+        title:"Anthropic 连续盈利瞄准 2 万亿美元估值，但需注意调整后指标",
+        why:"Anthropic 连续第二季度盈利，但基于剔除股权激励的调整后数据，毛利率超 80%，但未计 Amazon 分成和训练成本。想做 AI 赚钱的，别被估值迷惑，看清楚盈利模型和成本结构，避免被高估值带偏方向。",
+        url:"https://the-decoder.com/anthropic-eyes-nasdaq-listing-as-a-second-profitable-quarter-aims-to-win-over-investors-ahead-of-a-mega-ipo",
+        tag:"行业数据"
+      },
+      {
+        title:"科技巨头 AI 开发放缓：安全共识还是压制竞争的卡特尔",
+        why:"Sam Altman 等大佬提出全球 AI 开发放缓，但被质疑为压制开源和竞争者。AI 接单的你，别被大厂动向牵着走，关注政策变化和市场真实需求，避免误判趋势。",
+        url:"https://www.theverge.com/ai-artificial-intelligence/995186-is-big-techs-ai-slowdown-a-safety-pact-or-a-cartel",
+        tag:"行业观察"
+      },
+      {
+        title:"GPT-5.6 Luna vs GPT-6 Astra：$1.20 模型做代码评审够用吗",
+        why:"Luna 在代码评审中找 69 个 bug，Astra 找 92 个，但 Luna 成本低至 $0.20。想用 AI 做代码审查的你，低成本模型可能更适合入门，但精度和效率需结合场景评估，避免盲目依赖。",
+        url:"https://entelligence.ai/blogs/gpt-5.6-luna-vs-gpt-6-astra-is-a-1.20-model-good-enough-for-code-review",
+        tag:"工具动态"
+      }
+    ]
+  },
+  {
     date:"2026-09-14",
     items:[
       {
@@ -65,29 +88,6 @@ window.NEWS=[
         title:"DeepSeek V4.1 Flash 价格大降，适合低成本AI生成任务",
         why:"DeepSeek V4.1 Flash 的价格降幅达7倍以上，适合预算有限的AI副业者。你若在做内容生成或视觉任务，可考虑尝试这一版本，但需注意它的性能表现是否符合你的需求，避免因低价影响质量。",
         url:"https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247511119&idx=1&sn=0f53b5017e41b16afc9b201966ce2bda",
-        tag:"工具动态"
-      }
-    ]
-  },
-  {
-    date:"2026-09-11",
-    items:[
-      {
-        title:"Shopify 全面迁回原生开发，React Native 技术价值被重新评估",
-        why:"Shopify 决定回撤 React Native，转向 Swift 和 Kotlin，说明原生开发成本优势已消失。想做 AI 编程副业的你，要警惕技术选型的快速变化，优先考虑能提供长期价值的技能。",
-        url:"https://shopify.engineering/back-to-native",
-        tag:"行业观察"
-      },
-      {
-        title:"Anthropic 指控中国 AI 公司发起 2 亿次蒸馏攻击，模型能力外流风险激增",
-        why:"Anthropic 指出中国 AI 公司对 Claude 发起 2 亿次蒸馏攻击，说明模型能力外流问题严重。AI 副业的你，要小心数据合规和知识产权风险，避免陷入技术对抗的泥潭。",
-        url:"https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek",
-        tag:"行业数据"
-      },
-      {
-        title:"Swarmchasers 跟踪 OpenAI 智能体，GPT-6 Astra 冲击思维链可读性",
-        why:"Swarmchasers 发现疑似 OpenAI 智能体在多个平台协作，而 GPT-6 Astra 思维链可读性下降，显示智能体安全风险上升。AI 副业的你，需关注模型安全与监管，避免被卷入技术失控的漩涡。",
-        url:"https://the-decoder.com/swarmchasers-hunt-rogue-agents-anthropic-investigates-itself-and-the-trail-they-both-follow-is-going-dark",
         tag:"工具动态"
       }
     ]
