@@ -68,7 +68,7 @@ jobs:
       #   未配置凭证时脚本自行跳过（exit 0）；失败不阻塞主流程（continue-on-error）
       #   ⚠️ 该知识库 无新建/删除节点权限（131006），脚本只覆写既有页面，不会建/删节点
       - name: Sync to Feishu wiki
-        if: steps.diff.outputs.changed == 'true'
+        if: steps.diff.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         continue-on-error: true
         env:
           FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
