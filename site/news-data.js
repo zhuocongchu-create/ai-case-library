@@ -7,6 +7,29 @@
    ============================================================ */
 window.NEWS=[
   {
+    date:"2026-09-16",
+    items:[
+      {
+        title:"Perplexity 自研 CobbleDB 替代 AWS DynamoDB，每年最多可节省一亿美元",
+        why:"Perplexity 用 CobbleDB 节省每年一亿美金，说明自研数据库能带来显著成本优势。你若想用 AI 技术优化数据存储，可参考其构建方式——两名工程师+数百个智能体，两个月完成核心。但需注意技术门槛，别盲目上手，先评估自身资源与需求。",
+        url:"https://x.com/AravSrinivas/status/2099957318935028173",
+        tag:"行业数据"
+      },
+      {
+        title:"Gergely Orosz 探访 OpenAI：Codex 驱动的智能体软件工厂",
+        why:"OpenAI 现已用 Codex 和 ChatGPT Work 掌控大部分研发流程，说明 AI 工具在工程中已成主流。你若考虑用 AI 提升开发效率，可借鉴其内部实践，但需留意工具依赖风险，别忽视人工审核与质量把控。",
+        url:"https://newsletter.pragmaticengineer.com/p/openai-software-factory",
+        tag:"工具动态"
+      },
+      {
+        title:"Anthropic 与 OpenAI 提议协调放缓前沿 AI 开发，Cohere CEO 等批评者质疑其真实动机",
+        why:"头部公司提议放缓 AI 开发，却遭同行质疑动机，说明行业竞争与监管博弈激烈。你若想进入 AI 领域，需警惕政策与技术趋势变化带来的不确定性，建议多关注安全叙事与合规路径，避免被卷入争议漩涡。",
+        url:"https://the-decoder.com/not-everyone-is-convinced-that-big-ais-proposed-development-slowdown-is-really-about-safety",
+        tag:"行业观察"
+      }
+    ]
+  },
+  {
     date:"2026-09-15",
     items:[
       {
@@ -66,29 +89,6 @@ window.NEWS=[
         why:"OpenAI 现已同意让独立评估者访问其 AI 系统，这反映了行业对 AI 安全与透明的重视。你若想做 AI 咨询或评估类副业，这是一个值得跟进的趋势，但需注意技术门槛和合规风险。",
         url:"https://x.com/sama/status/2098811563415150910",
         tag:"行业观察"
-      }
-    ]
-  },
-  {
-    date:"2026-09-12",
-    items:[
-      {
-        title:"英伟达或投资100亿美元助Anthropic上市，成史上最大IPO",
-        why:"英伟达考虑投资Anthropic至多100亿美元，这说明AI大模型赛道正吸引巨头重金布局。如果你在做AI相关副业，要关注这类头部企业的动向，可能带来合作机会或市场信号。建议多关注行业动态，提前布局相关资源。",
-        url:"https://www.ithome.com/1/001/488.htm",
-        tag:"行业观察"
-      },
-      {
-        title:"Minitap指控Google Artemis未署名使用其开源代码",
-        why:"Google Artemis 项目被指移除了 Minitap 团队的署名，这提醒 AI 副业从业者注意代码版权与开源协议问题。你如果在使用开源项目，务必确认授权条款，避免法律风险，尤其像 Apache 2.0 这类明确署名要求的协议。",
-        url:"https://www.minitap.ai/blog/i-expected-better-from-google",
-        tag:"行业观察"
-      },
-      {
-        title:"DeepSeek V4.1 Flash 价格大降，适合低成本AI生成任务",
-        why:"DeepSeek V4.1 Flash 的价格降幅达7倍以上，适合预算有限的AI副业者。你若在做内容生成或视觉任务，可考虑尝试这一版本，但需注意它的性能表现是否符合你的需求，避免因低价影响质量。",
-        url:"https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247511119&idx=1&sn=0f53b5017e41b16afc9b201966ce2bda",
-        tag:"工具动态"
       }
     ]
   }
