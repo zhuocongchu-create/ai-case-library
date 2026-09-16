@@ -7,6 +7,29 @@
    ============================================================ */
 window.NEWS=[
   {
+    date:"2026-09-17",
+    items:[
+      {
+        title:"Perplexity 自研 CobbleDB 节省一亿美元",
+        why:"Perplexity 用自研键值数据库 CobbleDB 每年省下一亿美元，核心团队仅两人耗时两个月完成。迁移后热存储批次读取延迟下降 5 倍，P50 从 31.4ms 到 5.60ms。想做数据库优化的，可以考虑自研方案降低成本，但需评估开发和维护成本是否可控。",
+        url:"https://x.com/AravSrinivas/status/2099957318935028173",
+        tag:"行业数据"
+      },
+      {
+        title:"Arena Image-to-WebDev 榜单 GPT-6 Astra 1733 分登顶",
+        why:"Arena 新榜单显示 GPT-6 Astra 以 1733 分领先，性能比 GPT-5.6 Sol 高 129 分。如果你想做图像生成类 AI 项目，可参考榜单对比模型性能与成本，但需注意模型更新快，需持续跟踪最新表现。",
+        url:"https://x.com/arena/status/2099971741993050236",
+        tag:"工具动态"
+      },
+      {
+        title:"Vercel AI 销售开发智能体年成本仅数千美元",
+        why:"Vercel 用 AI 销售开发智能体实现 90% 自动化，团队从 10 人缩至 1.25 人，年成本仅数千美元。这对想做 AI 接单的你来说是个重要信号：自动化销售能极大降低人力成本，但需确保客户转化率和 AI 模型的精准度，否则投入产出比可能不佳。",
+        url:"https://tomtunguz.com/single-digit-thousand-dollar-ai-sdr",
+        tag:"行业观察"
+      }
+    ]
+  },
+  {
     date:"2026-09-16",
     items:[
       {
@@ -65,29 +88,6 @@ window.NEWS=[
         title:"Gary Marcus 赞成 Dario Amodei 放慢 AI 发展提议",
         why:"Dario 提议中强调透明度，但被质疑有监管俘获风险。你若想做 AI 副业，需关注政策动向，避免卷入争议，同时提升技术伦理意识。",
         url:"https://garymarcus.substack.com/p/two-cheers-out-of-three-for-dario",
-        tag:"行业观察"
-      }
-    ]
-  },
-  {
-    date:"2026-09-13",
-    items:[
-      {
-        title:"AI Agent 长任务上下文管理四招，教你应对目标丢失难题",
-        why:"这篇文章详细拆解了 Agent 长任务处理中上下文溢出的四类解决机制，包括预算控制、压缩、todo-state 复述和记忆管理。你如果想做 AI 副业，了解这些技术细节能帮助你优化系统，提高服务稳定性。建议结合具体产品实现方式，逐步测试应用。",
-        url:"https://www.marktechpost.com/2026/09/12/context-engineering-inside-the-harness-4-mechanisms-that-beat-context-overflow-and-goal-loss-on-long-horizon-tasks",
-        tag:"行业观察"
-      },
-      {
-        title:"英伟达成 AI 领域中央银行，700亿融资背后潜藏风险",
-        why:"英伟达通过巨额融资支持 AI 初创企业，三年累计投入超 700 亿美元，今年更提供 1050 亿美元兜底。你若想进入 AI 芯片或相关服务赛道，需警惕其背后可能引发的泡沫风险，建议关注实际应用场景和可持续性。",
-        url:"https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
-        tag:"行业数据"
-      },
-      {
-        title:"OpenAI 跟进 Anthropic，开放独立评估者访问",
-        why:"OpenAI 现已同意让独立评估者访问其 AI 系统，这反映了行业对 AI 安全与透明的重视。你若想做 AI 咨询或评估类副业，这是一个值得跟进的趋势，但需注意技术门槛和合规风险。",
-        url:"https://x.com/sama/status/2098811563415150910",
         tag:"行业观察"
       }
     ]
