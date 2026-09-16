@@ -11,19 +11,19 @@ window.NEWS=[
     items:[
       {
         title:"Perplexity 自研 CobbleDB 替代 AWS DynamoDB，每年最多可节省一亿美元",
-        why:"Perplexity 用两个月打造 CobbleDB，替代 AWS DynamoDB 节省每年一亿美元。想做数据库优化的，可以试试用 AI 智能体批量处理任务，但需注意技术门槛和维护成本，别盲目跟风。",
+        why:"Perplexity 用自研 CobbleDB 把网页抓取延迟降了 5 倍，每年省下上亿成本。你要是做数据抓取类项目，完全可以考虑自建数据库，别被大厂工具绑架。但注意，像他们这样用智能体持续运行两个月才完成核心，你得评估自己的技术储备和时间成本。",
         url:"https://x.com/AravSrinivas/status/2099957318935028173",
         tag:"行业数据"
       },
       {
         title:"Gergely Orosz 探访 OpenAI：Codex 驱动的智能体软件工厂",
-        why:"OpenAI 已用 Codex 和 ChatGPT Work 掌控内部研发，效率提升明显。想用 AI 提升开发效率的，可尝试将 Codex 作为工具辅助编程，但要注意版权和代码质量，别完全依赖 AI 输出。",
+        why:"OpenAI 现在用 Codex 和 ChatGPT Work 做几乎所有开发，说明这些工具已经深度融入内部流程。你做 AI 副业时，要关注这些工具的落地场景，比如自动化代码生成、文档处理等。但别盲目跟风，得先验证自己能否用好这些工具，否则容易掉进技术依赖陷阱。",
         url:"https://newsletter.pragmaticengineer.com/p/openai-software-factory",
         tag:"工具动态"
       },
       {
         title:"Anthropic 与 OpenAI 提议协调放缓前沿 AI 开发，Cohere CEO 等批评者质疑其真实动机",
-        why:"头部公司提议放缓 AI 前沿开发，但被部分 CEO 质疑动机。想布局 AI 行业的，需关注政策与竞争动向，别只盯着技术，更要留意行业风向和监管变化。",
+        why:"头部公司提议放缓 AI 开发，背后可能是商业竞争和监管压力。你做 AI 副业时，别只盯着技术突破，也要留意行业动向和政策变化，这对判断市场风险和机会很重要。但别被安全叙事迷惑，实际应用中仍需关注效率与利润平衡。",
         url:"https://the-decoder.com/not-everyone-is-convinced-that-big-ais-proposed-development-slowdown-is-really-about-safety",
         tag:"行业观察"
       }
