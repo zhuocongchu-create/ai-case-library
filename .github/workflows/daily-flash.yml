@@ -62,3 +62,15 @@ jobs:
           git add site/
           git commit -m "daily: aihot flash $(date -u +%F) [skip ci]"
           git push
+
+      # ↓ 新增：同步到飞书知识库的两个固定页（整页覆写，只保留近 3 天）
+      #   凭证 = 仓库 Secrets：FEISHU_APP_ID / FEISHU_APP_SECRET
+      #   未配置凭证时脚本自行跳过（exit 0）；失败不阻塞主流程（continue-on-error）
+      #   ⚠️ 该知识库 无新建/删除节点权限（131006），脚本只覆写既有页面，不会建/删节点
+      - name: Sync to Feishu wiki
+        if: steps.diff.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+          FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
+        run: python scripts/sync_wiki.py
