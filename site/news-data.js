@@ -10,20 +10,20 @@ window.NEWS=[
     date:"2026-09-16",
     items:[
       {
-        title:"Perplexity 自研 CobbleDB 替代 AWS DynamoDB，每年最多可节省一亿美元",
-        why:"Perplexity 用 CobbleDB 节省每年一亿美金，说明自研数据库能带来显著成本优势。你若想用 AI 技术优化数据存储，可参考其构建方式——两名工程师+数百个智能体，两个月完成核心。但需注意技术门槛，别盲目上手，先评估自身资源与需求。",
+        title:"Perplexity 自研 CobbleDB 节省一亿美元",
+        why:"你要是想做数据库优化，Perplexity 用 CobbleDB 把延迟降了 5 倍，每年省下一亿美元。这说明自研数据库能带来巨大成本优势，但别盲目跟风，得看自己业务场景是否匹配。",
         url:"https://x.com/AravSrinivas/status/2099957318935028173",
         tag:"行业数据"
       },
       {
-        title:"Gergely Orosz 探访 OpenAI：Codex 驱动的智能体软件工厂",
-        why:"OpenAI 现已用 Codex 和 ChatGPT Work 掌控大部分研发流程，说明 AI 工具在工程中已成主流。你若考虑用 AI 提升开发效率，可借鉴其内部实践，但需留意工具依赖风险，别忽视人工审核与质量把控。",
+        title:"OpenAI 内部全面使用 Codex 和 ChatGPT Work",
+        why:"OpenAI 已经让 Codex 成为内部研发主力，这说明 AI 工具正在深度渗透技术岗位。想接单的你，可以关注 Codex 驱动的自动化开发任务，但注意别只靠工具，得结合实际需求和技能溢价。",
         url:"https://newsletter.pragmaticengineer.com/p/openai-software-factory",
         tag:"工具动态"
       },
       {
-        title:"Anthropic 与 OpenAI 提议协调放缓前沿 AI 开发，Cohere CEO 等批评者质疑其真实动机",
-        why:"头部公司提议放缓 AI 开发，却遭同行质疑动机，说明行业竞争与监管博弈激烈。你若想进入 AI 领域，需警惕政策与技术趋势变化带来的不确定性，建议多关注安全叙事与合规路径，避免被卷入争议漩涡。",
+        title:"Anthropic 与 OpenAI 呼吁放缓 AI 开发",
+        why:"头部公司提议放缓模型开发，但 Cohere CEO 等批评者认为这可能另有动机。做 AI 副业的你，要留意行业政策变化，别被安全叙事忽悠，得看清背后的利益博弈。",
         url:"https://the-decoder.com/not-everyone-is-convinced-that-big-ais-proposed-development-slowdown-is-really-about-safety",
         tag:"行业观察"
       }
