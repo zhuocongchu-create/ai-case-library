@@ -10,22 +10,22 @@ window.NEWS=[
     date:"2026-09-17",
     items:[
       {
-        title:"Perplexity 自研 CobbleDB 节省一亿美元",
-        why:"Perplexity 用自研键值数据库 CobbleDB 每年省下一亿美元，核心团队仅两人耗时两个月完成。迁移后热存储批次读取延迟下降 5 倍，P50 从 31.4ms 到 5.60ms。想做数据库优化的，可以考虑自研方案降低成本，但需评估开发和维护成本是否可控。",
+        title:"Perplexity 自研 CobbleDB 节省每年一亿美元",
+        why:"Perplexity 用自研 CobbleDB 替代 AWS DynamoDB，节省每年一亿美元。你若想优化数据成本，可研究其热存储延迟优化（P50 从 31.4ms 降至 5.60ms），但需注意自研数据库需技术积累，别盲目跟风。",
         url:"https://x.com/AravSrinivas/status/2099957318935028173",
         tag:"行业数据"
       },
       {
-        title:"Arena Image-to-WebDev 榜单 GPT-6 Astra 1733 分登顶",
-        why:"Arena 新榜单显示 GPT-6 Astra 以 1733 分领先，性能比 GPT-5.6 Sol 高 129 分。如果你想做图像生成类 AI 项目，可参考榜单对比模型性能与成本，但需注意模型更新快，需持续跟踪最新表现。",
+        title:"Arena Image-to-WebDev 榜单：GPT-6 Astra 以 1733 分登顶",
+        why:"Arena 新榜单显示 GPT-6 Astra 在图像生成任务中表现突出，每百万 token 价格优势明显。你若想选模型接单，可参考此排名，但要留意模型性能与价格并非绝对正比，需结合实际需求测试。",
         url:"https://x.com/arena/status/2099971741993050236",
-        tag:"工具动态"
+        tag:"行业观察"
       },
       {
-        title:"Vercel AI 销售开发智能体年成本仅数千美元",
-        why:"Vercel 用 AI 销售开发智能体实现 90% 自动化，团队从 10 人缩至 1.25 人，年成本仅数千美元。这对想做 AI 接单的你来说是个重要信号：自动化销售能极大降低人力成本，但需确保客户转化率和 AI 模型的精准度，否则投入产出比可能不佳。",
+        title:"Vercel 用 AI 销售智能体实现 32x ROI",
+        why:"Vercel 将 inbound 销售团队从 10 人缩至 1.25 人，AI 成本仅数千美元，ROI 提升 32 倍。你若想用 AI 提高转化率，可借鉴其自动化策略，但需评估自身业务是否适合 AI 驱动的销售工具。",
         url:"https://tomtunguz.com/single-digit-thousand-dollar-ai-sdr",
-        tag:"行业观察"
+        tag:"行业数据"
       }
     ]
   },
