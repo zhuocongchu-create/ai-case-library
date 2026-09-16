@@ -10,20 +10,20 @@ window.NEWS=[
     date:"2026-09-16",
     items:[
       {
-        title:"Perplexity 自研 CobbleDB 节省一亿美元",
-        why:"你要是想做数据库优化，Perplexity 用 CobbleDB 把延迟降了 5 倍，每年省下一亿美元。这说明自研数据库能带来巨大成本优势，但别盲目跟风，得看自己业务场景是否匹配。",
+        title:"Perplexity 自研 CobbleDB 替代 AWS DynamoDB，每年最多可节省一亿美元",
+        why:"Perplexity 用两个月完成 CobbleDB，替代 AWS 节省超 1 亿。想做数据库优化的，别再幻想大厂级项目，专注细分场景，用智能体加速开发，节省成本是关键。",
         url:"https://x.com/AravSrinivas/status/2099957318935028173",
         tag:"行业数据"
       },
       {
-        title:"OpenAI 内部全面使用 Codex 和 ChatGPT Work",
-        why:"OpenAI 已经让 Codex 成为内部研发主力，这说明 AI 工具正在深度渗透技术岗位。想接单的你，可以关注 Codex 驱动的自动化开发任务，但注意别只靠工具，得结合实际需求和技能溢价。",
+        title:"Gergely Orosz 探访 OpenAI：Codex 驱动的智能体软件工厂",
+        why:"OpenAI 内部已全面使用 Codex 和 ChatGPT Work，技术群已从基础工具升级为软件工厂。想做 AI 接单的，别只盯着代码，要打造「AI+工程」的闭环，提升交付效率。",
         url:"https://newsletter.pragmaticengineer.com/p/openai-software-factory",
-        tag:"工具动态"
+        tag:"行业观察"
       },
       {
-        title:"Anthropic 与 OpenAI 呼吁放缓 AI 开发",
-        why:"头部公司提议放缓模型开发，但 Cohere CEO 等批评者认为这可能另有动机。做 AI 副业的你，要留意行业政策变化，别被安全叙事忽悠，得看清背后的利益博弈。",
+        title:"Anthropic 与 OpenAI 提议协调放缓前沿 AI 开发，Cohere CEO 等批评者质疑其真实动机",
+        why:"头部公司提议放缓 AI 开发，但被质疑是商业策略。想做 AI 副业的，别盲目跟风，关注政策与市场变化，把握机会窗口，避免被卷入无意义的行业舆论。",
         url:"https://the-decoder.com/not-everyone-is-convinced-that-big-ais-proposed-development-slowdown-is-really-about-safety",
         tag:"行业观察"
       }
