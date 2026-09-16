@@ -26,6 +26,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timedelta, timezone
@@ -157,13 +158,45 @@ def render_hot(groups):
 # 用飞书「AI 文档编辑」接口整页覆写（lark-cli 的 docs +update --command overwrite 走的就是它）：
 #   PUT /open-apis/docs_ai/v1/documents/{document_id}
 #   {"command":"overwrite","content":"<markdown>","format":"markdown","revision_id":-1}
-# 比「转换块 → 清空子块 → 逐块写入」简单得多，且实测应用身份可用。
-def overwrite_doc(doc_id, md, token):
+# ⚠️ 该接口是异步的：即使目标文档没有写权限，也可能返回 code=0。
+#    所以写入后必须「回读校验」，否则会出现"报成功但内容没变"的假成功。
+def read_raw(doc_id, token):
+    d = http("GET", "/open-apis/docx/v1/documents/%s/raw_content" % doc_id, token=token)
+    if d.get("code") != 0:
+        return None
+    return d.get("data", {}).get("content") or ""
+
+
+def _fingerprint(md):
+    """取正文里的关键特征做比对（服务端 markdown 与本地渲染会有格式差异，比对特征串）。"""
+    keys = []
+    for line in md.split("\n"):
+        s = line.strip()
+        if s.startswith("# ") or s.startswith("## 📅") or s.startswith("### "):
+            keys.append(re.sub(r"[#\s]", "", s)[:24])
+    return keys
+
+
+def overwrite_doc(doc_id, md, token, verify=True, wait=8):
     d = http("PUT", "/open-apis/docs_ai/v1/documents/%s" % doc_id, token=token,
              body={"command": "overwrite", "content": md, "format": "markdown", "revision_id": -1})
-    if d.get("code") != 0:
-        raise RuntimeError(json.dumps(d, ensure_ascii=False)[:300])
-    return len(md)
+    api_ok = (d.get("code") == 0)
+    if not api_ok:
+        raise RuntimeError("接口返回失败: %s" % json.dumps(d, ensure_ascii=False)[:250])
+    if not verify:
+        return len(md)
+    time.sleep(wait)
+    cur = read_raw(doc_id, token)
+    if cur is None:
+        raise RuntimeError("回读校验失败：无法读取文档（接口可能无读权限）")
+    keys = _fingerprint(md)
+    hit = sum(1 for k in keys if k and k in re.sub(r"\s", "", cur))
+    if keys and hit >= max(1, int(len(keys) * 0.6)):
+        return len(md)
+    raise RuntimeError(
+        "回读校验不通过：写入未生效（接口返回成功但内容未变）。"
+        "通常原因=该应用不是这两个文档的协作者，没有写入权限。"
+        "当前文档前 60 字=%r" % cur[:60])
 
 
 # ---------------- 主流程 ----------------
