@@ -99,17 +99,38 @@ def pick_window(groups, keep=KEEP_DAYS):
 
 
 # ---------------- 渲染 ----------------
+# 排版约定（飞书 markdown 导入会还原成原生块，层级要拉开）：
+#   #       → 文档标题
+#   > 多行  → 引用块（灰底卡片感），用来放页头说明 / 每条的重点点评
+#   ##      → 日期分组
+#   ###     → 单条标题（不挂链接，保持"标题"的深色粗体，别变成蓝色链接）
+#   普通段落 → 摘要正文（**不要用 - 列表**，列表会把正文压成小字、糊成一团）
+#   `xx`    → 行内代码 = 灰底小标签，用来放来源/分类/时间，像 tag
+#   ---     → 分割线
+def _header(title, lead, extra_lines, note):
+    out = ["# %s" % title, "",
+           "> **%s**" % lead,
+           "> %s" % "｜".join(extra_lines),
+           "> %s" % note, "", "---", ""]
+    return out
+
+
+def _meta_line(chips, url, link_text="读原文 →"):
+    tags = "　".join("`%s`" % c for c in chips if c)
+    if url:
+        return (tags + "　·　[%s](%s)" % (link_text, url)) if tags else "[%s](%s)" % (link_text, url)
+    return tags
+
+
 def render_flash(groups):
     sel, degraded = pick_window(groups)
     now = beijing_now().strftime("%Y-%m-%d %H:%M") + "（北京时间）"
     span = "%s ~ %s" % (sel[-1]["date"], sel[0]["date"]) if sel else "-"
-    note = ("> ⚠️ 近 3 天无新增，当前展示最近一次数据窗口：%s" % span) if degraded \
-        else ("> 数据窗口：%s（仅保留近 3 天）" % span)
-    out = ["# ⚡ AI 快讯", "",
-           "> 近 3 天 AI 圈值得一看的快讯，每条附一句「为什么值得看」。",
-           "> 数据来源：AIHOT（aihot.virxact.com，站长：数字生命卡兹克）",
-           "> 本页由自动化每日重写 · 最近更新：%s" % now,
-           note, "", "---", ""]
+    note = ("⚠️ 近 3 天无新增，当前展示最近一次数据窗口：%s" % span) if degraded \
+        else ("最近更新：%s　·　数据窗口：%s（仅保留近 3 天）" % (now, span))
+    out = _header("⚡ AI 快讯",
+                  "近 3 天 AI 圈值得一看的快讯，每条附一句「为什么值得看」",
+                  ["来源：AIHOT（aihot.virxact.com）", "本页由自动化每日重写"], note)
     if not sel:
         out.append("_暂无语料，请稍后再来。_")
         return "\n".join(out)
@@ -117,16 +138,15 @@ def render_flash(groups):
         out += ["## 📅 %s" % g["date"], ""]
         for i, it in enumerate(g["items"], 1):
             t, u = it.get("t") or "(无标题)", it.get("u") or ""
-            out.append("### %d. [%s](%s)" % (i, t, u) if u else "### %d. %s" % (i, t))
-            out.append("")
+            out += ["### %d. %s" % (i, t), ""]
             if it.get("s"):
-                out.append("- **摘要**：%s" % it["s"])
+                out += [it["s"], ""]
             if it.get("w"):
-                out.append("- **为什么值得看**：%s" % it["w"])
-            meta = " · ".join(x for x in [it.get("src") or "", it.get("cat") or "", it.get("hm") or ""] if x)
+                out += ["> 💡 **为什么值得看**　%s" % it["w"], ""]
+            meta = _meta_line([it.get("src"), it.get("cat"), it.get("hm")], u)
             if meta:
-                out.append("- **来源**：%s" % meta)
-            out += ["", "---", ""]
+                out += [meta, ""]
+            out += ["---", ""]
     return "\n".join(out)
 
 
@@ -134,12 +154,11 @@ def render_hot(groups):
     sel, degraded = pick_window(groups)
     now = beijing_now().strftime("%Y-%m-%d %H:%M") + "（北京时间）"
     span = "%s ~ %s" % (sel[-1]["date"], sel[0]["date"]) if sel else "-"
-    note = ("> ⚠️ 近 3 天无新增，当前展示最近一次数据窗口：%s" % span) if degraded \
-        else ("> 数据窗口：%s（仅保留近 3 天）" % span)
-    out = ["# 💰 重点机会", "",
-           "> 近 3 天最值得下手的 AI 变现机会，每条附一句「变现视角」点评。",
-           "> 本页由自动化每日重写 · 最近更新：%s" % now,
-           note, "", "---", ""]
+    note = ("⚠️ 近 3 天无新增，当前展示最近一次数据窗口：%s" % span) if degraded \
+        else ("最近更新：%s　·　数据窗口：%s（仅保留近 3 天）" % (now, span))
+    out = _header("💰 重点机会",
+                  "近 3 天最值得下手的 AI 变现机会，每条附一句「变现视角」点评",
+                  ["来源：本站 AI 情报站 · 编辑自选", "本页由自动化每日重写"], note)
     if not sel:
         out.append("_暂无语料，请稍后再来。_")
         return "\n".join(out)
@@ -147,15 +166,15 @@ def render_hot(groups):
         out += ["## 📅 %s" % g["date"], ""]
         for i, it in enumerate(g["items"], 1):
             t, u = it.get("title") or "(无标题)", it.get("url") or ""
-            out.append("### %d. [%s](%s)" % (i, t, u) if u else "### %d. %s" % (i, t))
-            out.append("")
+            out += ["### %d. %s" % (i, t), ""]
             if it.get("why"):
-                out += ["**变现视角**：%s" % it["why"], ""]
-            tail = ([("`%s`" % it["tag"])] if it.get("tag") else []) + (["[原文](%s)" % u] if u else [])
-            if tail:
-                out.append(" · ".join(tail))
-            out += ["", "---", ""]
+                out += ["> 💰 **变现视角**　%s" % it["why"], ""]
+            meta = _meta_line([it.get("tag")], u, "读原文 →")
+            if meta:
+                out += [meta, ""]
+            out += ["---", ""]
     return "\n".join(out)
+
 
 
 # ---------------- 文档覆写 ----------------
