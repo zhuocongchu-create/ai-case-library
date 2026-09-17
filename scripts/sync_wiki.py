@@ -80,8 +80,12 @@ def load_js(path, varname):
     return json.loads(body)
 
 
+def beijing_now():
+    return datetime.now(timezone.utc) + timedelta(hours=8)
+
+
 def beijing_today():
-    return (datetime.now(timezone.utc) + timedelta(hours=8)).date()
+    return beijing_now().date()
 
 
 def pick_window(groups, keep=KEEP_DAYS):
@@ -97,7 +101,7 @@ def pick_window(groups, keep=KEEP_DAYS):
 # ---------------- 渲染 ----------------
 def render_flash(groups):
     sel, degraded = pick_window(groups)
-    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    now = beijing_now().strftime("%Y-%m-%d %H:%M") + "（北京时间）"
     span = "%s ~ %s" % (sel[-1]["date"], sel[0]["date"]) if sel else "-"
     note = ("> ⚠️ 近 3 天无新增，当前展示最近一次数据窗口：%s" % span) if degraded \
         else ("> 数据窗口：%s（仅保留近 3 天）" % span)
@@ -128,7 +132,7 @@ def render_flash(groups):
 
 def render_hot(groups):
     sel, degraded = pick_window(groups)
-    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    now = beijing_now().strftime("%Y-%m-%d %H:%M") + "（北京时间）"
     span = "%s ~ %s" % (sel[-1]["date"], sel[0]["date"]) if sel else "-"
     note = ("> ⚠️ 近 3 天无新增，当前展示最近一次数据窗口：%s" % span) if degraded \
         else ("> 数据窗口：%s（仅保留近 3 天）" % span)
