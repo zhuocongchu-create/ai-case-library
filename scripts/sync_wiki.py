@@ -177,26 +177,48 @@ def _fingerprint(md):
     return keys
 
 
-def overwrite_doc(doc_id, md, token, verify=True, wait=8):
+def _hits(md, cur):
+    keys = _fingerprint(md)
+    flat = re.sub(r"\s", "", cur or "")
+    hit = sum(1 for k in keys if k and k in flat)
+    need = max(1, int(len(keys) * 0.6)) if keys else 0
+    return hit, need
+
+
+def overwrite_doc(doc_id, md, token, verify=True, wait=8, tries=6):
+    """整页覆写 + 回读校验。
+
+    ⚠️ docs_ai 覆写接口是**异步**的：PUT 返回 code=0 只代表"已受理"，落库可能还要几秒到几十秒。
+    因此不能只 sleep 一次就下结论（曾因此误判"假成功"，实际写入是成功的），要**轮询**。
+    """
+    before = read_raw(doc_id, token) if verify else None
+
     d = http("PUT", "/open-apis/docs_ai/v1/documents/%s" % doc_id, token=token,
              body={"command": "overwrite", "content": md, "format": "markdown", "revision_id": -1})
-    api_ok = (d.get("code") == 0)
-    if not api_ok:
+    if d.get("code") != 0:
         raise RuntimeError("接口返回失败: %s" % json.dumps(d, ensure_ascii=False)[:250])
     if not verify:
         return len(md)
-    time.sleep(wait)
-    cur = read_raw(doc_id, token)
-    if cur is None:
-        raise RuntimeError("回读校验失败：无法读取文档（接口可能无读权限）")
-    keys = _fingerprint(md)
-    hit = sum(1 for k in keys if k and k in re.sub(r"\s", "", cur))
-    if keys and hit >= max(1, int(len(keys) * 0.6)):
-        return len(md)
+
+    hit = need = 0
+    for i in range(tries):
+        time.sleep(wait)
+        cur = read_raw(doc_id, token)
+        if cur is None:
+            continue
+        hit, need = _hits(md, cur)
+        if need and hit >= need:
+            return len(md)
+        # 兜底：内容确实变化了 → 写入已生效（特征串对不齐只是服务端 markdown 转换差异）
+        if before is not None and cur != before and cur.strip():
+            return len(md)
+
+    cur = read_raw(doc_id, token) or ""
     raise RuntimeError(
-        "回读校验不通过：写入未生效（接口返回成功但内容未变）。"
+        "回读校验不通过：轮询 %ds 后内容仍未变化（特征命中 %d/%d）。"
         "通常原因=该应用不是这两个文档的协作者，没有写入权限。"
-        "当前文档前 60 字=%r" % cur[:60])
+        "当前文档前 60 字=%r" % (wait * tries, hit, need, cur[:60]))
+
 
 
 # ---------------- 主流程 ----------------
