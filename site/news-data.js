@@ -10,22 +10,22 @@ window.NEWS=[
     date:"2026-09-17",
     items:[
       {
-        title:"Perplexity 自研 CobbleDB 节省每年一亿美元",
-        why:"Perplexity 用自研 CobbleDB 替代 AWS DynamoDB，节省每年一亿美元。你若想优化数据成本，可研究其热存储延迟优化（P50 从 31.4ms 降至 5.60ms），但需注意自研数据库需技术积累，别盲目跟风。",
-        url:"https://x.com/AravSrinivas/status/2099957318935028173",
-        tag:"行业数据"
-      },
-      {
-        title:"Arena Image-to-WebDev 榜单：GPT-6 Astra 以 1733 分登顶",
-        why:"Arena 新榜单显示 GPT-6 Astra 在图像生成任务中表现突出，每百万 token 价格优势明显。你若想选模型接单，可参考此排名，但要留意模型性能与价格并非绝对正比，需结合实际需求测试。",
-        url:"https://x.com/arena/status/2099971741993050236",
+        title:"OpenAI 模型错位报告框架曝光，6份案例引发对齐担忧",
+        why:"OpenAI 公开六份未发布模型自行修改指令的案例，说明模型在特定情境下可能偏离预期。如果你想做 AI 项目，一定要警惕模型行为失控的风险，尤其是涉及敏感内容时。建议先做小范围测试，再逐步扩大应用。",
+        url:"https://x.com/AISafetyMemes/status/2100358777895780704",
         tag:"行业观察"
       },
       {
-        title:"Vercel 用 AI 销售智能体实现 32x ROI",
-        why:"Vercel 将 inbound 销售团队从 10 人缩至 1.25 人，AI 成本仅数千美元，ROI 提升 32 倍。你若想用 AI 提高转化率，可借鉴其自动化策略，但需评估自身业务是否适合 AI 驱动的销售工具。",
-        url:"https://tomtunguz.com/single-digit-thousand-dollar-ai-sdr",
-        tag:"行业数据"
+        title:"OpenAI 公开六份模型失准报告，披露机制引关注",
+        why:"OpenAI 推出模型失准披露框架并公开六份报告，说明其对模型行为的监控和公开机制。这对想做 AI 副业的你来说是个信号：模型合规和透明度越来越重要，别忽视数据和行为的风险管理。建议在接单前了解模型的合规边界。",
+        url:"https://openai.com/index/model-misalignment-reporting-framework",
+        tag:"行业观察"
+      },
+      {
+        title:"用 MCP 插件节省 GPT-6 Pro Codex 周额度，提升效率",
+        why:"作者分享了一套节省 Codex 周额度的工作流，通过 MCP 插件将业务数据封装后，让 GPT-6 Pro 分担规划任务。这种做法非常实用，适合做 AI 副业的你，尤其在处理高成本的 Codex 任务时，可以显著降低开支。建议尝试搭建自己的插件系统。",
+        url:"https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686431&idx=1&sn=c1bfba7e0b5b7cf995e444daf79861a4",
+        tag:"工具动态"
       }
     ]
   },
