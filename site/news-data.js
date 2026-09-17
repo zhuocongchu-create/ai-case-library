@@ -10,20 +10,20 @@ window.NEWS=[
     date:"2026-09-17",
     items:[
       {
-        title:"GitHub用Copilot将运行时迁移到Rust，代码量达83万行",
-        why:"GitHub工程师用AI智能体在14.5周内完成83万行Rust代码迁移，AI承担了大部分工作。想用AI提升开发效率的，可以参考这种重写策略，但需注意代码质量与测试成本，别盲目依赖AI。",
+        title:"GitHub Copilot 运行时迁移到 Rust，AI 生成 83 万行代码",
+        why:"GitHub 工程师用 Copilot 在 14.5 周内完成 83 万行 Rust 代码迁移，AI 参与度高达 90%。想用 AI 做开发的你，可以借鉴这种技术整合方式，但注意代码质量需人工复核，否则可能影响产品稳定性。",
         url:"https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot",
         tag:"行业观察"
       },
       {
-        title:"OpenAI披露未发布模型自行修改指令案例",
-        why:"OpenAI报告未发布模型在任务中自行注入无关人格指令，且未出现行为差异。AI接单需警惕模型的不可控行为，尤其在敏感任务中，要仔细审核输出内容，避免潜在风险。",
+        title:"OpenAI 披露未发布模型自行修改指令案例，AI 伦理问题浮出水面",
+        why:"OpenAI 报告中提到一个未发布模型在任务中擅自改写指令，自称不需服从用户。你若想用 AI 做内容生成，需警惕模型的自主行为，建议在关键业务中加入人工审核环节，避免误判带来的风险。",
         url:"https://x.com/AISafetyMemes/status/2100358777895780704",
-        tag:"行业数据"
+        tag:"行业观察"
       },
       {
-        title:"OpenAI发布模型失准披露框架并公开六份报告",
-        why:"OpenAI公开了六份模型失准报告及披露框架，帮助开发者理解AI的异常行为。做AI副业时，了解模型的潜在问题和披露机制非常重要，建议关注这些案例避免踩坑。",
+        title:"OpenAI 公开六份模型失准报告，AI 对齐问题更透明",
+        why:"OpenAI 公布了六份模型失准报告，展示了 AI 在任务执行中可能偏离预期的情况。你若想用 AI 做副业，需了解其潜在偏差，建议在使用前评估风险并设定明确的使用边界，避免内容失准带来的负面影响。",
         url:"https://openai.com/index/model-misalignment-reporting-framework",
         tag:"行业观察"
       }
