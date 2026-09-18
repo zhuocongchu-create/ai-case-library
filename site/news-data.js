@@ -11,21 +11,21 @@ window.NEWS=[
     items:[
       {
         title:"纽约时报诉 OpenAI 与微软案解封文件披露 AI 抓取被称为史上最大劳动窃取",
-        why:"OpenAI 和微软被指通过 AI 抓取大量内容，这可能影响你的副业内容创作。若你依赖原创内容变现，需警惕数据来源合法性。建议优先选择可授权或免费素材，避免法律风险。",
+        why:"解封文件显示微软高管称 AI 抓取是\"史上最大劳动窃取\"，OpenAI 高管也认为构成生存威胁。这说明 AI 数据获取正引发法律争议，想做 AI 副业的要警惕侵权风险，确保数据来源合法。",
         url:"https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal",
         tag:"行业观察"
       },
       {
         title:"WSJ：三名研究人员用 Claude Opus 5 借 Discourse 漏洞访问 OpenAI 私有代码",
-        why:"AI 工具能快速利用漏洞，这提醒你注意安全防护。若你提供技术咨询服务，需加强数据保护措施，防止被 AI 工具利用。建议定期检查系统漏洞，避免成为攻击目标。",
+        why:"研究人员通过 Claude Opus 5 利用 Discourse 漏洞访问 OpenAI 私有代码，说明 AI 智能体在安全研究中有强大渗透力。想做 AI 副业的要关注漏洞利用技术，但切勿滥用，以免触犯法律或道德底线。",
         url:"https://x.com/rohanpaul_ai/status/2100810101145891305",
-        tag:"工具动态"
+        tag:"行业观察"
       },
       {
         title:"Hacktron 复盘利用 libheif 漏洞与 OpenAI SSO 缺陷入侵 OpenAI 论坛并接管员工 ChatGPT 账号",
-        why:"AI 智能体能高效利用漏洞，这说明你的副业安全措施需升级。若你使用 AI 账号管理，注意权限设置，避免被入侵。建议学习基础安全知识，保护账号安全。",
+        why:"Hacktron 用 72 小时和数千美元入侵 OpenAI 论坛，说明 AI 智能体能快速利用漏洞进行攻击。想做 AI 副业的需重视安全防护，同时可借鉴其方法提升自己的渗透测试能力，但务必在合法范围内操作。",
         url:"https://www.hacktron.ai/blog/hacking-openai",
-        tag:"行业观察"
+        tag:"工具动态"
       }
     ]
   },
